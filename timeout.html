@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery.form-validator-2.1.67.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="assets/js/app.js"></script>
+</head>
+
+<body>
+    <!-- CONTENT -->
+    <div id="home">
+        <div class="height-bigpc">
+            <div class="home">
+                <div class="container">
+                    <div class="row align-items">
+                        <!-- banner -->
+                        <div class="col-xs-12 col-md-6">
+                            <div class="logo">
+                                <img src="assets/imgs/logo.svg" class="img-responsive" alt="">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="banner">
+                                <img src="assets/imgs/banner-openaccount.png" class="img" alt="">
+                                <div class="continue">
+                                    <a href="/go-edit-op-acc">
+                                        <img src="assets/imgs/resume_btn.png" class="img" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-6 no-padding-mobile">
+                            <div class="block-CheckTransSta">
+                                <div class="tab">
+                                    <li class="header-title">ตรวจสอบสถานะการทำรายการ</li>
+                                </div>
+                                <!-- form -->
+                                <form id="frm_register" action="resumesotp.html" method="GET" class="form" role="form">
+                                    <div class="content no-flex">
+                                        <div class="col-xs-12">
+                                            <div class="content-message">
+                                                <div class="content__CheckTransSta" id="appendNdid">
+
+                                                </div>
+                                                <div class="detail__contact">
+                                                    <h5>
+                                                        ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ Customer Experience
+                                                    </h5>
+                                                    <div class="info__call">
+                                                        <div class="call">
+                                                            <a href="tel:020884666">
+                                                                <img src="assets/imgs/tel.png" alt="">
+                                                                <span>
+                                                                    โทรศัพท์ 02-088-4666 ในวันและเวลาทำการ หรือ
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="email">
+                                                            <a href="mailto:callcenter@finansiada.com">
+                                                                <img src="assets/imgs/email.png" alt="">
+                                                                <span> อีเมล callcenter@finansiada.com</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+
+                                        <div class="bottom">
+                                            <div class="col-xs-6 col-md-4 padding">
+                                                <a href="register" class="arrow">
+                                                    <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                                        <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                                        <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                                    </svg>
+                                                    <div>ย้อนกลับ</div>
+                                                </a>
+                                            </div>
+                                            <!-- <div class="col-xs-6 col-md-offset-4 col-md-4 padding no-padding-mobile">
+                                            <input type="submit" class="submit" value="ถัดไป">
+                                        </div> -->
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <!-- Modal Exist Email Mobile -->
+                        <!-- <div id="ndidTimeout" class="modal fade" role="dialog">
+                            <div class="modal-dialog mr-top10">
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                    </div>
+                                    <div class="modal-body ">
+                                        <div class="formgroup">
+                                            <div class="content__CheckTransSta">
+                                                <span>[Timeout]</span>
+                                                เนื่องจากท่านไม่ทำรายการผ่านผู้ให้บริการยืนยันตัวตน
+                                                <span>(idp)</span>
+                                                ในเวลาที่กำหนด กรุณาทำรายการใหม่อีกครั้ง
+                                                หรือทำการเลือกผู้ให้บริการยืนยันตัวตน <span>(idp)</span> รายอื่น
+                                                <br>
+                                                ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ ฝ่าย Customer Experience
+                                                โทรศัพท์ 02-088-4666 ในวันและเวลาทำการหรืออีเมล
+                                                callcenter@finansiada.com
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button href="javascript:void(0)" onclick="goKyc()"
+                                            class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                        <button href="javascript:void(0)" onclick="hideModalndidTimeout()"
+                                            class="button-accept" type="button" aria-label="Close">ยกเลิก</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Modal NDID Time Out before 60 min -->
+                        <!-- <div id="ndidPending" class="modal fade" role="dialog">
+                            <div class="modal-dialog mr-top10">
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                    </div>
+                                    <div class="modal-body ">
+                                        <div class="formgroup">
+                                            <div class="content__CheckTransSta" id="ndid_timeout_before_60_min">
+                                            <span>[PENDING]</span>
+                                                กรุณายืนยันตัวตนผ่านผู้ให้บริการ
+                                                <span>(idp)</span>
+                                                ที่ท่านได้ทำการถ่ายภาพใบหน้าเพื่อยืนยันตัวตน
+                                                หรือสมัครใช้บริการ <span>NDID</span> แล้ว และมี Mobile Application ของผู้ให้บริการ
+                                                <span>(idp)</span> นั้น บนโทรศัพท์มือถือ
+                                                (Smart Phone ทั้ง
+                                                Ios และ/หรือ
+                                                Android)
+                                                <br>
+                                                ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ ฝ่าย Customer Experience
+                                                02-088-4666 ในวันและเวลาทำการ หรือ
+                                                callcenter@finansiada.com
+
+                                                <br>
+                                                <div class="detail__contact" style="text-align: center;">
+                                                    <h5 class="detail__contact_pending">
+                                                        ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ Customer Experience
+                                                    </h5>
+                                                    <div class="info__call">
+                                                        <div class="call">
+                                                            <a href="tel:020884666">
+                                                                <img src="assets/imgs/tel.png" alt="">
+                                                                <span class="detail__contact_pending">
+                                                                    02-088-4666 ในวันและเวลาทำการ หรือ
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="email">
+                                                            <a href="mailto:callcenter@finansiada.com">
+                                                                <img src="assets/imgs/email.png" alt="">
+                                                                <span class="detail__contact_pending"> callcenter@finansiada.com</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                    <button href="javascript:void(0)" onclick="hideModalndidTimeout()"
+                                            class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                        <button href="javascript:void(0)" onclick="hideModalndidTimeout()"
+                                            class="button-accept" type="button" aria-label="Close">ยกเลิก</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+
+                        <!-- Modal NDID Status -->
+                        <div id="ndidStatus" class="modal fade" role="dialog">
+                            <div class="modal-dialog mr-top10">
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                    </div>
+                                    <div class="modal-body ">
+                                        <div class="modal-message">
+                                            <div class="content__CheckTransSta">
+                                                <div id="ndidStatusText" class="justify_center_modal_timeout">
+                                                    
+                                                </div>
+                                                <br>
+                                                <div id="HideInfo" class="detail__contact justify_center_modal_timeout">
+                                                    <h5 class="detail__contact_pending">
+                                                        ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ Customer Experience
+                                                    </h5>
+                                                    <div class="info__call">
+                                                        <div class="call">
+                                                            <a href="tel:020884666">
+                                                                <img src="assets/imgs/tel.png" alt="">
+                                                                <span class="detail__contact_pending">
+                                                                    02-088-4666 ในวันและเวลาทำการ หรือ
+                                                                </span>
+                                                            </a>
+                                                        </div>
+                                                        <div class="email">
+                                                            <a href="mailto:callcenter@finansiada.com">
+                                                                <img src="assets/imgs/email.png" alt="">
+                                                                <span class="detail__contact_pending" style="text-transform: lowercase;"> 
+                                                                    callcenter@finansiada.com</span>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer" id="ndidButton">
+                                    <!-- <button href="javascript:void(0)" onclick="hideModalndidTimeout()"
+                                            class="button-accept" type="button" aria-label="Close">ตกลง</button> -->
+                                        <!-- <button href="javascript:void(0)" onclick="hideModalndidTimeout()"
+                                            class="button-accept" type="button" aria-label="Close">ยกเลิก</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="includedFooter"></div>
+    <!-- JS -->
+    <script>
+    $("#includedFooter").load("assets/layout/footer.php");
+    </script>
+    <!-- OTHER -->
+    <script>
+    const MAIN_URL = window.location.origin;
+
+    $(document).ready(function() {
+        getStatus();
+
+        let session = '64d9413d0ca441b4bf518bd3a5e4ebbe';
+        console.log(session)
+        // $("#ndidTimeout").addClass('show');
+        // $("#ndidPending").addClass('show');
+        // $("#ndidTimeoutAfter60").addClass('show');
+    });
+
+    function hideModalndidTimeout() {
+        $('.modal').removeClass('show')
+    }
+
+    function goKyc() {
+        setTimeout(() => {
+            window.open(`${MAIN_URL}/identity/selection/type`, "_self");
+        }, 50);
+    }
+
+    function getStatus() { ///getStatus
+        let checkSession = false;
+        let data = {
+            id: localStorage.getItem("Idcard")
+            // id: "7522441041331"
+        }
+        const wsurl = `${MAIN_URL}/api/get-status-ndid`;
+        fetch(wsurl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+
+            .then(response => response.text())
+            .then(function(result) {
+                console.log(result)
+                let data = JSON.parse(result)
+                // let data = {
+                //                 "success": true,
+                //                 "message": "",
+                //                 "data": {
+                //                     "request_tran_id": "20221223135258424_58424362",
+                //                     "identifier": "9575272273680",
+                //                     "idp_id_list": "E8AF34C5-A948-4F5C-AD71-998D097FFAAD",
+                //                     "as_id_list": "FB3ADF7A-56CB-41DD-98D8-521D1A17A2CD",
+                //                     "request_id": "51f1497c9cbc7ef3ae69084c2c5791bd6be58b1271441ffd3de4702fba51a08d",
+                //                     "reference_id": "758_20221223135258_69609766",
+                //                     "status": "errored",
+                //                     "timed_out": false,
+                //                     "closed": true,
+                //                     "code_status": "30800",
+                //                     "request_datetime": "2022-12-23T13:52:58",
+                //                     "update_datetime": "2023-01-04T16:55:50"
+                //                 }
+                //             }
+                console.log(data)
+                if (data != null) {
+                    const timed_out = data.data.timed_out;
+                    const closed = data.data.closed;
+                    const status = data.data.status;
+                    const error_code = data.data.code_status;
+                    const message = data.message;
+
+                    console.log(error_code);
+
+                    // const timed_out = true;
+                    // const timed_out = false;
+                    // const closed = true;
+                    // const closed = false;
+                    // const status = "pending";
+                    // const status = "errored";
+
+                    if (status == 'unknow') {
+                        // $('#appendNdid').append(`<span>[Not Found]</span>`);
+                        // $('#ndidStatusText').append(`<span>[Not Found]</span>`);
+                        $('#appendNdid').append(message);
+                        $('#ndidStatusText').append(message);
+                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                        $("#HideInfo").attr("style", "display: none;");
+                        $("#ndidStatus").addClass('show');
+
+                    } else if (!timed_out && !closed) { // false, false
+                        switch (status) {
+                                    case 'pending':
+                                        // $('#appendNdid').append(`<span>[PENDING]</span>
+                                        //         กรุณายืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน
+                                        //         <span>(idp)</span>
+                                        //         ที่ท่านได้ทำการถ่ายภาพใบหน้าเพื่อยืนยันตัวตน
+                                        //         หรือสมัครใช้บริการ <span>NDID</span> แล้ว และมี Mobile Application ของผู้ให้บริการตัวตน
+                                        //         <span>(idp)</span> นั้น บนโทรศัพท์มือถือ
+                                        //         (Smart Phone ทั้ง
+                                        //         Ios และ/หรือ
+                                        //         Android)`);
+                                        // $('#ndidStatusText').append(`<span>[PENDING]</span>
+                                        //         กรุณายืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน
+                                        //         <span>(idp)</span>
+                                        //         ที่ท่านได้ทำการถ่ายภาพใบหน้าเพื่อยืนยันตัวตน
+                                        //         หรือสมัครใช้บริการ <span>NDID</span> แล้ว และมี Mobile Application ของผู้ให้บริการตัวตน
+                                        //         <span>(idp)</span> นั้น บนโทรศัพท์มือถือ
+                                        //         (Smart Phone ทั้ง
+                                        //         Ios และ/หรือ
+                                        //         Android)`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                        break;
+                                    case 'confirmed':
+                                        // $('#appendNdid').append(`<span>[confirmed]</span>`);
+                                        // $('#ndidStatusText').append(`<span>[confirmed]</span>`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                        break;
+                                    case 'rejected':
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[rejected]</span> เนื่องจากท่านปฏิเสธการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[rejected]</span> เนื่องจากท่านปฏิเสธการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                        break;
+                                    case 'complicated':
+                                        // $('#appendNdid').append(`<span>[complicated]</span>`);
+                                        // $('#ndidStatusText').append(`<span>[complicated]</span>`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                        break;
+                                    case 'completed':
+                                        // $('#appendNdid').append(`<span>[completed]</span>`);
+                                        // $('#ndidStatusText').append(`<span>[completed]</span>`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                        break;
+
+                                    default:
+                                        // $('#appendNdid').append(`<span>[default]</span> ท่านไม่สามารถทำรายการได้ในขณะนี้ กรุณาทำรายการใหม่หรือเลือกผู้ให้บริการยืนยันตัวตนรายอื่น<br/>The request cannot be proceeded at the moment. Please retry or select another Identity Provider.`);
+                                        // $('#ndidStatusText').append(`<span>[default]</span> ท่านไม่สามารถทำรายการได้ในขณะนี้ กรุณาทำรายการใหม่หรือเลือกผู้ให้บริการยืนยันตัวตนรายอื่น<br/>The request cannot be proceeded at the moment. Please retry or select another Identity Provider.`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    break;
+                                    }
+
+                            } else if (!timed_out && closed) { // false, true
+                                if (status == 'completed') {
+                                    // $('#appendNdid').append(`<span>[completed]</span> ท่านได้เปิดบัญชีเรียบร้อยแล้ว กรุณาตรวจสอบ Username & Password ทางอีเมลที่สมัคร`);
+                                    // $('#ndidStatusText').append(`<span>[completed]</span> ท่านได้เปิดบัญชีเรียบร้อยแล้ว กรุณาตรวจสอบ Username & Password ทางอีเมลที่สมัคร`);
+                                    $('#appendNdid').append(message);
+                                    $('#ndidStatusText').append(message);
+                                    $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                    $("#HideInfo").attr("style", "display: none;");
+                                    $("#ndidStatus").addClass('show');
+                                } else if (status == 'confirmed') {
+                                    // $('#appendNdid').append(`<span>[confirmed]</span>`);
+                                    // $('#ndidStatusText').append(`<span>[confirmed]</span>`);
+                                    $('#appendNdid').append(message);
+                                    $('#ndidStatusText').append(message);
+                                    $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                    $("#HideInfo").attr("style", "display: none;");
+                                    $("#ndidStatus").addClass('show');
+                                } else if (status == 'pending') {
+                                    checkSession = true;
+                                    // $('#appendNdid').append(`<span>[cancel]</span> เนื่องจากท่านได้ยกเลิกการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                    // $('#ndidStatusText').append(`<span>[cancel]</span> เนื่องจากท่านได้ยกเลิกการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                    $('#appendNdid').append(message);
+                                    $('#ndidStatusText').append(message);
+                                    $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                             <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                    $("#HideInfo").attr("style", "display: none;");
+                                    $("#ndidStatus").addClass('show');
+                                } else if (status == 'rejected') {
+                                    checkSession = true;
+                                    // $('#appendNdid').append(`<span>[rejected]</span> เนื่องจากท่านปฏิเสธการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                    // $('#ndidStatusText').append(`<span>[rejected]</span> เนื่องจากท่านปฏิเสธการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                    $('#appendNdid').append(message);
+                                    $('#ndidStatusText').append(message);
+                                    $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                             <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                    $("#HideInfo").attr("style", "display: none;");
+                                    $("#ndidStatus").addClass('show');
+                                } else if (status == 'errored') {
+                                    // $('#appendNdid').append(`<span>[errored]</span>`);
+                                    // $('#ndidStatusText').append(`<span>[errored]</span>`);
+                                    // $("#ndidStatus").addClass('show');
+                                    // $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                    //     <button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                    //     <button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+
+                                    if (error_code == 30000) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP) ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP) ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30200) {
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านระบุหมายเลขบัตรประชาชนไม่ถูกต้อง กรุณาสอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านระบุหมายเลขบัตรประชาชนไม่ถูกต้อง กรุณาสอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30300) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านไม่มีข้อมูลกับผู้ให้บริการยืนยันตัวตน(IDP) ที่ท่านเลือกไว้ กรุณาเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านไม่มีข้อมูลกับผู้ให้บริการยืนยันตัวตน(IDP) ที่ท่านเลือกไว้ กรุณาเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30400) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านไม่ได้ทำการอัพเดทข้อมูลกับผู้ให้บริการยืนยันตัวตน (IDP) ที่ท่านเลือก กรุณาอัพเดทข้อมูล หรือเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านไม่ได้ทำการอัพเดทข้อมูลกับผู้ให้บริการยืนยันตัวตน (IDP) ที่ท่านเลือก กรุณาอัพเดทข้อมูล หรือเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30500) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านยืนยันตัวตนไม่ผ่านตามเงื่อนไขของผู้ให้บริการยืนยันตัวตน (IDP) ที่ท่านเลือกไว้  เช่น ระบุ PIN ผิด กรุณาเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านยืนยันตัวตนไม่ผ่านตามเงื่อนไขของผู้ให้บริการยืนยันตัวตน (IDP) ที่ท่านเลือกไว้  เช่น ระบุ PIN ผิด กรุณาเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30510) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านใส่ PIN/PASSWORD กับผู้ให้บริการยืนยันตัวตน (IDP)ไม่ถูกต้อง กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถ เลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านใส่ PIN/PASSWORD กับผู้ให้บริการยืนยันตัวตน (IDP)ไม่ถูกต้อง กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถ เลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30520) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากความเสมือนใบหน้า (Face Recognition) ในการยืนยันตัวตนของท่านไม่ผ่านเกณฑ์ที่กำหนด กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากความเสมือนใบหน้า (Face Recognition) ในการยืนยันตัวตนของท่านไม่ผ่านเกณฑ์ที่กำหนด กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30530) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านระบุรหัส OTP กับผู้ให้บริการยืนยันตัวตน (IDP) ไม่ถูกต้อง กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านระบุรหัส OTP กับผู้ให้บริการยืนยันตัวตน (IDP) ไม่ถูกต้อง กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่น สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30600) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านได้ยกเลิกการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านได้ยกเลิกการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30610) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านปฏิเสธการยอมรับเงื่อนไขการใช้บริการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านปฏิเสธการยอมรับเงื่อนไขการใช้บริการยืนยันตัวตนผ่านผู้ให้บริการยืนยันตัวตน (IDP) กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30700) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP)ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP)ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30800) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านไม่มีข้อมูลการยืนยันตัวตนรูปแบบดิจิทัลกับผู้ให้บริการยืนยันตัวตน (IDP) ที่ท่านเลือกไว้ กรุณาเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านไม่มีข้อมูลการยืนยันตัวตนรูปแบบดิจิทัลกับผู้ให้บริการยืนยันตัวตน (IDP) ที่ท่านเลือกไว้ กรุณาเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 30900) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP) ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP) ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 40000) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP) ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากผู้ให้บริการยืนยันตัวตน (IDP) ไม่สามารถให้บริการได้ กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 40200) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากข้อมูลบัตรประชาชนของท่านไม่ถูกต้อง กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากข้อมูลบัตรประชาชนของท่านไม่ถูกต้อง กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 40300) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านไม่สามารถทำรายการได้ในขณะนี้  กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP)รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านไม่สามารถทำรายการได้ในขณะนี้  กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP)รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 40400) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากข้อมูลของท่านไม่ถูกต้อง  กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากข้อมูลของท่านไม่ถูกต้อง  กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                    else if (error_code == 40500) {
+                                        checkSession = true;
+                                        // $('#appendNdid').append(`<span>[errored]</span> เนื่องจากท่านไม่สามารถทำรายการได้ในขณะนี้  กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        // $('#ndidStatusText').append(`<span>[errored]</span> เนื่องจากท่านไม่สามารถทำรายการได้ในขณะนี้  กรุณาทำรายการใหม่อีกครั้ง หรือท่านสามารถเลือกผู้ให้บริการยืนยันตัวตน (IDP) รายอื่นแทน สอบถามเพิ่มเติมได้ที่ 02-088-4666 ในวันและเวลาทำการ หรืออีเมล callcenter@finansiada.com`);
+                                        $('#appendNdid').append(message);
+                                        $('#ndidStatusText').append(message);
+                                        $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                                        $("#HideInfo").attr("style", "display: none;");
+                                        $("#ndidStatus").addClass('show');
+                                    }
+                                } else {}
+
+                            } else if (timed_out && !closed) { // true, false
+                                if (status != 'completed') {
+                            // $('#appendNdid').append(`<div class="content__CheckTransSta">
+                            //                 <span>[Timeout]</span>
+                            //                 เนื่องจากท่านไม่ทำรายการผ่านผู้ให้บริการยืนยันตัวตน
+                            //                 <span>(idp)</span>
+                            //                 ในเวลาที่กำหนด กรุณาทำรายการใหม่อีกครั้ง
+                            //                 หรือทำการเลือกผู้ให้บริการยืนยันตัวตน <span>(idp)</span> รายอื่น
+                            //                 <br>
+                            //                 ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ ฝ่าย Customer Experience
+                            //                 โทรศัพท์ 02-088-4666 ในวันและเวลาทำการหรืออีเมล
+                            //                 callcenter@finansiada.com
+                            //             </div>
+                            //             <div class="detail__contact">
+                            //                 <h5>
+                            //                     ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ Customer Experience
+                            //                 </h5>
+                            //                 <div class="info__call">
+                            //                     <div class="call">
+                            //                         <a href="tel:020884666">
+                            //                             <img src="assets/imgs/tel.png" alt="">
+                            //                             <span>
+                            //                                 โทรศัพท์ 02-088-4666 ในวันและเวลาทำการ หรือ
+                            //                             </span>
+                            //                         </a>
+                            //                     </div>
+                            //                     <div class="email">
+                            //                         <a href="mailto:callcenter@finansiada.com">
+                            //                             <img src="assets/imgs/email.png" alt="">
+                            //                             <span> อีเมล callcenter@finansiada.com</span>
+                            //                         </a>
+                            //                     </div>
+                            //                 </div>
+                            //             </div>`);
+                            // $("#ndidTimeout").addClass('show');
+                            checkSession = true;
+                            $('#appendNdid').append(message);
+                            $('#ndidStatusText').append(message);
+                            $('#ndidButton').append(`<button href="javascript:void(0)" onclick="goKyc()" class="button-accept" type="button" aria-label="Close">ตกลง</button>
+                                                                 <button href="javascript:void(0)" onclick="hideModalndidTimeout();fnCheckSession(${!checkSession})" class="button-accept" type="button" aria-label="Close">ยกเลิก</button>`);
+                            $("#HideInfo").attr("style", "display: none;");
+                            $("#ndidStatus").addClass('show');
+                        }
+                    }
+                }
+                fnCheckSession(checkSession)
+                // $('#ndid_timeout_before_60_min').html(description)
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function fnCheckSession(session){
+        console.log(session)
+        if(!session){
+            const wsurl = `${MAIN_URL}/api/clear-session`;
+            fetch(wsurl, {
+                    method: "POST"
+                })
+                .then(response => response.text())
+                .then(function(result) {
+                    console.log(result)
+                })
+                .catch(error => console.log('error', error));
+        }
+    }
+
+    function checkID(id) {
+        if (id.length != 13)
+            return false;
+        for (i = 0, sum = 0; i < 12; i++) {
+            sum += parseFloat(id.charAt(i)) * (13 - i);
+        }
+        if ((11 - sum % 11) % 10 != parseFloat(id.charAt(12))) {
+            return false;
+        }
+        return true;
+    }
+
+    function checkForm() {
+        if (!checkID($("#Idcard").val()))
+            $('.right').fadeOut()
+        else
+            $('.right').fadeIn()
+    }
+    </script>
+</body>
+
+</html>

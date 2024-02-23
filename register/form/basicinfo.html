@@ -1,0 +1,3571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="logo">
+                    <a href="#"><img src="../../assets/imgs/header/logo.png" class="img-responsive" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- CONTENT -->
+<style>
+    .tt-menu {
+        max-height: 500px;
+        overflow: auto;
+    }
+
+    .ui-autocomplete {
+        max-height: 400px;
+        width: 200px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        z-index: 1000;
+    }
+</style>
+<div id="general">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 no-padding-mobile">
+                <div id="loader">
+                    <div uk-spinner></div> รอสักครู่ กำลังโหลดฐานข้อมูล...
+                </div>
+                <!-- process -->
+                <div class="border">
+                    <div class="process">
+                        <div class="col-xs-12 col-md-5">
+                            <div class="process__title">กรอกข้อมูลส่วนตัว</div>
+                        </div>
+                        <div class="col-xs-12 col-md-7">
+                            <div class="process__list">
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="30, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">1</text>
+                                    </svg>
+                                    <div class="title orange">กรอกข้อมูล</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart ">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="50, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">2</text>
+                                    </svg>
+                                    <div class="title">ยืนยันตัวตน</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart ">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="80, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">3</text>
+                                    </svg>
+                                    <div class="title">รับรหัสผ่าน</div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <form id="module_basicInfo" action="#" method="GET" role="form" class="demo" style="display:none;"
+                    autocomplete="off" uk-grid>
+                    <!-- ที่อยู่ตามบัตรประชาชน -->
+                    <div class="border">
+                        <div class="content no-flex">
+                            <div class="col-xs-12 no-padding-mobile">
+                                <div class="content__title">
+                                    <span><img src="../../assets/imgs/home.svg" alt=""> </span>
+                                    <span>ที่อยู่ตามบัตรประชาชน <span class="orange">*</span></span>
+                                </div>
+                            </div>
+                            <div class="mobile-height"></div>
+                            <div class="col-xs-12 no-padding-mobile">
+                                <div class="col-xs-6 col-md-2 padding">
+                                    <div class="formgroup">
+                                        <input type="text" id="Address" name="Address" data-kyc="Address"
+                                            error-text="กรุณาระบุเลขที่" autocomplete="off"
+                                            oninput="this.value = this.value.replace(/[^0-9/]/g, '').replace(/^\s+/,'');"
+                                            maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Address">เลขที่ <span>*</span></label>
+                                        <div id="errorAddress"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-1 padding">
+                                    <div class="formgroup">
+                                        <input type="text" id="Floor" name="Floor" data-kyc="Floor"
+                                            onkeydown="keyDown(event)" maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Floor">ชั้น </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4 col-md-1 padding">
+                                    <div class="formgroup">
+                                        <input type="text" id="Moo" name="Moo" data-kyc="Moo" onkeydown="keyDown(event)"
+                                            oninput="this.value = this.value.replace(/[^0-9\s]/g, '').replace(/(\..*)\./g, '$1');"
+                                            maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Moo">หมู่ที่ </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-3 padding">
+                                    <div class="formgroup">
+                                        <input type="text" id="Mooban" name="Mooban" data-kyc="Mooban" maxlength="80" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Mooban">หมู่บ้าน/อาคาร </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-2 padding">
+                                    <div class="formgroup">
+                                        <input type="text" id="Soi" name="Soi" data-kyc="Soi" maxlength="80" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Soi">ซอย </label>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-3 padding">
+                                    <div class="formgroup">
+                                        <input type="text" id="Road" name="Road" data-kyc="Road" maxlength="80" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Road">ถนน </label>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="col-xs-12 col-md-4 padding">
+                                    <div class="formgroup" id="DistricView">
+                                        <input type="hidden" id="Distric_id" name="Distric_id" data-kyc="Distric_id" />
+                                        <input type="text" id="Distric" name="Distric" data-kyc="Distric"
+                                            error-text="กรุณาระบุแขวง/ตำบล" maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Distric" class="labeltitle">แขวง/ตำบล <span>*</span></label>
+                                        <div id="errorDistric"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-2 padding">
+                                    <div class="formgroup" id="AmphoeView">
+                                        <input type="hidden" id="Amphoe_id" name="Amphoe_id" data-kyc="Amphoe_id" />
+                                        <input type="text" id="Amphoe" name="Amphoe" data-kyc="Amphoe"
+                                            error-text="กรุณาระบุเขต/อำเภอ" maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Amphoe" class="labeltitle">เขต/อำเภอ <span>*</span></label>
+                                        <div id="errorAmphoe"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-2 padding">
+                                    <div class="formgroup" id="ProvinceView">
+                                        <input type="hidden" id="Province_id" name="Province_id"
+                                            data-kyc="Province_id" />
+                                        <input type="text" id="Province" name="Province" data-kyc="Province"
+                                            error-text="กรุณาระบุจังหวัด" maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Province" class="labeltitle">จังหวัด <span>*</span></label>
+                                        <div id="errorProvince"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-2 padding">
+                                    <div class="formgroup margin-bottom-0" id="ZipcodeView">
+                                        <input type="text" id="Zipcode" name="Zipcode" data-kyc="Zipcode"
+                                            error-text="กรุณาระบุรหัสไปรษณีย์" oninput="keyDown(event)"
+                                            maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="Zipcode" class="labeltitle">รหัสไปรษณีย์ <span>*</span></label>
+                                        <div id="errorZipcode"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-md-2 padding">
+                                    <div class="formgroup margin-bottom-0" id="colorCountry">
+                                        <input type="hidden" id="Country" name="Country" data-kyc="Country" value="ไทย">
+                                        <input type="hidden" id="Countryid" name="Countryid" data-kyc="Countryid"
+                                            value="TH">
+                                        <div class="label-drop" id="labelCountryVal">ประเทศ <span class="red"
+                                                style="color: red;">*</span></div>
+                                        <select id="CountryVal" name="CountryVal" class="units"
+                                            data-validation="required" data-validation-error-msg="กรุณาเลือกประเทศ"
+                                            onchange="changeColor('CountryVal');">
+                                            <option value="" class="label red">ไทย</option>
+                                        </select>
+                                        <div id="errorCountryVal"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div id="IdcardFill" class="hidden"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!-- ที่อยู่ปัจจุบัน -->
+                    <div class="border">
+                        <div class="content no-flex">
+                            <div class="col-xs-12 col-sm-6 no-padding-mobile">
+                                <div class="content__title">
+                                    <span><img src="../../assets/imgs/pin.png" alt=""> </span>
+                                    <span>ที่อยู่ปัจจุบัน <span class="orange">*</span></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 no-padding-mobile">
+                                <input type="hidden" id="CurrentChoiceVal" data-kyc="CurrentChoice">
+                                <div class="choice current-choice">
+                                    <li>
+                                        <label for="CurrentChoice1" class="radio"> ที่อยู่ตามบัตรประชาชน
+                                            <input type="radio" name="CurrentChoice" id="CurrentChoice1" value="Home"
+                                                onclick="showAddressChoice('Current','hidden');fillAddress('Current','','ที่อยู่ตามบัตรประชาชน')"
+                                                data-validation="required" data-validation-error-msg="&nbsp;">
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="CurrentChoice2" class="radio"> ที่อยู่อื่น (โปรดระบุ)
+                                            <input type="radio" name="CurrentChoice" id="CurrentChoice2" value="Other"
+                                                onclick="showAddressChoice('Current','show')" data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกที่อยู่">
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </li>
+                                    <div id="errorCurrentChoice"></div>
+                                </div>
+                            </div>
+                            <div id="CurrentChoice" class="hidden">
+                                <div class="mobile-height"></div>
+                                <div class="col-xs-12 no-padding-mobile">
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="AddressCurrent" name="AddressCurrent"
+                                                autocomplete="off" data-kyc="AddressCurrent"
+                                                error-text="กรุณาระบุเลขที่"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '').replace(/^\s+/,'');"
+                                                maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="AddressCurrent">เลขที่ <span>*</span></label>
+                                            <div id="errorAddressCurrent"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-1 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="FloorCurrent" name="FloorCurrent"
+                                                onkeydown="keyDown(event)" data-kyc="FloorCurrent" maxlength="250" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="FloorCurrent">ชั้น </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-md-1 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="MooCurrent" name="MooCurrent"
+                                                onkeydown="keyDown(event)" data-kyc="MooCurrent"
+                                                oninput="this.value = this.value.replace(/[^0-9\s]/g, '').replace(/(\..*)\./g, '$1');"
+                                                maxlength="250" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="MooCurrent">หมู่ที่ </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="MoobanCurrent" name="MoobanCurrent"
+                                                data-kyc="MoobanCurrent" maxlength="80" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="MoobanCurrent">หมู่บ้าน/อาคาร </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="SoiCurrent" name="SoiCurrent" data-kyc="SoiCurrent"
+                                                maxlength="80" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="SoiCurrent">ซอย </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="RoadCurrent" name="RoadCurrent"
+                                                data-kyc="RoadCurrent" maxlength="80" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="RoadCurrent">ถนน </label>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-xs-12 col-md-4 padding">
+                                        <div class="formgroup" id="DistricCurrentView">
+                                            <input type="hidden" id="DistricCurrent_id" name="DistricCurrent_id"
+                                                data-kyc="DistricCurrent_id" />
+                                            <input type="text" id="DistricCurrent" name="DistricCurrent"
+                                                onkeydown="keyDown(event)" data-kyc="DistricCurrent"
+                                                error-text="กรุณาระบุแขวง/ตำบล" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="DistricCurrent" class="labeltitle">แขวง/ตำบล
+                                                <span>*</span></label>
+                                            <div id="errorDistricCurrent"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup" id="AmphoeCurrentView">
+                                            <input type="hidden" id="AmphoeCurrent_id" name="AmphoeCurrent_id"
+                                                data-kyc="AmphoeCurrent_id" />
+                                            <input type="text" id="AmphoeCurrent" name="AmphoeCurrent"
+                                                onkeydown="keyDown(event)" data-kyc="AmphoeCurrent"
+                                                error-text="กรุณาระบุเขต/อำเภอ" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="AmphoeCurrent" class="labeltitle">เขต/อำเภอ
+                                                <span>*</span></label>
+                                            <div id="errorAmphoeCurrent"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup" id="ProvinceCurrentView">
+                                            <input type="hidden" id="ProvinceCurrent_id" name="ProvinceCurrent_id"
+                                                data-kyc="ProvinceCurrent_id" />
+                                            <input type="text" id="ProvinceCurrent" name="ProvinceCurrent"
+                                                onkeydown="keyDown(event)" data-kyc="ProvinceCurrent"
+                                                error-text="กรุณาระบุจังหวัด" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="ProvinceCurrent" class="labeltitle">จังหวัด
+                                                <span>*</span></label>
+                                            <div id="errorProvinceCurrent"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup margin-bottom-0" id="ZipcodeCurrentView">
+                                            <input type="text" id="ZipcodeCurrent" name="ZipcodeCurrent"
+                                                onkeydown="keyDown(event)" data-kyc="ZipcodeCurrent"
+                                                error-text="กรุณาระบุรหัสไปรษณีย์" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="ZipcodeCurrent" class="labeltitle">รหัสไปรษณีย์
+                                                <span>*</span></label>
+                                            <div id="errorZipcodeCurrent"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup margin-bottom-0" id="CountryCurrentView">
+                                            <input type="text" class="input" id="CountryCurrent" name="CountryCurrent"
+                                                data-kyc="CountryCurrent" data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกประเทศ"
+                                                error-text="กรุณาเลือกประเทศ">
+                                            <input type="hidden" id="CountryCurrentid" name="CountryCurrentid"
+                                                data-kyc="CountryCurrentid">
+                                            <label for="CountryCurrent" class="labeltitle"
+                                                id="labelCountryCurrentVal">ประเทศ <span class="red"
+                                                    style="color: red;">*</span></label>
+                                            <div id="errorCountryCurrentVal"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div id="CurrentFill" class="hidden"></div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div id="error_current_address" class="hidden"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!-- อาชีพปัจจุบันและแหล่งที่มาของเงินลงทุน -->
+                    <div class="border">
+                        <div class="content no-flex">
+                            <div class="col-xs-12 no-padding-mobile">
+                                <div class="head-title" style="margin-bottom: 30px;">
+                                    <div class="content__title">
+                                        <span><img src="../../assets/imgs/hand.svg" alt="" class="hand"> </span>
+                                        <span>อาชีพปัจจุบันและแหล่งที่มาของเงินลงทุน </span>
+                                    </div>
+                                </div>
+                                <div class="row from-group-investment">
+                                    <!-- from-group-investment row -->
+                                    <div class="col-md-6 col-xs-12 padding no-padding-mobile" style="z-index:1;">
+                                        <div class="formgroup" id="colorEducationLevelVal">
+                                            <input type="hidden" id="EducationLevel" name="EducationLevel"
+                                                data-kyc="EducationLevel">
+                                            <input type="hidden" id="EducationLevelId" name="EducationLevelId"
+                                                data-kyc="EducationLevelId">
+                                            <div class="label-drop" id="labelEducationLevelVal">
+                                                ระดับการรศึกษาสูงสุด
+                                                <span>*</span>
+                                            </div>
+                                            <select id="EducationLevelVal" name="EducationLevelVal" class="units"
+                                                data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกระดับการรศึกษาสูงสุด"
+                                                onchange="changeColor('EducationLevelVal');">
+                                                <option value="" class="units">
+                                                    <span>ระดับการรศึกษาสูงสุด *</span></span>
+                                                </option>
+                                            </select>
+                                            <div id="errorEducationLevelVal"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-xs-12 padding no-padding-mobile" style="z-index:1;">
+                                        <div class="formgroup" id="colorSourceOfInvestmentVal">
+                                            <input type="hidden" id="SourceOfInvestment" name="SourceOfInvestment"
+                                                data-kyc="SourceOfInvestment">
+                                            <input type="hidden" id="SourceOfInvestmentid" name="SourceOfInvestmentid"
+                                                data-kyc="SourceOfInvestmentid">
+                                            <div class="label-drop" id="labelSourceOfInvestmentVal">
+                                                แหล่งที่มาของเงินลงทุน
+                                                <span>*</span>
+                                            </div>
+                                            <select id="SourceOfInvestmentVal" name="SourceOfInvestmentVal"
+                                                class="units" data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกแหล่งที่มาของเงินลงทุน"
+                                                onchange="changeColor('SourceOfInvestmentVal');">
+                                                <option value="" class="units">
+                                                    <span>แหล่งที่มาของเงินลงทุน *</span></span>
+                                                </option>
+                                            </select>
+                                            <div id="errorSourceOfInvestmentVal"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 padding no-padding-mobile">
+                                        <div class="formgroup" id="colorCareerVal">
+                                            <input type="hidden" id="Career" name="Career" data-kyc="Career">
+                                            <input type="hidden" id="Careerid" name="Careerid" data-kyc="Careerid">
+                                            <div class="label-drop" id="labelCareerVal">อาชีพปัจจุบัน
+                                                <span>*</span>
+                                            </div>
+                                            <select id="CareerVal" name="CareerVal" class="dropdown"
+                                                data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกอาชีพปัจจุบัน"
+                                                onchange="changeColor('CareerVal');">
+                                                <option value="" class="label">อาชีพปัจจุบัน * </option>
+                                            </select>
+                                            <div id="errorCareerVal"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 padding no-padding-mobile" id="hideWorkPlaceName">
+                                        <div class="formgroup">
+                                            <input type="text" id="WorkPlaceName" name="WorkPlaceName"
+                                                data-kyc="WorkPlaceName" error-text="กรุณาระบุชื่อสถานที่ทำงาน"
+                                                oninput="this.value = this.value.replace(/^\s+/,'');" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="WorkPlaceName">ชื่อสถานที่ทำงาน
+                                                <span>*</span></label>
+                                            <div id="errorWorkPlaceName"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 padding no-padding-mobile" id="hideBusinessType">
+                                        <div class="formgroup" id="colorBusinessTypeVal">
+                                            <input type="hidden" id="BusinessType" name="BusinessType"
+                                                data-kyc="BusinessType">
+                                            <input type="hidden" id="BusinessTypeid" name="BusinessTypeid"
+                                                data-kyc="BusinessTypeid">
+                                            <div class="label-drop" id="labelBusinessTypeVal">ประเภทธุรกิจ
+                                                <span>*</span>
+                                            </div>
+                                            <select id="BusinessTypeVal" name="BusinessTypeVal" class="units"
+                                                data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกประเภทธุรกิจ"
+                                                onchange="changeColor('BusinessTypeVal');">
+                                                <option value="" class="label red">ประเภทธุรกิจ *</option>
+                                            </select>
+                                            <div id="errorBusinessTypeVal"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 padding no-padding-mobile" id="hidePosition">
+                                        <div class="formgroup">
+                                            <input type="text" id="Position" name="Position" data-kyc="Position"
+                                                error-text="กรุณาระบุตำแหน่งงาน"
+                                                oninput="this.value = this.value.replace(/^\s+/,'');" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="Position">ตำแหน่งงาน
+                                                <span>*</span></label>
+                                            <div id="errorPosition"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-xs-12 padding no-padding-mobile">
+                                        <div class="formgroup" id="colorMonthlyIncomeVal">
+                                            <input type="hidden" id="MonthlyIncome" name="MonthlyIncome"
+                                                data-kyc="MonthlyIncome">
+                                            <input type="hidden" id="MonthlyIncomeid" name="MonthlyIncomeid"
+                                                data-kyc="MonthlyIncomeid">
+                                            <div class="label-drop" id="labelMonthlyIncomeVal">รายได้ต่อเดือน
+                                                <span>*</span>
+                                            </div>
+                                            <select id="MonthlyIncomeVal" name="MonthlyIncomeVal" class="dropdown"
+                                                data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกรายได้ต่อเดือน"
+                                                onchange="changeColor('MonthlyIncomeVal');">
+                                                <option value="" class="label">รายได้ต่อเดือน *</option>
+                                            </select>
+                                            <div id="errorMonthlyIncomeVal"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+
+                    <!-- ที่ตั้งที่ทำงาน -->
+                    <div class="border">
+                        <div class="content no-flex">
+                            <div class="col-xs-12 col-sm-4 no-padding-mobile">
+                                <div class="content__title">
+                                    <span>ที่ตั้งที่ทำงาน <span class="orange">*</span></span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 no-padding-mobile">
+                                <input type="hidden" id="WorkChoiceVal" data-kyc="WorkChoice">
+                                <div class="choice work-choice">
+                                    <li>
+                                        <label for="WorkChoice1" class="radio"> ที่อยู่ตามบัตรประชาชน
+                                            <input type="radio" name="WorkChoice" id="WorkChoice1" value="Home"
+                                                onclick="showAddressChoice('Work','hide');fillAddress('Work','','ที่อยู่ตามบัตรประชาชน')"
+                                                data-validation="required" data-validation-error-msg="&nbsp;">
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="WorkChoice2" class="radio"> ที่อยู่ปัจจุบัน
+                                            <input type="radio" name="WorkChoice" id="WorkChoice2" value="Current"
+                                                onclick="showAddressChoice('Work','hide');fillAddress('Work','Current','ที่อยู่ปัจจุบัน')"
+                                                data-validation="required" data-validation-error-msg="&nbsp;">
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="WorkChoice3" class="radio"> ที่อยู่อื่น (โปรดระบุ)
+                                            <input type="radio" name="WorkChoice" id="WorkChoice3" value="Other"
+                                                onclick="showAddressChoice('Work','show')" data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกที่อยู่">
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </li>
+                                    <div id="errorWorkChoice"></div>
+                                </div>
+                            </div>
+                            <div id="WorkChoice" class="hidden">
+                                <div class="mobile-height"></div>
+                                <div class="col-xs-12 no-padding-mobile">
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="AddressWork" name="AddressWork" autocomplete="off"
+                                                data-kyc="AddressWork" error-text="กรุณาระบุเลขที่"
+                                                oninput="this.value = this.value.replace(/[^0-9/]/g, '').replace(/^\s+/,'');"
+                                                maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="AddressWork">เลขที่ <span>*</span></label>
+                                            <div id="errorAddressWork"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-1 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="FloorWork" name="FloorWork" data-kyc="FloorWork"
+                                                onkeydown="keyDown(event)" maxlength="250" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="FloorWork">ชั้น </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-md-1 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="MooWork" name="MooWork" onkeydown="keyDown(event)"
+                                                data-kyc="MooWork"
+                                                oninput="this.value = this.value.replace(/[^0-9\s]/g, '').replace(/(\..*)\./g, '$1');"
+                                                maxlength="250" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="MooWork">หมู่ที่ </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12 col-md-3 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="MoobanWork" name="MoobanWork" data-kyc="MoobanWork"
+                                                maxlength="80" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="MoobanWork">หมู่บ้าน/อาคาร </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="SoiWork" name="SoiWork" data-kyc="SoiWork"
+                                                maxlength="80" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="SoiWork">ซอย </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-3 padding">
+                                        <div class="formgroup">
+                                            <input type="text" id="RoadWork" name="RoadWork" data-kyc="RoadWork"
+                                                maxlength="80" />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="RoadWork">ถนน </label>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-xs-12 col-md-4 padding">
+                                        <div class="formgroup" id="DistricWorkView">
+                                            <input type="hidden" id="DistricWork_id" name="DistricWork_id"
+                                                data-kyc="DistricWork_id" />
+                                            <input type="text" id="DistricWork" name="DistricWork"
+                                                onkeydown="keyDown(event)" data-kyc="DistricWork"
+                                                error-text="กรุณาระบุแขวง/ตำบล" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="DistricWork" class="labeltitle">แขวง/ตำบล
+                                                <span>*</span></label>
+                                            <div id="errorDistricWork"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup" id="AmphoeWorkView">
+                                            <input type="hidden" id="AmphoeWork_id" name="AmphoeWork_id"
+                                                data-kyc="AmphoeWork_id" />
+                                            <input type="text" id="AmphoeWork" name="AmphoeWork"
+                                                onkeydown="keyDown(event)" data-kyc="AmphoeWork"
+                                                error-text="กรุณาระบุเขต/อำเภอ" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="AmphoeWork" class="labeltitle">เขต/อำเภอ
+                                                <span>*</span></label>
+                                            <div id="errorAmphoeWork"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup" id="ProvinceWorkView">
+                                            <input type="hidden" id="ProvinceWork_id" name="ProvinceWork_id"
+                                                data-kyc="ProvinceWork_id" />
+                                            <input type="text" id="ProvinceWork" name="ProvinceWork"
+                                                onkeydown="keyDown(event)" data-kyc="ProvinceWork"
+                                                error-text="กรุณาระบุจังหวัด" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="ProvinceWork" class="labeltitle">จังหวัด
+                                                <span>*</span></label>
+                                            <div id="errorProvinceWork"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup margin-bottom-0" id="ZipcodeWorkView">
+                                            <input type="text" id="ZipcodeWork" name="ZipcodeWork"
+                                                onkeydown="keyDown(event)" data-kyc="ZipcodeWork"
+                                                error-text="กรุณาระบุรหัสไปรษณีย์" maxlength="250" disabled />
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label for="ZipcodeWork" class="labeltitle">รหัสไปรษณีย์
+                                                <span>*</span></label>
+                                            <div id="errorZipcodeWork"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-6 col-md-2 padding">
+                                        <div class="formgroup margin-bottom-0" id="CountryWorkView">
+                                            <input type="text" class="input" id="CountryWork" name="CountryWork"
+                                                data-kyc="CountryWork" data-validation="required"
+                                                data-validation-error-msg="กรุณาเลือกประเทศ"
+                                                error-text="กรุณาเลือกประเทศ">
+                                            <input type="hidden" id="CountryWorkid" name="CountryWorkid"
+                                                data-kyc="CountryWorkid">
+                                            <label for="CountryWork" class="labeltitle" id="labelCountryWorkVal">ประเทศ
+                                                <span class="red" style="color: red;">*</span></label>
+                                            <div id="errorCountryWorkVal"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div id="WorkFill" class="hidden"></div>
+                            </div>
+                            <div class="col-xs-12">
+                                <div id="error_work_address" class="hidden"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!-- วัตถุประสงค์การลงทุน -->
+                    <div class="border">
+                        <div class="content no-flex">
+                            <div class="col-xs-12 no-padding-mobile">
+                                <div class="content__title">
+                                    <span>วัตถุประสงค์การลงทุน <span class="orange">*</span></span>
+                                </div>
+                            </div>
+                            <div class="mobile-height"></div>
+                            <div class="formgroup margin-bottom-0">
+                                <div class="checkboxchoice">
+                                    <ul class="pad-lft0 checkbox-choice" style="padding: 0;" id="showInvest"></ul>
+                                </div>
+                                <input type="hidden" id="InvestmentObjectives" data-kyc="InvestmentObjectives">
+                                <div id="errorInvestmentObjectivesChoice" class="help-block form-error hidden">
+                                    กรุณาเลือกวัตถุประสงค์การลงทุน</div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <!-- บัญชีธนาคารของท่านเพื่อทำธุรกรรมกับบริษัทฯ -->
+                    <div class="border">
+                        <div class="content no-flex">
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="content__title">
+                                    <span>
+                                        <!-- บัญชีธนาคารของท่านเพื่อทำธุรกรรมกับบริษัทฯ (บัญชีที่ 1)  -->
+                                        บัญชีธนาคารของท่าน (เพื่อใช้ในการฝาก -ถอนเงิน)
+                                        <span class="orange">*</span></span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-xs-12 col-sm-12">
+                                <div class="Sub-title"><span class="star">*</span>
+                                    <span class="pls">กรุณาระบุชื่อธนาคารก่อนกรอกชื่อสาขา</span>
+                                </div>
+                            </div>
+                            <br />
+                            <div class="col-xs-4">
+                                <div class="formgroup" id="colorBankNameVal">
+                                    <input type="hidden" id="BankCode" name="BankCode" data-kyc="BankCode">
+                                    <input type="hidden" id="BankName" name="BankName" data-kyc="BankName">
+                                    <div class="label-drop" id="labelBankNameVal">ธนาคาร
+                                        <span>*</span>
+                                    </div>
+                                    <select id="BankNameVal" name="BankNameVal" data-validation="required"
+                                        data-validation-error-msg="กรุณาเลือกธนาคาร">
+                                        <option value="" class="label">ธนาคาร *</option>
+                                    </select>
+                                    <div id="errorBankNameVal"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="formgroup" id="colorBankBranchVal">
+                                    <input type="hidden" id="BankBranchCode" name="BankBranchCode"
+                                        data-kyc="BankBranchCode">
+                                    <input type="hidden" id="BankBranch" name="BankBranch" data-kyc="BankBranch">
+                                    <div class="label-drop" id="labelBankBranchVal">ชื่อสาขา
+                                        <span>*</span>
+                                    </div>
+                                    <select id="BankBranchVal" name="BankBranchVal" data-validation="required"
+                                        data-validation-error-msg="กรุณาเลือกสาขา">
+                                        <option value="" class="label">ชื่อสาขา *</option>
+                                    </select>
+                                    <div id="errorBankBranchVal"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="formgroup">
+                                    <input type="text" id="BankNo" name="BankNo" data-kyc="BankNo"
+                                        onkeydown="keyDown(event)" error-text="กรุณาระบุเลขบัญชี"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+                                        maxlength="250" />
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label for="BankNo">เลขบัญชี
+                                        <span>*</span></label>
+                                    <div id="errorBankNo"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-8 no-padding-mobile">
+                                <div class="content__title">
+                                    <span>
+                                        เพิ่มบัญชีธนาคารที่ 2 (เพื่อใช้ฝากเงิน)
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-4 no-padding-mobile">
+                                <input type="hidden" id="SubBranchChoiceVal" data-kyc="SubBranchChoice">
+                                <div class="choice pad-80">
+                                    <li>
+                                        <label for="SubBranchChoice1" class="radio"> ใช้
+                                            <input type="radio" name="SubBranchChoice" id="SubBranchChoice1"
+                                                value="Have" onclick="showSubAccountChoice('show')">
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="SubBranchChoice2" class="radio"> ไม่ใช้
+                                            <input type="radio" name="SubBranchChoice" id="SubBranchChoice2"
+                                                value="NotHave" onclick="showSubAccountChoice('hide')" checked>
+                                            <span class="checkround"></span>
+                                        </label>
+                                    </li>
+                                </div>
+                            </div>
+                            <br />
+
+
+                            <div id="shw-sub" class="hidden">
+                                <div class="col-xs-12 col-sm-12" style="margin-bottom: 10px;">
+                                    <div class="Sub-title"><span class="star">*</span>
+                                        <span class="pls">กรุณาระบุชื่อธนาคารก่อนกรอกชื่อสาขา</span>
+                                    </div>
+                                </div>
+                                <br />
+                                <div class="col-xs-4">
+                                    <div class="formgroup" id="colorSubBankNameVal">
+                                        <input type="hidden" id="SubBankCode" name="SubBankCode" data-kyc="SubBankCode">
+                                        <input type="hidden" id="SubBankName" name="SubBankName" data-kyc="SubBankName">
+                                        <div class="label-drop" id="labelSubBankNameVal">ธนาคาร
+                                            <span>*</span>
+                                        </div>
+                                        <select id="SubBankNameVal" name="SubBankNameVal" data-kyc="SubBankNameVal"
+                                            data-validation="required" data-validation-error-msg="กรุณาเลือกธนาคาร">
+                                            <option value="" class="label">ธนาคาร *</option>
+                                        </select>
+                                        <div id="errorSubBankNameVal"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="formgroup" id="colorSubBankBranchVal">
+                                        <input type="hidden" id="SubBankBranchCode" name="SubBankBranchCode"
+                                            data-kyc="SubBankBranchCode">
+                                        <input type="hidden" id="SubBankBranch" name="SubBankBranch"
+                                            data-kyc="SubBankBranch">
+                                        <div class="label-drop" id="labelSubBankBranchVal">ชื่อสาขา
+                                            <span>*</span>
+                                        </div>
+                                        <select id="SubBankBranchVal" name="SubBankBranchVal"
+                                            data-kyc="SubBankBranchVal" data-validation="required"
+                                            data-validation-error-msg="กรุณาเลือกสาขา" disabled>
+                                            <option value="" class="label">ชื่อสาขา *</option>
+                                        </select>
+                                        <div id="errorSubBankBranchVal"></div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-4">
+                                    <div class="formgroup">
+                                        <input type="text" id="SubBankNo" name="SubBankNo" data-kyc="SubBankNo"
+                                            onkeydown="keyDown(event)" error-text="กรุณาระบุเลขบัญชี"
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+                                            maxlength="250" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <label for="SubBankNo">เลขบัญชี
+                                            <span>*</span></label>
+                                        <div id="errorSubBankNo"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                            <div class="col-xs-12 col-sm-12">
+                                <div id="shw-note"> <span class="text-note">หมายเหตุ:</span><span class="text-acc">
+                                        บัญชีธนาคารต้องเป็น “ชื่อบัญชีลูกค้า” และเป็นบัญชีประเภท
+                                        “ออมทรัพย์” เท่านั้น (บัญชีร่วมจะไม่สามารถใช้ได้)</span></div>
+                                <input type="hidden" id="status_module" name="status_module" data-kyc="status_module">
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <!-- bottom -->
+                    <div class="col-xs-12 padding hidden-md hidden-lg">
+                        <div class="condition"><span>*</span> ข้อมูลสำคัญ กรุณากรอกให้ครบถ้วน</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="bottom">
+                        <div class="col-xs-6 col-md-4 padding">
+                            <a onclick="btnBack()" class="arrow" role="button">
+                                <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                    <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                    <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                </svg>
+                                <div>ย้อนกลับ</div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 padding hidden-xs hidden-sm">
+                            <div class="condition"><span>*</span> ข้อมูลสำคัญ กรุณากรอกให้ครบถ้วน</div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 padding"><input type="button" class="submit" value="ถัดไป"
+                                onclick="btnNext()" style="background-color:#f2f2f2;">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="subBranchPop" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body mdb-msg">
+                <p id="msg_content">กรุณากรอกชื่อธนาคารก่อนที่จะทำการกรอกชื่อสาขาธนาคาร</p>
+            </div>
+            <div class="modal-footer">
+                <button href="javascript:void(0)" onclick="hidesubBranchPop()" class="button-accept btn-w-25"
+                    type="button" aria-label="Close">ตกลง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bussiPop" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body mdb-msg">
+                <p id="msg_content">กรุณากรอกอาชีพปัจจุบันก่อนที่จะทำการกรอกประเภทธุรกิจ</p>
+            </div>
+            <div class="modal-footer">
+                <button href="javascript:void(0)" onclick="hidebussiPop()" class="button-accept btn-w-25" type="button"
+                    aria-label="Close">ตกลง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="bankNotMathcPop" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body mdb-msg">
+                <p id="msg_content">กรุณากรอกบัญชีธนาคารของท่าน</p>
+            </div>
+            <div class="modal-footer">
+                <button href="javascript:void(0)" onclick="hideBankNotMathcPop()" class="button-accept btn-w-25"
+                    type="button" aria-label="Close">ตกลง</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="../../assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="../../assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="../../assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- JS -->
+<script type="text/javascript" src="../../assets/js/JQL.min.js"></script>
+<script type="text/javascript" src="../../assets/js/typeahead.bundle.js"></script>
+<script type="text/javascript" src="../../assets/js/jquery.Thailand.js"></script>
+<script src="../../assets/js/basic-info.js"></script>
+<script src="../../assets/js/framework.js"></script>
+<script src="../../assets/js/script.js"></script>
+
+<!-- AUTO COMPLEATE -->
+<script type="text/javascript">
+    let module = 'module_basicInfo';
+
+    let testtt = "";
+
+    $(window).on('load', function () {
+        let v = parseInt('1');
+        $('#waiting_modal_dialog').addClass('show');
+        if (v != 1) {
+            setTimeout(() => {
+                window.location.href = '/send-reload-page';
+            }, 1000);
+        }
+    });
+
+    $(document).ready(() => {
+        initCurrenPage(module)
+
+        getBasicDropdown();
+
+
+        $("#CountryVal-button").addClass("ui-selectmenu-button ui-selectmenu-button-closed ui-corner-all ui-button ui-widget ui-selectmenu-disabled ui-state-disabled input");
+        $('#CountryVal').prop("disabled", true);
+        $("#labelCountryVal").attr("style", "display:block;")
+
+        if ($("#SubBranchChoice2").is(":checked")) {
+            $("#shw-sub").addClass('hidden')
+            $("#shw-note").removeClass('hidden')
+            $("#SubBankNameVal").prop("disabled", true)
+            $("#SubBankBranchVal").prop("disabled", true)
+            $("#SubBankNo").prop("disabled", true)
+        }
+
+        $("#BankBranchVal-button").addClass("ui-selectmenu-disabled ui-state-disabled");
+        $("#BankNameVal").selectmenu({
+            change: () => {
+                $("#BankName").val($("#BankNameVal option:selected").text());
+                $("#BankCode").val($('#BankNameVal').find(":selected").val());
+                $("#BankBranchVal").selectmenu("enable");
+                $("#errorBankNameVal").html("");
+                $("#labelBankNameVal").attr("style", "display: block;");
+                $('#BankBranchVal').html("");
+
+                $("#BankBranch").val("")
+                $("#BankBranchCode").val("")
+                $("#BankBranchVal").val("")
+                $("div#colorBankBranchVal select").val("").change();
+                $("#BankBranchVal-button").removeAttr("style")
+                $("#labelBankBranchVal").removeAttr("style")
+                $("span#BankBranchVal-button span.ui-selectmenu-text").text("กรุณาเลือกชื่อสาขา *");
+
+                getBranch();
+            }
+        })
+
+        $("#SubBankNameVal").selectmenu({
+            change: () => {
+                $("#SubBankName").val($("#SubBankNameVal option:selected").text());
+                $("#SubBankCode").val($('#SubBankNameVal').find(":selected").val());
+                $("#SubBankBranchVal").selectmenu("enable");
+                $("#errorSubBankNameVal").html("");
+                $("#labelSubBankNameVal").attr("style", "display: block;");
+                $('#SubBankBranchVal').html("");
+
+                $("#SubBankBranch").val("")
+                $("#SubBankBranchCode").val("")
+                $("#SubBankBranchVal").val("")
+                $("div#colorSubBankBranchVal select").val("").change();
+                $("#SubBankBranchVal-button").removeAttr("style")
+                $("#labelSubBankBranchVal").removeAttr("style")
+                $("span#SubBankBranchVal-button span.ui-selectmenu-text").text("กรุณาเลือกชื่อสาขา *");
+
+                getSubBranch();
+            }
+        })
+
+        $("#BusinessTypeVal-button").addClass("ui-selectmenu-disabled ui-state-disabled");
+        $("span#CareerVal-button span.ui-selectmenu-text").html("อาชีพปัจจุบัน <span class=red style=color:red;>*</span>");
+
+        $("span#BusinessTypeVal-button span.ui-selectmenu-text").html("ประเภทธุรกิจ <span class=red style=color:red;>*</span>");
+
+        $("span#MonthlyIncomeVal-button span.ui-selectmenu-text").html("รายได้ต่อเดือน <span class=red style=color:red;>*</span>");
+
+        $("span#SourceOfInvestmentVal-button span.ui-selectmenu-text").html("แหล่งที่มาของเงินลงทุน <span class=red style=color:red;>*</span>");
+
+        $("span#EducationLevelVal-button span.ui-selectmenu-text").html("ระดับการรศึกษาสูงสุด <span class=red style=color:red;>*</span>");
+
+        $("input").on('keyup', function () {
+            var id = document.getElementById(this.id);
+            if (id !== "BankNo") {
+                $('#error' + this.id).html("");
+                $("#" + this.id).removeAttr("style", "border-color: red;");
+            }
+            if (this.id == "Address" || this.id == "Floor" || this.id == "Moo" || this.id == "Mooban" || this.id == "Soi" || this.id == "Road" || this.id == "Distric" || this.id == "Amphoe" || this.id == "Province" || this.id == "Zipcode") {
+                $("#IdcardFill").attr("class", "hidden");
+            }
+            if (this.id == "AddressCurrent" || this.id == "FloorCurrent" || this.id == "MooCurrent" || this.id == "MoobanCurrent" || this.id == "SoiCurrent" || this.id == "RoadCurrent" || this.id == "DistricCurrent" || this.id == "AmphoeCurrent" || this.id == "ProvinceCurrent" || this.id == "ZipcodeCurrent") {
+                $("#error_current_address").attr("class", "hidden");
+            }
+            if (this.id == "AddressWork" || this.id == "FloorWork" || this.id == "MooWork" || this.id == "MoobanWork" || this.id == "SoiWork" || this.id == "RoadWork" || this.id == "DistricWork" || this.id == "AmphoeWork" || this.id == "ProvinceWork" || this.id == "ZipcodeWork") {
+                $("#error_work_address").attr("class", "hidden");
+            }
+            if (this.id == 'WorkPlaceName') {
+                if ($('#EducationLevelVal').val() != "") {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                    $('#EducationLevelVal-button').attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#SourceOfInvestmentVal').val() != "") {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                    $('#SourceOfInvestmentVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#CareerVal').val() != "") {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                    $('#CareerVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#WorkPlaceName').val() != "") {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                    $('#WorkPlaceName').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#BusinessTypeVal').val() != "") {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#BusinessTypeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#Position').val() != "") {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                    $('#Position').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#MonthlyIncomeVal').val() != "") {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#MonthlyIncomeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                }
+            }
+
+            if (this.id == 'Position') {
+                if ($('#EducationLevelVal').val() != "") {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                    $('#EducationLevelVal-button').attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#SourceOfInvestmentVal').val() != "") {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                    $('#SourceOfInvestmentVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#CareerVal').val() != "") {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                    $('#CareerVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#WorkPlaceName').val() != "") {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                    $('#WorkPlaceName').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#BusinessTypeVal').val() != "") {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#BusinessTypeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#BusinessTypeVal').val() != "") {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                    $('#Position').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#MonthlyIncomeVal').val() != "") {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#MonthlyIncomeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                }
+            }
+        });
+
+        $("#Zipcode").on('input', function () {
+            var country = document.getElementById('Countryid').value
+            if (country == "TH") {
+                this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+            } else {
+                this.value = this.value.replace(/[^0-9/-]/g, '');
+            }
+        })
+
+        $("#ZipcodeCurrent").on('input', function () {
+            var country = document.getElementById('CountryCurrentid').value
+            if (country == "TH") {
+                this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+            } else {
+                this.value = this.value.replace(/[^0-9/-]/g, '');
+            }
+        })
+
+        $("#ZipcodeWork").on('input', function () {
+            var country = document.getElementById('CountryWorkid').value
+            if (country == "TH") {
+                this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');
+            } else {
+                this.value = this.value.replace(/[^0-9/-]/g, '');
+            }
+        })
+
+
+        $("span#BankNameVal-button span.ui-selectmenu-text").html("กรุณาเลือกธนาคาร <span class=red style=color:red;>*</span>");
+        $("span#BankBranchVal-button span.ui-selectmenu-text").html("กรุณาเลือกชื่อสาขา <span class=red style=color:red;>*</span>");
+        $("label[for='BankNo']").html("กรุณาระบุเลขบัญชี <span class=red style=color:red;>*</span>");
+        $("#BankNo").on("keyup", function () {
+            if (this.value.length < 10) {
+                $("#errorBankNo").html(
+                    `<div class="help-block form-error">เลขบัญชีอย่างน้อย 10 ตัวอักษร</div>`)
+            }
+        })
+
+        $("span#SubBankNameVal-button span.ui-selectmenu-text").html("กรุณาเลือกธนาคาร <span class=red style=color:red;>*</span>");
+        $("span#SubBankBranchVal-button span.ui-selectmenu-text").html("กรุณาเลือกชื่อสาขา <span class=red style=color:red;>*</span>");
+        $("label[for='SubBankNo']").html("กรุณาระบุเลขบัญชี <span class=red style=color:red;>*</span>");
+        $("#SubBankNo").on("keyup", function () {
+            if (this.value.length < 10) {
+                $("#errorSubBankNo").html(
+                    `<div class="help-block form-error">เลขบัญชีอย่างน้อย 10 ตัวอักษร</div>`)
+            }
+        })
+
+        $("#BankNo").on("click", function () {
+            $("label[for='BankNo']").html("เลขบัญชี <span class=red style=color:red;>*</span>");
+        })
+
+        $("#SubBankNo").on("click", function () {
+            $("label[for='SubBankNo']").html("เลขบัญชี <span class=red style=color:red;>*</span>");
+        })
+
+
+        $("input").on('blur', function () {
+            if (this.value == "") {
+                var id = document.getElementById(this.id);
+                console.log("=>", this.id)
+                var textError = id.getAttribute('error-text');
+                if (textError !== null) {
+                    $("#" + this.id).attr("style", "border-color: red;");
+                    $("#" + this.id + "View").find('label').removeClass('uplabel');
+                    $('#error' + this.id).html(`<div class="help-block form-error">${textError}</div>`);
+                    if (this.id == "BankNo") {
+                        $("label[for='BankNo']").html("กรุณาระบุเลขบัญชี <span class=red style=color:red;>*</span>");
+                    }
+                    if (this.id == "SubBankNo") {
+                        $("label[for='SubBankNo']").html("กรุณาระบุเลขบัญชี <span class=red style=color:red;>*</span>");
+                    }
+                }
+            } else {
+                if (this.id == "BankNo") {
+                    $("label[for='BankNo']").html("เลขบัญชี <span class=red style=color:red;>*</span>");
+                }
+                if (this.id == "SubBankNo") {
+                    $("label[for='SubBankNo']").html("เลขบัญชี <span class=red style=color:red;>*</span>");
+                }
+            }
+        });
+
+        $("#Province, #ProvinceCurrent, #ProvinceWork").on('change blur paste', function () {
+            console.log("Yes Province");
+        });
+
+
+        $("select").on('change', function () {
+            $('#error' + this.id).html("");
+        });
+
+        $('input[type="radio"]').on('change', function () {
+            let id = this.id.substring(0, this.id.length - 1);
+            $('#error' + id).html("");
+
+            if (this.id == 'CurrentChoice2') {
+                $('#CountryCurrent').val('ไทย').addClass('input')
+                $("#CountryCurrentid").val('TH')
+                $("#labelCountryCurrentVal").attr("style", "display:block;")
+                $("#CountryCurrent").attr("style", "border-bottom:2px solid #002561;")
+            }
+            if (this.id == 'WorkChoice3') {
+                $('#CountryWork').val('ไทย').addClass('input')
+                $("#CountryWorkid").val('TH')
+                $("#labelCountryWorkVal").attr("style", "display:block;")
+                $("#CountryWork").attr("style", "border-bottom:2px solid #002561;")
+
+            }
+        });
+
+        $('ul[role="listbox"]').on('click', function () {
+            var ulId = document.getElementById(this.id);
+            var spanId = ulId.getAttribute('aria-labelledby');
+            if (spanId == "BankNameVal-button" || spanId == "SubBankNameVal-button") {
+                $("#" + spanId).removeAttr("style", "border-color: red;").attr("style",
+                    "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;");
+            } else if (spanId == "CareerVal-button") {
+                $("#" + spanId).removeAttr("style", "border-color: red;").attr("style",
+                    "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;");
+            } else if (spanId == "EducationLevelVal-button") {
+                $("#" + spanId).removeAttr("style", "border-color: red;").attr("style",
+                    "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;");
+            }
+            else {
+                $("#" + spanId).removeAttr("style", "border-color: red;").attr("style",
+                    "border-bottom:2px solid #002561;");
+            }
+
+        });
+
+        $('#showInvest').on('change', 'input[type=checkbox]', function (e) {
+            if (typeof $('.InvestmentObjectivesChoice:checked')[0] !== 'undefined') {
+                $("#errorInvestmentObjectivesChoice").addClass("hidden")
+            } else {
+                $("#errorInvestmentObjectivesChoice").removeClass("hidden")
+            }
+        })
+
+        setTimeout(function () {
+            customLoad(module, function (data) {
+                // ที่อยู่ตามบัตรประชาชน
+                if (data.Address !== "" && data.Address !== null) $("#Address").val(data.Address).addClass(
+                    'input valid')
+
+                if (data.Floor !== "" && data.Floor !== null) $("#Floor").val(data.Floor).addClass(
+                    'input valid')
+                if (data.Distric !== "" && data.Distric !== null) $('#DistricView').find('label').addClass(
+                    'uplabel')
+                if (data.Distric !== "" && data.Distric !== null) $('#Distric').val(data.Distric).addClass(
+                    'input valid')
+                if (data.Amphoe !== "" && data.Amphoe !== null) $('#AmphoeView').find('label').addClass(
+                    'uplabel')
+                if (data.Amphoe !== "" && data.Amphoe !== null) $('#Amphoe').val(data.Amphoe).addClass(
+                    'input valid')
+                if (data.Province !== "" && data.Province !== null) $('#ProvinceView').find('label')
+                    .addClass('uplabel')
+                if (data.Province !== "" && data.Province !== null) $('#Province').val(data.Province)
+                    .addClass('input valid')
+                if (data.Zipcode !== "" && data.Zipcode !== null) $('#ZipcodeView').find('label').addClass(
+                    'uplabel')
+                if (data.Zipcode !== "" && data.Zipcode !== null) $('#Zipcode').val(data.Zipcode).addClass(
+                    'input valid')
+                if (data.Country !== "" && data.Country !== null) {
+                    $("#Countryid").val(data.Countryid)
+                    $("#Country").val(data.Country).addClass('input valid')
+                    $("#labelCountryVal").attr("style", "display:block;")
+                    $("#CountryVal").val(CountryVal)
+                    $("#CountryVal-button")[0].lastElementChild.innerHTML = data.Country;
+                    $("#CountryVal-button").attr("style",
+                        "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#Country').val("ไทย").addClass('input valid')
+                    $('#Countryid').val("TH").addClass('input valid')
+                }
+
+                if (data.Moo !== "" && data.Moo !== null) $("#Moo").val(data.Moo).addClass('input valid')
+                if (data.Mooban !== "" && data.Mooban !== null) $("#Mooban").val(data.Mooban).addClass(
+                    'input valid')
+                if (data.Soi !== "" && data.Soi !== null) $("#Soi").val(data.Soi).addClass('input valid')
+                if (data.Road !== "" && data.Road !== null) $("#Road").val(data.Road).addClass(
+                    'input valid')
+
+                // ที่อยู่ปัจจุบัน
+                if (data.CurrentChoice !== "" && data.CurrentChoice !== null && data.CurrentChoice ==
+                    "Home") {
+                    $("#CurrentChoice1").prop("checked", true);
+                    $("#CurrentFill").removeClass("hidden");
+                    fillAddress('Current', '', 'ที่อยู่ตามบัตรประชาชน');
+                } else if (data.CurrentChoice !== "" && data.CurrentChoice !== null && data.CurrentChoice ==
+                    "Other") {
+                    $("#CurrentChoice2").prop("checked", true);
+                    showAddressChoice('Current', 'show')
+
+                    if (data.AddressCurrent !== "" && data.AddressCurrent !== null) $("#AddressCurrent")
+                        .val(data.AddressCurrent).addClass('input valid')
+
+                    if (data.DistricCurrent !== "" && data.DistricCurrent !== null) $('#DistricCurrentView')
+                        .find('label').addClass('uplabel')
+                    if (data.DistricCurrent !== "" && data.DistricCurrent !== null) $('#DistricCurrent')
+                        .val(data.DistricCurrent).addClass('input valid')
+                    if (data.AmphoeCurrent !== "" && data.AmphoeCurrent !== null) $('#AmphoeCurrentView')
+                        .find('label').addClass('uplabel')
+                    if (data.AmphoeCurrent !== "" && data.AmphoeCurrent !== null) $('#AmphoeCurrent').val(
+                        data.AmphoeCurrent).addClass('input valid')
+                    if (data.ProvinceCurrent !== "" && data.ProvinceCurrent !== null) $(
+                        '#ProvinceCurrentView').find('label').addClass('uplabel')
+                    if (data.ProvinceCurrent !== "" && data.ProvinceCurrent !== null) $('#ProvinceCurrent')
+                        .val(data.ProvinceCurrent).addClass('input valid')
+                    if (data.ZipcodeCurrent !== "" && data.ZipcodeCurrent !== null) $('#ZipcodeCurrentView')
+                        .find('label').addClass('uplabel')
+                    if (data.ZipcodeCurrent !== "" && data.ZipcodeCurrent !== null) $('#ZipcodeCurrent')
+                        .val(data.ZipcodeCurrent).addClass('input valid')
+
+                    if (data.CountryCurrent !== "" && data.CountryCurrent !== null) {
+                        $("#CountryCurrentid").val(data.CountryCurrentid)
+                        $("#CountryCurrent").val(data.CountryCurrent).addClass('input valid')
+                        $("#labelCountryCurrentVal").attr("style", "display:block;")
+                        $('#CountryCurrentView').find('label').addClass('uplabel')
+                        $("#CountryCurrent").attr("style", "border-bottom:2px solid #002561;")
+                    }
+
+                    if (data.FloorCurrent !== "" && data.FloorCurrent !== null) $("#FloorCurrent").val(data
+                        .FloorCurrent).addClass(
+                            'input valid')
+                    if (data.MooCurrent !== "" && data.MooCurrent !== null) $("#MooCurrent").val(data
+                        .MooCurrent).addClass(
+                            'input valid')
+                    if (data.MoobanCurrent !== "" && data.MoobanCurrent !== null) $("#MoobanCurrent").val(
+                        data.MoobanCurrent).addClass(
+                            'input valid')
+                    if (data.SoiCurrent !== "" && data.SoiCurrent !== null) $("#SoiCurrent").val(data
+                        .SoiCurrent).addClass(
+                            'input valid')
+                    if (data.RoadCurrent !== "" && data.RoadCurrent !== null) $("#RoadCurrent").val(data
+                        .RoadCurrent).addClass(
+                            'input valid')
+                }
+
+                // อาชีพปัจจุบันและแหล่งที่มาของเงินลงทุน
+                if (data.EducationLevel !== "" && data.EducationLevel !== null) {
+                    $("#EducationLevelId").val(data.EducationLevelId)
+                    $("#EducationLevel").val(data.EducationLevel)
+                    $("#labelEducationLevelVal").attr("style", "display:block;")
+                    $("#EducationLevelVal").val(EducationLevelVal)
+                    $("#EducationLevelVal-button")[0].lastElementChild.innerHTML = data
+                        .EducationLevel;
+                    $("#EducationLevelVal-button").attr("style",
+                        "border-bottom:2px solid #002561;")
+                }
+
+
+                if (data.SourceOfInvestment !== "" && data.SourceOfInvestment !== null) {
+                    console.log("second", data.SourceOfInvestment);
+                    $("#SourceOfInvestmentid").val(data.SourceOfInvestmentid)
+                    $("#SourceOfInvestment").val(data.SourceOfInvestment)
+                    $("#labelSourceOfInvestmentVal").attr("style", "display:block;")
+                    console.log("third", SourceOfInvestmentVal);
+                    $("#SourceOfInvestmentVal").val(SourceOfInvestmentVal)
+                    $("#SourceOfInvestmentVal-button")[0].lastElementChild.innerHTML = data
+                        .SourceOfInvestment;
+                    $("#SourceOfInvestmentVal-button").attr("style",
+                        "border-bottom:2px solid #002561;")
+                }
+
+                if (data.MonthlyIncome !== "" && data.MonthlyIncome !== null) {
+                    var MonthlyIncomeDecode = document.createElement('textarea');
+                    MonthlyIncomeDecode.innerHTML = data.MonthlyIncome;
+                    data.MonthlyIncome = MonthlyIncomeDecode.value;
+                    $("#MonthlyIncomeid").val(data.MonthlyIncomeid)
+                    $("#MonthlyIncome").val(data.MonthlyIncome)
+                    $("#labelMonthlyIncomeVal").attr("style", "display:block;")
+                    $("#MonthlyIncomeVal").val(MonthlyIncomeVal)
+                    $("#MonthlyIncomeVal-button")[0].lastElementChild.innerHTML = data.MonthlyIncome;
+                    $("#MonthlyIncomeVal-button").attr("style",
+                        "border-bottom:2px solid #002561;")
+                }
+
+                if (data.WorkPlaceName !== "" && data.WorkPlaceName !== null) {
+                    $("#WorkPlaceName").val(data.WorkPlaceName).addClass('input valid')
+                }
+
+                if (data.Position !== "" && data.Position !== null) {
+                    $("#Position").val(data.Position).addClass('input valid')
+                }
+
+                if (data.Career !== "" && data.Career !== null) {
+                    $("#Careerid").val(data.Careerid)
+                    $("#Career").val(data.Career)
+                    $("#labelCareerVal").attr("style", "display:block;")
+                    $("#CareerVal").val(CareerVal)
+                    $("#CareerVal-button")[0].lastElementChild.innerHTML = data.Career;
+                    $("#CareerVal-button").attr("style",
+                        "border-bottom:2px solid #002561;")
+                    $("#BusinessTypeVal-button").removeClass("ui-selectmenu-disabled ui-state-disabled");
+                    getBusinesstypeLoad(data.Careerid);
+
+                }
+
+                if (data.BusinessType !== "" && data.BusinessType !== null) {
+                    $("#BusinessTypeid").val(data.BusinessTypeid)
+                    $("#BusinessType").val(data.BusinessType)
+                    $("#labelBusinessTypeVal").attr("style", "display:block;")
+                    $("#BusinessTypeVal").val(BusinessTypeVal)
+                    $("#BusinessTypeVal-button")[0].lastElementChild.innerHTML = data.BusinessType;
+                    $("#BusinessTypeVal-button").attr("style",
+                        "border-bottom:2px solid #002561;")
+                }
+
+                // ที่ตั้งที่ทำงาน
+                if (data.WorkChoice == "Home") {
+                    $("#WorkChoice1").prop("checked", true);
+                    $("#WorkFill").removeClass("hidden");
+                    fillAddress('Work', '', 'ที่อยู่ตามบัตรประชาชน')
+                } else if (data.WorkChoice == "Current") {
+                    $("#WorkChoice2").prop("checked", true);
+                    $("#WorkFill").removeClass("hidden");
+                    fillAddress('Work', 'Current', 'ที่อยู่ปัจจุบัน')
+                } else if (data.WorkChoice == "Other") {
+                    $("#WorkChoice3").prop("checked", true);
+                    showAddressChoice('Work', 'show')
+
+                    if (data.AddressWork !== "" && data.AddressWork !== null) $("#AddressWork").val(data
+                        .AddressWork).addClass('input valid')
+
+                    if (data.DistricWork !== "" && data.DistricWork !== null) $('#DistricWorkView').find(
+                        'label').addClass('uplabel')
+                    if (data.DistricWork !== "" && data.DistricWork !== null) $('#DistricWork').val(data
+                        .DistricWork).addClass('input valid')
+                    if (data.AmphoeWork !== "" && data.AmphoeWork !== null) $('#AmphoeWorkView').find(
+                        'label').addClass('uplabel')
+                    if (data.AmphoeWork !== "" && data.AmphoeWork !== null) $('#AmphoeWork').val(data
+                        .AmphoeWork).addClass('input valid')
+                    if (data.ProvinceWork !== "" && data.ProvinceWork !== null) $('#ProvinceWorkView').find(
+                        'label').addClass('uplabel')
+                    if (data.ProvinceWork !== "" && data.ProvinceWork !== null) $('#ProvinceWork').val(data
+                        .ProvinceWork).addClass('input valid')
+                    if (data.ZipcodeWork !== "" && data.ZipcodeWork !== null) $('#ZipcodeWorkView').find(
+                        'label').addClass('uplabel')
+                    if (data.ZipcodeWork !== "" && data.ZipcodeWork !== null) $('#ZipcodeWork').val(data
+                        .ZipcodeWork).addClass('input valid')
+                    if (data.CountryWork !== "" && data.CountryWork !== null) $('#CountryWork').val(data
+                        .CountryWork).addClass('input valid')
+                    if (data.CountryWork !== "" && data.CountryWork !== null) {
+                        $("#CountryWorkid").val(data.CountryWorkid)
+                        $("#CountryWork").val(data.CountryWork).addClass('input valid')
+                        $("#labelCountryWorkVal").attr("style", "display:block;")
+                        $('#CountryWorkView').find('label').addClass('uplabel')
+                        $("#CountryWork").attr("style", "border-bottom:2px solid #002561;")
+                    }
+
+                    if (data.FloorWork !== "" && data.FloorWork !== null) $("#FloorWork").val(data.FloorWork)
+                        .addClass('input valid')
+                    if (data.MooWork !== "" && data.MooWork !== null) $("#MooWork").val(data.MooWork)
+                        .addClass('input valid')
+                    if (data.MoobanWork !== "" && data.MoobanWork !== null) $("#MoobanWork").val(data
+                        .MoobanWork).addClass(
+                            'input valid')
+                    if (data.SoiWork !== "" && data.SoiWork !== null) $("#SoiWork").val(data.SoiWork)
+                        .addClass('input valid')
+                    if (data.RoadWork !== "" && data.RoadWork !== null) $("#RoadWork").val(data.RoadWork)
+                        .addClass('input valid')
+                }
+
+                // บัญชีธนาคาร
+                if (data.BankName !== "" && data.BankName !== null) {
+                    $("#BankName").val(data.BankName)
+                    $("#BankCode").val(data.BankCode)
+                    $("#BankNameVal").val(data.BankCode)
+                    $("#labelBankNameVal").attr("style", "display:block;")
+                    $("#BankNameVal-button")[0].lastElementChild.innerHTML = data.BankName;
+                    $("#BankNameVal-button").attr("style",
+                        "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                    $("#BankBranchVal-button").removeClass("ui-selectmenu-disabled ui-state-disabled");
+                    getBranch();
+                }
+
+                if (data.BankBranch !== "" && data.BankBranch !== null) {
+                    $("#BankBranch").val(data.BankBranch)
+                    $("#BankBranchCode").val(data.BankBranchCode)
+                    $("#BankBranchVal").val(data.BankBranchCode)
+                    $("#labelBankBranchVal").attr("style", "display:block;")
+                    $("#BankBranchVal-button")[0].lastElementChild.innerHTML = data.BankBranch;
+                    $("#BankBranchVal-button").attr("style",
+                        "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                    $("#BankBranchVal-button").removeClass("ui-selectmenu-disabled ui-state-disabled");
+
+                }
+
+                if (data.BankNo !== "" && data.BankNo !== null) {
+                    $("#BankNo").val(data.BankNo).addClass('input valid')
+                    $("label[for='BankNo']").html("เลขบัญชี <span class=red style=color:red;>*</span>")
+                    if (data.BankNo.length < 10) {
+                        $("#errorBankNo").html(
+                            `<div class="help-block form-error">เลขบัญชีอย่างน้อย 10 ตัวอักษร</div>`)
+                    }
+                }
+
+                if (data.SubBranchChoice !== "" && data.SubBranchChoice !== null && data.SubBranchChoice ==
+                    "Have") {
+                    $("#SubBranchChoice1").prop("checked", true);
+                    showSubAccountChoice('show')
+                    if (data.SubBankNo !== "" && data.SubBankNo !== null) {
+                        $("#SubBankNo").val(data.SubBankNo).addClass('input valid')
+                        $("label[for='SubBankNo']").html("เลขบัญชี <span class=red style=color:red;>*</span>")
+                        if (data.SubBankNo.length < 10) {
+                            $("#errorSubBankNo").html(
+                                `<div class="help-block form-error">เลขบัญชีอย่างน้อย 10 ตัวอักษร</div>`
+                            )
+                        }
+                    }
+
+                    if (data.SubBankName !== "" && data.SubBankName !== null) {
+                        $("#SubBankName").val(data.SubBankName)
+                        $("#SubBankCode").val(data.SubBankCode)
+                        $("#SubBankNameVal").val(data.SubBankCode)
+                        $("#labelSubBankNameVal").attr("style", "display:block;")
+                        $("#SubBankNameVal-button")[0].lastElementChild.innerHTML = data.SubBankName;
+                        $("#SubBankNameVal-button").attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                        $("#SubBankBranchVal").selectmenu("enable");
+                        getSubBranch();
+                    }
+
+                    if (data.SubBankBranch !== "" && data.SubBankBranch !== null) {
+                        $("#SubBankBranch").val(data.SubBankBranch)
+                        $("#SubBankBranchCode").val(data.SubBankBranchCode)
+                        $("#SubBankBranchVal").val(data.SubBankBranchCode)
+                        $("#labelSubBankBranchVal").attr("style", "display:block;")
+                        $("#SubBankBranchVal-button")[0].lastElementChild.innerHTML = data.SubBankBranch;
+                        $("#SubBankBranchVal-button").attr("style",
+                            "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                        $("#SubBankBranchVal").selectmenu("enable");
+                    }
+                }
+
+                let ansInvestArr = data.InvestmentObjectives.split("|")
+
+                $("#showInvest").find(".checkbox").each(function (e) {
+                    for (i = 0; i < ansInvestArr.length; i++) {
+                        if ((e + 1) == ansInvestArr[i]) {
+                            $(`#InvestmentObjectives${e + 1}`).prop("checked", true)
+                            break;
+                        }
+                    }
+                });
+            });
+        }, 500);
+    })
+    function getBasicDropdown() {
+
+
+        const wsurl = `${MAIN_URL}/api/get-basic-dropdown`;
+
+        fetch(wsurl, {
+            method: "POST"
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                console.log(result);
+                var data = JSON.parse(result);
+                console.log(data);
+
+                var countryCodeMap = {};
+                // Populate DataCountryCurrent for autocomplete
+                var DataCountryCurrent = [];
+                $.each(data.country, function (i, item) {
+                    DataCountryCurrent.push(item.name);
+                    countryCodeMap[item.name] = item.code; // Map country names to country codes
+                });
+
+                $("#CountryCurrent").autocomplete({
+                    source: DataCountryCurrent,
+                    minLength: 0,
+                    select: function (event, ui) {
+                        var selectedCountryName = ui.item.value; // Get the selected country name
+                        var selectedCountryCode = countryCodeMap[selectedCountryName]; // Get the corresponding country code
+                        $("#CountryCurrentid").val(selectedCountryCode); // Set the value of CountryCurrentid
+                    },
+                    search: function (event, ui) {
+                        var selectedCountryCode = countryCodeMap[this.value];
+                        if (selectedCountryCode != null || selectedCountryCode != undefined) {
+                            $("#CountryCurrentid").val(selectedCountryCode);
+                        }
+
+                        return true;
+                    }
+                });
+                // เพิ่มการจัดการเหตุการณ์คลิกที่ input "tags" เพื่อแสดง dropdown
+                $("#CountryCurrent").on("click", function () {
+                    $(this).autocomplete("search", ""); // ใช้คำสั่ง search เพื่อแสดง dropdown
+                });
+
+                //CountryWork
+                var countryWorkCodeMap = {};
+                // Populate DataCountryWork for autocomplete
+                var DataCountryWork = [];
+                $.each(data.country, function (i, item) {
+                    DataCountryWork.push(item.name);
+                    countryWorkCodeMap[item.name] = item.code; // Map country names to country codes
+                });
+
+                $("#CountryWork").autocomplete({
+                    source: DataCountryWork,
+                    minLength: 0,
+                    select: function (event, ui) {
+                        var selectedCountryName = ui.item.value; // Get the selected country name
+                        var selectedCountryCode = countryWorkCodeMap[selectedCountryName]; // Get the corresponding country code
+                        $("#CountryWorkid").val(selectedCountryCode); // Set the value of CountryCurrentid
+                    },
+                    search: function (event, ui) {
+                        var selectedCountryCode = countryCodeMap[this.value];
+                        if (selectedCountryCode != null || selectedCountryCode != undefined) {
+                            $("#CountryWorkid").val(selectedCountryCode);
+                        }
+                        return true;
+                    }
+                });
+                // เพิ่มการจัดการเหตุการณ์คลิกที่ input "tags" เพื่อแสดง dropdown
+                $("#CountryWork").on("click", function () {
+                    $(this).autocomplete("search", ""); // ใช้คำสั่ง search เพื่อแสดง dropdown
+                });
+
+                $.each(data.education, function (i, item) {
+                    $('#EducationLevelVal').append($('<option>', {
+                        value: item.id,
+                        text: item.name
+                    }))
+                })
+
+                $.each(data.investment_type, function (i, item) {
+                    $('#SourceOfInvestmentVal').append($('<option>', {
+                        value: item.id,
+                        text: item.name
+                    }))
+                })
+                $.each(data.current_career_type, function (i, item) {
+                    $('#CareerVal').append($('<option>', {
+                        value: item.id,
+                        text: item.name
+                    }))
+                })
+                $.each(data.business_type, function (i, item) {
+                    $('#BusinessTypeVal').append($('<option>', {
+                        value: item.id,
+                        text: item.name
+                    }))
+                })
+                $.each(data.monthly_income_type, function (i, item) {
+                    $('#MonthlyIncomeVal').append($('<option>', {
+                        value: item.id,
+                        text: item.name
+                    }))
+                })
+                $.each(data.bank, function (i, item) {
+                    $('#BankNameVal').append($('<option>', {
+                        value: item.code,
+                        text: item.name
+                    }))
+                })
+                $.each(data.bank, function (i, item) {
+                    $('#SubBankNameVal').append($('<option>', {
+                        value: item.code,
+                        text: item.name
+                    }))
+                })
+
+                for (i = 0; i < data.investment_objectives_type.length; i++) {
+                    var add = "";
+
+                    if (i == 0) {
+                        add = `data-validation="checkbox_group"
+                        data-validation-qty="min1"
+                        data-validation-error-msg="กรุณาเลือกวัตถุประสงค์การลงทุน"`;
+                    }
+                    $('#showInvest').append(`<li>
+                                        <label for="InvestmentObjectives${[i + 1]}" class="checkbox">
+                                            ${data.investment_objectives_type[i].name}
+                                            <input type="checkbox" name="InvestmentObjectives${[i + 1]}"
+                                                data-kyc="InvestmentObjectives${[i + 1]}" class="InvestmentObjectivesChoice"
+                                                id="InvestmentObjectives${[i + 1]}" ${add}>
+                                            <span class="checksquare"></span>
+                                        </label>
+                                    </li>`);
+                }
+            })
+            .catch(error => console.log('error', error))
+            .finally(() => {
+                setTimeout(() => {
+                    $('#waiting_modal_dialog').removeClass('show');
+                }, 300);
+            });
+    }
+
+    function getBusinesstypeLoad(datac) {
+        let data = {
+            id: datac
+        }
+        const wsurl = `${MAIN_URL}/api/get-Business-type-dropdown`;
+        fetch(wsurl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+
+            .then(response => response.text())
+            .then(function (result) {
+                var data = JSON.parse(result);
+
+                if (data.current_career_type[0].workplace_flag == "N") {
+                    $("#hideWorkPlaceName").attr('style', 'display:none')
+                    $("#hideWorkPlaceName").attr('hide-workplace', 'yes')
+                }
+
+                if (data.current_career_type[0].position_flag == "N") {
+                    $("#hidePosition").attr('style', 'display:none')
+                    $("#hidePosition").attr('hide-posi', 'yes')
+                }
+
+                if (data.current_career_type[0].business_flag == "N") {
+                    $("#hideBusinessType").attr('style', 'display:none')
+                    $("#hideBusinessType").attr('hide-busi', 'yes')
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function getBusinesstype() {
+        let data = {
+            id: document.getElementById('CareerVal').value
+        }
+        const wsurl = `${MAIN_URL}/api/get-Business-type-dropdown`;
+        fetch(wsurl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+
+            .then(response => response.text())
+            .then(function (result) {
+                var data = JSON.parse(result);
+
+                $.each(data.business_type, function (i, item) {
+                    if (i == 0) {
+                        $('#BusinessTypeVal').append($('<option>', {
+                            value: "",
+                            text: "กรุณาเลือก *"
+                        }))
+                    } else {
+                        $('#BusinessTypeVal').append($('<option>', {
+                            value: item.id,
+                            text: item.name
+                        }))
+                    }
+                })
+                $("#BusinessTypeVal").selectmenu("refresh");
+                $("span#BusinessTypeVal-button span.ui-selectmenu-text").html(document.getElementById('BusinessType').value != "" ? document.getElementById('BusinessType').value : "ประเภทธุรกิจ <span class=red style=color:red;>*</span>");
+                $("#BusinessTypeVal").val(document.getElementById('BusinessTypeid').value != "" ? document.getElementById('BusinessTypeid').value : "");
+
+                $("div#hideBusinessType select").val("").change();
+                $("#BusinessTypeVal-button").removeAttr("style")
+                $("#labelBusinessTypeVal").removeAttr("style")
+
+                $("#hideWorkPlaceName").removeAttr('hide-workplace')
+                $("#hidePosition").removeAttr('hide-posi')
+                $("#hideBusinessType").removeAttr('hide-busi')
+                $("#hideWorkPlaceName, #hidePosition, #hideBusinessType").removeAttr('style', 'display:none')
+
+                if (data.current_career_type[0].workplace_flag == "N") {
+                    $("#WorkPlaceName").val("")
+                    $('#errorWorkPlaceName').html("");
+                    $("#WorkPlaceName").removeAttr("style")
+                    $("#WorkPlaceName").removeAttr("class")
+                    $("#hideWorkPlaceName").attr('style', 'display:none')
+                    $("#hideWorkPlaceName").attr('hide-workplace', 'yes')
+
+                }
+
+                if (data.current_career_type[0].position_flag == "N") {
+                    $("#Position").val("")
+                    $('#errorPosition').html("");
+                    $("#Position").removeAttr("style")
+                    $("#Position").removeAttr("class")
+                    $("#hidePosition").attr('style', 'display:none')
+                    $("#hidePosition").attr('hide-posi', 'yes')
+
+                }
+
+                if (data.current_career_type[0].business_flag == "N") {
+                    $("#BusinessType").val("")
+                    $("#BusinessTypeVal").val("")
+                    $("#hideBusinessType").attr('style', 'display:none')
+                    $("#hideBusinessType").attr('hide-busi', 'yes')
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function getBranch() {
+        let data = {
+            id: document.getElementById('BankCode').value
+        }
+        const wsurl = `${MAIN_URL}/api/get-basic-branch-dropdown`;
+        fetch(wsurl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+
+            .then(response => response.text())
+            .then(function (result) {
+                var data = JSON.parse(result);
+
+                if (document.getElementById('BankBranch').value == "") {
+                    $('#BankBranchVal').append($('<option>', {
+                        value: "",
+                        text: "กรุณาเลือก *"
+                    }));
+                }
+
+                $.each(data.bank_branch, function (i, item) {
+                    $('#BankBranchVal').append($('<option>', {
+                        value: item.code,
+                        text: item.name
+                    }));
+                });
+
+                $("#BankBranchVal").selectmenu("refresh");
+                $("span#BankBranchVal-button span.ui-selectmenu-text").html(document.getElementById('BankBranch').value != "" ? document.getElementById('BankBranch').value : "กรุณาเลือกชื่อสาขา <span class=red style=color:red;>*</span>");
+                $("#BankBranchVal").val(document.getElementById('BankBranchCode').value != "" ? document.getElementById('BankBranchCode').value : "");
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function getSubBranch() {
+        let data = {
+            id: document.getElementById('SubBankCode').value
+        }
+        const wsurl = `${MAIN_URL}/api/get-basic-branch-dropdown`;
+        fetch(wsurl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+
+            .then(response => response.text())
+            .then(function (result) {
+                var data = JSON.parse(result);
+
+                if (document.getElementById('SubBankBranch').value == "") {
+                    $('#SubBankBranchVal').append($('<option>', {
+                        value: "",
+                        text: "กรุณาเลือก *"
+                    }));
+                }
+
+                $.each(data.bank_branch, function (i, item) {
+                    $('#SubBankBranchVal').append($('<option>', {
+                        value: item.code,
+                        text: item.name
+                    }))
+                })
+
+                $("#SubBankBranchVal").selectmenu("refresh");
+                $("span#SubBankBranchVal-button span.ui-selectmenu-text").html(document.getElementById('SubBankBranch').value != "" ? document.getElementById('SubBankBranch').value : "กรุณาเลือกชื่อสาขา <span class=red style=color:red;>*</span>");
+                $("#SubBankBranchVal").val(document.getElementById('SubBankBranchCode').value != "" ? document.getElementById('SubBankBranchCode').value : "");
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function initCurrenPage(module) {
+        const wsurl = `${MAIN_URL}/api/current-page`;
+        var data = {
+            module: module
+        };
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) { })
+            .catch(error => console.log('error', error));
+    }
+
+    function checkSession(module) {
+        let session = 'Y';
+        if (session == "Y") {
+            const wsurl = `${MAIN_URL}/api/current-page`;
+            var data = {
+                module: module
+            };
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    let data = JSON.parse(result)
+                    if (data.success == false) {
+                        window.location.href = '/register';
+                    }
+                })
+                .catch(error => console.log('error', error));
+        } else {
+            window.location.href = '/register';
+        }
+    }
+
+
+    $(".current-choice > li").on("mousedown", () => {
+        $('label[for="CurrentChoice2"] .help-block').addClass("hidden")
+    })
+    $(".work-choice > li").on("mousedown", () => {
+        $('label[for="WorkChoice3"] .help-block').addClass("hidden")
+    })
+
+    $(document).ready(function () {
+        $.Thailand({
+            database: '../../assets/js/geodb.json',
+
+            $district: $('#Distric'),
+            $amphoe: $('#Amphoe'),
+            $province: $('#Province'),
+            $zipcode: $('#Zipcode'),
+            onDataFill: function (data) {
+                console.info('Data Filled', data);
+                $('#DistricView').find('label').addClass('uplabel')
+                $('#Distric_id').val(data.district_code)
+                $('#Distric').addClass('input')
+                $('#AmphoeView').find('label').addClass('uplabel')
+                $('#Amphoe_id').val(data.amphoe_code)
+                $('#Amphoe').addClass('input')
+                $('#ProvinceView').find('label').addClass('uplabel')
+                $('#Province_id').val(data.province_code)
+                $('#Province').addClass('input')
+                $('#ZipcodeView').find('label').addClass('uplabel')
+                $('#Zipcode').addClass('input')
+                $('#Country').val('ไทย').addClass('input')
+                $("#Countryid").val('TH')
+                $("#labelCountryVal").attr("style", "display:block;")
+                $("#CountryVal").val('TH')
+                $("#CountryVal-button")[0].lastElementChild.innerHTML = 'ไทย';
+                $("#CountryVal-button").attr("style",
+                    "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                $("#errorCountryVal").html("");
+
+                // DistricView
+            },
+
+            onLoad: function () {
+                $('#loader, .demo').toggle();
+            }
+        });
+
+        $('#Distric').change(function () {
+            $("#DistricView .form-error").html("")
+        });
+        $('#Amphoe').change(function () {
+            $("#AmphoeView .form-error").html("")
+        });
+        $('#Province').change(function () {
+            $("#ProvinceView .form-error").html("")
+        });
+        $('#Zipcode').change(function () {
+            $("#ZipcodeView .form-error").html("")
+        });
+
+        $.Thailand({
+            database: '../../assets/js/geodb.json',
+
+            $district: $('#DistricCurrent'),
+            $amphoe: $('#AmphoeCurrent'),
+            $province: $('#ProvinceCurrent'),
+            $zipcode: $('#ZipcodeCurrent'),
+
+            onDataFill: function (data) {
+                console.info('Data Filled', data);
+                $('#DistricCurrentView').find('label').addClass('uplabel')
+                $('#DistricCurrent_id').val(data.district_code)
+                $('#DistricCurrent').addClass('input')
+                $('#AmphoeCurrentView').find('label').addClass('uplabel')
+                $('#AmphoeCurrent_id').val(data.amphoe_code)
+                $('#AmphoeCurrent').addClass('input')
+                $('#ProvinceCurrentView').find('label').addClass('uplabel')
+                $('#ProvinceCurrent_id').val(data.province_code)
+                $('#ProvinceCurrent').addClass('input')
+                $('#ZipcodeCurrentView').find('label').addClass('uplabel')
+                $('#ZipcodeCurrent').addClass('input')
+                $('#CountryCurrent').val('ไทย')
+                $("#CountryCurrentid").val('TH')
+                $("#labelCountryCurrentVal").attr("style", "display:block;")
+                $('#CountryCurrentView').find('label').addClass('uplabel')
+                $("#CountryCurrent").attr("style", "border-bottom:2px solid #002561;")
+                $("#errorCountryCurrentVal").html("");
+                $("#CountryCurrentView .form-error").html("")
+            },
+
+        });
+
+        $('#DistricCurrent').change(function () {
+            $("#DistricCurrentView .form-error").html("")
+        });
+        $('#AmphoeCurrent').change(function () {
+            $("#AmphoeCurrentView .form-error").html("")
+        });
+        $('#ProvinceCurrent').change(function () {
+            $("#ProvinceCurrentView .form-error").html("")
+        });
+        $('#ZipcodeCurrent').change(function () {
+            $("#ZipcodeCurrentView .form-error").html("")
+        });
+        $('#CountryCurrent').change(function () {
+            $("#CountryCurrentView .form-error").html("")
+        });
+
+        $.Thailand({
+            database: '../../assets/js/geodb.json',
+
+            $district: $('#DistricWork'),
+            $amphoe: $('#AmphoeWork'),
+            $province: $('#ProvinceWork'),
+            $zipcode: $('#ZipcodeWork'),
+
+            onDataFill: function (data) {
+                console.info('Data Filled', data);
+                $('#DistricWorkView').find('label').addClass('uplabel')
+                $('#DistricWork_id').val(data.district_code)
+                $('#DistricWork').addClass('input')
+                $('#AmphoeWorkView').find('label').addClass('uplabel')
+                $('#AmphoeWork_id').val(data.amphoe_code)
+                $('#AmphoeWork').addClass('input')
+                $('#ProvinceWorkView').find('label').addClass('uplabel')
+                $('#ProvinceWork_id').val(data.province_code)
+                $('#ProvinceWork').addClass('input')
+                $('#ZipcodeWorkView').find('label').addClass('uplabel')
+                $('#ZipcodeWork').addClass('input')
+                $('#CountryWork').val('ไทย').addClass('input')
+                $("#CountryWorkid").val('TH')
+                $("#labelCountryWorkVal").attr("style", "display:block;")
+                $('#CountryWorkView').find('label').addClass('uplabel')
+                $("#CountryWork").attr("style", "border-bottom:2px solid #002561;")
+                $("#errorCountryWorkVal").html();
+                $("#CountryWorkView .form-error").html("")
+            },
+        });
+
+        $('#DistricWork').change(function () {
+            $("#DistricWorkView .form-error").html("")
+        });
+        $('#AmphoeWork').change(function () {
+            $("#AmphoeWorkView .form-error").html("")
+        });
+        $('#ProvinceWork').change(function () {
+            $("#ProvinceWorkView .form-error").html("")
+        });
+        $('#ZipcodeWork').change(function () {
+            $("#ZipcodeWorkView .form-error").html("")
+        });
+        $('#CountryWork').change(function () {
+            $("#CountryWorkView .form-error").html("")
+        });
+    });
+</script>
+<!-- OTHER -->
+<script>
+
+    function getJsonSendInvest() {
+        var score = 0;
+        var ans_list = [];
+        $("#showInvest").find(".checkbox").each(function (e) {
+            //radio case
+            var ans;
+            var inputRadio = $(this).find('input:checked')
+            console.log("inputRadio", inputRadio)
+
+            if (inputRadio.is(":checked") == true) {
+                ans = e + 1;
+                ans_list.push(ans);
+            }
+        });
+
+        let InvestmentObjectives = ans_list.join("|");
+        $("#InvestmentObjectives").val(InvestmentObjectives)
+    }
+
+    $("select").selectmenu({
+        change: function (event, data) {
+            changeColor(this.name)
+            selectOther(this.name, data.item.value)
+
+            if (this.name == "MonthlyIncomeVal") {
+                $("#MonthlyIncome").val($("#MonthlyIncomeVal option:selected").text());
+                $("#MonthlyIncomeid").val($('#MonthlyIncomeVal').find(":selected").val());
+                if ($('#EducationLevelVal').val() != "") {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                    $('#EducationLevelVal-button').attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#SourceOfInvestmentVal").val() != "") {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style')
+                    $('#SourceOfInvestmentVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#CareerVal").val() != "") {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style')
+                    $('#CareerVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#WorkPlaceName").val() != "") {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style')
+                    $('#WorkPlaceName').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#BusinessTypeVal").val() != "") {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style')
+                    $('#BusinessTypeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#Position").val() != "") {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style')
+                    $('#Position').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#MonthlyIncomeVal").val() != "") {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style')
+                    $('#MonthlyIncomeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                }
+            }
+            else if (this.name == "BusinessTypeVal") {
+                $("#BusinessType").val($("#BusinessTypeVal option:selected").text());
+                $("#BusinessTypeid").val($('#BusinessTypeVal').find(":selected").val());
+                if ($('#EducationLevelVal').val() != "") {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                    $('#EducationLevelVal-button').attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#SourceOfInvestmentVal").val() != "") {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                    $('#SourceOfInvestmentVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#CareerVal").val() != "") {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                    $('#CareerVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#WorkPlaceName").val() != "") {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                    $('#WorkPlaceName').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#BusinessTypeVal").val() != "") {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#BusinessTypeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#Position").val() != "") {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                    $('#Position').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($("#MonthlyIncomeVal").val() != "") {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#MonthlyIncomeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                }
+            }
+            else if (this.name == "CareerVal") {
+                $('#BusinessTypeVal').html("");
+                $("#BusinessType").val("");
+                $("#BusinessTypeid").val("");
+                $("#Career").val($("#CareerVal option:selected").text());
+                $("#Careerid").val($('#CareerVal').find(":selected").val());
+
+                if ($('#EducationLevelVal').val() != "") {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                    $('#EducationLevelVal-button').attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#SourceOfInvestmentVal').val() != "") {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                    $('#SourceOfInvestmentVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#CareerVal').val() != "") {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                    $('#CareerVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#WorkPlaceName').val() != "") {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                    $('#WorkPlaceName').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#BusinessTypeVal').val() != "") {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#BusinessTypeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#Position').val() != "") {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                    $('#Position').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#MonthlyIncomeVal').val() != "") {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#MonthlyIncomeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                getBusinesstype()
+
+            }
+            else if (this.name == "SourceOfInvestmentVal") {
+                $("#SourceOfInvestment").val($("#SourceOfInvestmentVal option:selected").text());
+                $("#SourceOfInvestmentid").val($('#SourceOfInvestmentVal').find(":selected").val());
+                if ($('#EducationLevelVal').val() != "") {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                    $('#EducationLevelVal-button').attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#SourceOfInvestmentVal').val() != "") {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                    $('#SourceOfInvestmentVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#CareerVal').val() != "") {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                    $('#CareerVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#WorkPlaceName').val() != "") {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                    $('#WorkPlaceName').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#BusinessTypeVal').val() != "") {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#BusinessTypeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#Position').val() != "") {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                    $('#Position').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#MonthlyIncomeVal').val() != "") {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#MonthlyIncomeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                }
+            }
+            else if (this.name == "EducationLevelVal") {
+                $("#EducationLevel").val($("#EducationLevelVal option:selected").text());
+                $("#EducationLevelId").val($('#EducationLevelVal').find(":selected").val());
+
+                if ($('#EducationLevelVal').val() != "") {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                    $('#EducationLevelVal-button').attr("style", "border-bottom:2px solid #002561;padding: 5px 0 5px 0px;")
+                } else {
+                    $('#errorEducationLevelVal').html("")
+                    $('#EducationLevelVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#SourceOfInvestmentVal').val() != "") {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                    $('#SourceOfInvestmentVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorSourceOfInvestmentVal').html("")
+                    $('#SourceOfInvestmentVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#CareerVal').val() != "") {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                    $('#CareerVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorCareerVal').html("")
+                    $('#CareerVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#WorkPlaceName').val() != "") {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                    $('#WorkPlaceName').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorWorkPlaceName').html("")
+                    $('#WorkPlaceName').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#BusinessTypeVal').val() != "") {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#BusinessTypeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorBusinessTypeVal').html("")
+                    $('#BusinessTypeVal-button').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#Position').val() != "") {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                    $('#Position').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorPosition').html("")
+                    $('#Position').removeAttr('style', 'border-color: red;')
+                }
+
+                if ($('#MonthlyIncomeVal').val() != "") {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                    $('#MonthlyIncomeVal-button').attr("style", "border-bottom:2px solid #002561;")
+                } else {
+                    $('#errorMonthlyIncomeVal').html("")
+                    $('#MonthlyIncomeVal-button').removeAttr('style', 'border-color: red;')
+                }
+            }
+            else if (this.name == "BankBranchVal") {
+                $("#BankBranch").val($("#BankBranchVal option:selected").text())
+                $("#BankBranchCode ").val($('#BankBranchVal ').find(":selected").val());
+            }
+            else if (this.name == "SubBankBranchVal") {
+                $("#SubBankBranch").val($("#SubBankBranchVal option:selected").text())
+                $("#SubBankBranchCode ").val($('#SubBankBranchVal ').find(":selected").val());
+            }
+            else if (this.name == "CountryVal") {
+                $("#IdcardFill").attr("class", "hidden");
+            }
+        }
+    });
+
+    function showMate(status) {
+        if (status == 'show') {
+            $("#TitleName").selectmenu("enable");
+            $("#FirstName").prop("disabled", false)
+            $("#LastName").prop("disabled", false)
+        } else {
+            $("#TitleName").selectmenu("disable");
+            $("#FirstName").prop("disabled", true)
+            $("#LastName").prop("disabled", true)
+        }
+    }
+
+    function selectOther(type, val) {
+        if (val == '5') {
+            $("#Other" + type).removeClass('hidden')
+            $("#" + type + "Other").prop("disabled", false)
+        } else {
+            $("#Other" + type).addClass('hidden')
+            $("#" + type + "Other").prop("disabled", true)
+        }
+    }
+
+    function showAddressChoice(type, status) {
+        if (status == 'show') {
+
+            $("#" + type + "Fill").addClass('hidden')
+            $("#" + type + "Choice").removeClass('hidden')
+            $("#Address" + type).prop("disabled", false)
+            $("#Distric" + type).prop("disabled", false)
+            $("#Amphoe" + type).prop("disabled", false)
+            $("#Province" + type).prop("disabled", false)
+            $("#Zipcode" + type).prop("disabled", false)
+            if (type == "Current" && $("#WorkChoice2").is(":checked")) {
+                $("#WorkFill").html("กรุณากรอกข้อมูล : ที่อยู่ปัจจุบัน").attr("style", "color:red");
+            }
+
+        } else {
+            $("#" + type + "Fill").removeClass('hidden')
+            $("#" + type + "Choice").addClass('hidden')
+            $("#Address" + type).prop("disabled", true)
+            $("#Distric" + type).prop("disabled", true)
+            $("#Amphoe" + type).prop("disabled", true)
+            $("#Province" + type).prop("disabled", true)
+            $("#Zipcode" + type).prop("disabled", true)
+        }
+    }
+
+    function fillAddress(id, type, title) {
+        var address = ""
+        var floor = ""
+        var moo = ""
+        var mooban = ""
+        var soi = ""
+        var road = ""
+        var distric = ""
+        var amphoe = ""
+        var province = ""
+        var zipcode = ""
+        var country = ""
+
+        if ($('#CurrentChoice1').is(':checked')) {
+            address = $("#Address").val()
+            floor = $("#Floor").val()
+            moo = $("#Moo").val()
+            mooban = $("#Mooban").val()
+            soi = $("#Soi").val()
+            road = $("#Road").val()
+            distric = $("#Distric").val()
+            amphoe = $("#Amphoe").val()
+            province = $("#Province").val()
+            zipcode = $("#Zipcode").val()
+            country = $("#Country").val()
+        } else if ($('#WorkChoice1').is(':checked')) {
+            address = $("#Address").val()
+            floor = $("#Floor").val()
+            moo = $("#Moo").val()
+            mooban = $("#Mooban").val()
+            soi = $("#Soi").val()
+            road = $("#Road").val()
+            distric = $("#Distric").val()
+            amphoe = $("#Amphoe").val()
+            province = $("#Province").val()
+            zipcode = $("#Zipcode").val()
+            country = $("#Country").val()
+        } else if ($('#WorkChoice2').is(':checked')) {
+            if ($('#CurrentChoice1').is(':checked')) {
+                address = $("#Address").val()
+                floor = $("#Floor").val()
+                moo = $("#Moo").val()
+                mooban = $("#Mooban").val()
+                soi = $("#Soi").val()
+                road = $("#Road").val()
+                distric = $("#Distric").val()
+                amphoe = $("#Amphoe").val()
+                province = $("#Province").val()
+                zipcode = $("#Zipcode").val()
+                country = $("#Country").val()
+            }
+            else {
+                address = $("#Address" + type).val()
+                floor = $("#Floor" + type).val()
+                moo = $("#Moo" + type).val()
+                mooban = $("#Mooban" + type).val()
+                soi = $("#Soi" + type).val()
+                road = $("#Road" + type).val()
+                distric = $("#Distric" + type).val()
+                amphoe = $("#Amphoe" + type).val()
+                province = $("#Province" + type).val()
+                zipcode = $("#Zipcode" + type).val()
+                country = $("#Country" + type).val()
+            }
+
+        }
+
+
+
+        var content = "";
+        if (address != "") content += title + " : เลขที่ " + address;
+        if (floor != "") content += ", ชั้น " + floor;
+        if (moo != "") content += ", หมู่ที่ " + moo;
+        if (mooban != "") content += ", หมู่บ้าน/อาคาร " + mooban;
+        if (soi != "") content += ", ซอย " + soi;
+        if (road != "") content += ", ถนน " + road;
+        if (distric != "") content += ", แขวง/ตำบล " + distric;
+        if (amphoe != "") content += ", เขต/อำเภอ " + amphoe;
+        if (province != "") content += ", จังหวัด " + province;
+        if (zipcode != "") content += ", " + zipcode;
+        if (country != "") content += ", ประเทศ" + country;
+
+        if (address == "" || distric == "" || amphoe == "" || province == "" || zipcode == "" || country == "")
+            $("#" + id + "Fill").html("กรุณากรอกข้อมูล : " + title).attr("style", "color:red");
+        else
+            $("#" + id + "Fill").html(content).removeAttr("style")
+
+        $(`#Distric${type}, #Amphoe${type}, #Province${type}, #Zipcode${type}`)
+
+
+        if (id == "Current") {
+            $("#Address" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Floor" + id).val("").removeAttr("class")
+            $("#Moo" + id).val("").removeAttr("class")
+            $("#Mooban" + id).val("").removeAttr("class")
+            $("#Soi" + id).val("").removeAttr("class")
+            $("#Road" + id).val("").removeAttr("class")
+            $("#Distric" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Amphoe" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Province" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Zipcode" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Country" + id).val("").removeAttr("class")
+
+            $("#Distric" + id + "View").find('label').removeClass('uplabel')
+            $("#Amphoe" + id + "View").find('label').removeClass('uplabel')
+            $("#Province" + id + "View").find('label').removeClass('uplabel')
+            $("#Zipcode" + id + "View").find('label').removeClass('uplabel')
+            $("#Country" + id + "View").find('label').removeClass('uplabel')
+
+            $("#errorAddress" + id).html("")
+            $("#errorDistric" + id).html("")
+            $("#errorAmphoe" + id).html("")
+            $("#errorProvince" + id).html("")
+            $("#errorZipcode" + id).html("")
+
+            if ($("#WorkChoice2").is(":checked")) {
+                if (address == "" || distric == "" || amphoe == "" || province == "" || zipcode == "" || country == "")
+                    $("#WorkFill").html("กรุณากรอกข้อมูล : " + title).attr("style", "color:red");
+                else
+                    content = "";
+                if (address != "") content += "ที่อยู่ปัจจุบัน" + " : เลขที่ " + address;
+                if (floor != "") content += ", ชั้น " + floor;
+                if (moo != "") content += ", หมู่ที่ " + moo;
+                if (mooban != "") content += ", หมู่บ้าน/อาคาร " + mooban;
+                if (soi != "") content += ", ซอย " + soi;
+                if (road != "") content += ", ถนน " + road;
+                if (distric != "") content += ", แขวง/ตำบล " + distric;
+                if (amphoe != "") content += ", เขต/อำเภอ " + amphoe;
+                if (province != "") content += ", จังหวัด " + province;
+                if (zipcode != "") content += ", " + zipcode;
+                if (country != "") content += ", ประเทศ" + country;
+
+                $("#WorkFill").html(content).removeAttr("style");
+            }
+        }
+        if (id == "Work") {
+            $("#Address" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Floor" + id).val("").removeAttr("class")
+            $("#Moo" + id).val("").removeAttr("class")
+            $("#Mooban" + id).val("").removeAttr("class")
+            $("#Soi" + id).val("").removeAttr("class")
+            $("#Road" + id).val("").removeAttr("class")
+            $("#Distric" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Amphoe" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Province" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Zipcode" + id).val("").removeAttr("class").removeAttr("style")
+            $("#Country" + id).val("").removeAttr("class")
+
+            $("#Distric" + id + "View").find('label').removeClass('uplabel')
+            $("#Amphoe" + id + "View").find('label').removeClass('uplabel')
+            $("#Province" + id + "View").find('label').removeClass('uplabel')
+            $("#Zipcode" + id + "View").find('label').removeClass('uplabel')
+            $("#Country" + id + "View").find('label').removeClass('uplabel')
+
+            $("#errorAddress" + id).html("")
+            $("#errorDistric" + id).html("")
+            $("#errorAmphoe" + id).html("")
+            $("#errorProvince" + id).html("")
+            $("#errorZipcode" + id).html("")
+        }
+
+        if ($("#CurrentChoice1").is(":checked")) {
+            $("#error_current_address").attr("class", "hidden");
+        }
+        if ($("#WorkChoice1").is(":checked") || $("#WorkChoice2").is(":checked")) {
+            $("#error_work_address").attr("class", "hidden");
+        }
+    }
+
+    function showSubAccountChoice(status) {
+        if (status == 'show') {
+            $("#shw-sub").removeClass('hidden')
+            $("#shw-note").addClass('hidden')
+            $("#SubBankNameVal").prop("disabled", false)
+            $("#SubBankBranchVal").prop("disabled", false)
+            $("#SubBankNo").prop("disabled", false)
+        } else {
+            $("#shw-sub").addClass('hidden')
+            $("#shw-note").removeClass('hidden')
+            $("#SubBankNameVal").prop("disabled", true)
+            $("#SubBankBranchVal").prop("disabled", true)
+            $("#SubBankNo").prop("disabled", true)
+        }
+    }
+
+    function fillAddressByEvent(type) {
+        var address = $("#Address" + type).val()
+        var floor = $("#Floor" + type).val()
+        var moo = $("#Moo" + type).val()
+        var mooban = $("#Mooban" + type).val()
+        var soi = $("#Soi" + type).val()
+        var road = $("#Road" + type).val()
+        var distric = $("#Distric" + type).val()
+        var amphoe = $("#Amphoe" + type).val()
+        var province = $("#Province" + type).val()
+        var zipcode = $("#Zipcode" + type).val()
+        var country = $("#Country" + type).val()
+
+        if (type == "") {
+            if ($("#CurrentChoice1").is(":checked")) {
+                let title = "ที่อยู่ตามบัตรประชาชน"
+                let id = "Current"
+
+                var content = "";
+                if (address != "") content += title + " : เลขที่ " + address;
+                if (floor != "") content += ", ชั้น " + floor;
+                if (moo != "") content += ", หมู่ที่ " + moo;
+                if (mooban != "") content += ", หมู่บ้าน/อาคาร " + mooban;
+                if (soi != "") content += ", ซอย " + soi;
+                if (road != "") content += ", ถนน " + road;
+                if (distric != "") content += ", แขวง/ตำบล " + distric;
+                if (amphoe != "") content += ", เขต/อำเภอ " + amphoe;
+                if (province != "") content += ", จังหวัด " + province;
+                if (zipcode != "") content += ", " + zipcode;
+                if (country != "") content += ", ประเทศ" + country;
+
+                if (address == "" || distric == "" || amphoe == "" || province == "" || zipcode == "" || country == "")
+                    $("#" + id + "Fill").html("กรุณากรอกข้อมูล : " + title).attr("style", "color:red");
+                else
+                    $("#" + id + "Fill").html(content).removeAttr("style")
+            }
+            if ($("#WorkChoice1").is(":checked")) {
+                let title = "ที่อยู่ตามบัตรประชาชน"
+                let id = "Work"
+
+                var content = "";
+                if (address != "") content += title + " : เลขที่ " + address;
+                if (floor != "") content += ", ชั้น " + floor;
+                if (moo != "") content += ", หมู่ที่ " + moo;
+                if (mooban != "") content += ", หมู่บ้าน/อาคาร " + mooban;
+                if (soi != "") content += ", ซอย " + soi;
+                if (road != "") content += ", ถนน " + road;
+                if (distric != "") content += ", แขวง/ตำบล " + distric;
+                if (amphoe != "") content += ", เขต/อำเภอ " + amphoe;
+                if (province != "") content += ", จังหวัด " + province;
+                if (zipcode != "") content += ", " + zipcode;
+                if (country != "") content += ", ประเทศ" + country;
+
+                if (address == "" || distric == "" || amphoe == "" || province == "" || zipcode == "" || country == "")
+                    $("#" + id + "Fill").html("กรุณากรอกข้อมูล : " + title).attr("style", "color:red");
+                else
+                    $("#" + id + "Fill").html(content).removeAttr("style")
+            }
+            if ($("#CurrentChoice1").is(":checked") && $("#WorkChoice2").is(":checked")) {
+                let title = "ที่อยู่ตามบัตรประชาชน"
+                let id = "Work"
+
+                var content = "";
+                if (address != "") content += title + " : เลขที่ " + address;
+                if (floor != "") content += ", ชั้น " + floor;
+                if (moo != "") content += ", หมู่ที่ " + moo;
+                if (mooban != "") content += ", หมู่บ้าน/อาคาร " + mooban;
+                if (soi != "") content += ", ซอย " + soi;
+                if (road != "") content += ", ถนน " + road;
+                if (distric != "") content += ", แขวง/ตำบล " + distric;
+                if (amphoe != "") content += ", เขต/อำเภอ " + amphoe;
+                if (province != "") content += ", จังหวัด " + province;
+                if (zipcode != "") content += ", " + zipcode;
+                if (country != "") content += ", ประเทศ" + country;
+
+                if (address == "" || distric == "" || amphoe == "" || province == "" || zipcode == "" || country == "")
+                    $("#" + id + "Fill").html("กรุณากรอกข้อมูล : " + title).attr("style", "color:red");
+                else
+                    $("#" + id + "Fill").html(content).removeAttr("style");
+            }
+        } else if (type == "Current") {
+            if ($("#WorkChoice2").is(":checked")) {
+                let title = "ที่อยู่ปัจจุบัน"
+                let id = "Work"
+
+                var content = "";
+                if (address != "") content += title + " : เลขที่ " + address;
+                if (floor != "") content += ", ชั้น " + floor;
+                if (moo != "") content += ", หมู่ที่ " + moo;
+                if (mooban != "") content += ", หมู่บ้าน/อาคาร " + mooban;
+                if (soi != "") content += ", ซอย " + soi;
+                if (road != "") content += ", ถนน " + road;
+                if (distric != "") content += ", แขวง/ตำบล " + distric;
+                if (amphoe != "") content += ", เขต/อำเภอ " + amphoe;
+                if (province != "") content += ", จังหวัด " + province;
+                if (zipcode != "") content += ", " + zipcode;
+                if (country != "") content += ", ประเทศ" + country;
+
+                if (address == "" || distric == "" || amphoe == "" || province == "" || zipcode == "" || country == "")
+                    $("#" + id + "Fill").html("กรุณากรอกข้อมูล : " + title).attr("style", "color:red");
+                else
+                    $("#" + id + "Fill").html(content).removeAttr("style")
+            }
+        }
+    }
+
+    function btnNext() {
+        checkSession(module)
+
+        if (typeof $('.InvestmentObjectivesChoice:checked')[0] !== 'undefined') {
+            $("#errorInvestmentObjectivesChoice").addClass("hidden")
+        } else {
+            $("#errorInvestmentObjectivesChoice").removeClass("hidden")
+        }
+
+        var formData = $('#module_basicInfo').serializeArray().reduce(function (obj, item) {
+            obj[item.name] = item.value;
+            return obj;
+        }, {});
+
+        $("#CurrentChoiceVal").val(formData.CurrentChoice);
+        $("#WorkChoiceVal").val(formData.WorkChoice);
+        $("#SubBranchChoiceVal").val(formData.SubBranchChoice);
+        if (formData.CurrentChoice == "Home") {
+            formData.AddressCurrent = formData.Address
+            formData.MooCurrent = formData.Moo
+            formData.MoobanCurrent = formData.Mooban
+            formData.SoiCurrent = formData.Soi
+            formData.RoadCurrent = formData.Road
+            formData.DistricCurrent = formData.Distric
+            formData.AmphoeCurrent = formData.Amphoe
+            formData.ProvinceCurrent = formData.Province
+            formData.ZipcodeCurrent = formData.Zipcode
+            formData.CountryCurrent = formData.Country
+            formData.CountryCurrentid = formData.Countryid
+        }
+        if (formData.WorkChoice == "Home") {
+            formData.AddressWork = formData.Address
+            formData.MooWork = formData.Moo
+            formData.MoobanWork = formData.Mooban
+            formData.SoiWork = formData.Soi
+            formData.RoadWork = formData.Road
+            formData.DistricWork = formData.Distric
+            formData.AmphoeWork = formData.Amphoe
+            formData.ProvinceWork = formData.Province
+            formData.ZipcodeWork = formData.Zipcode
+            formData.CountryWork = formData.Country
+            formData.CountryWorkid = formData.Countryid
+        }
+        if (formData.WorkChoice == "Current") {
+            formData.AddressWork = formData.AddressCurrent
+            formData.MooWork = formData.MooCurrent
+            formData.MoobanWork = formData.MoobanCurrent
+            formData.SoiWork = formData.SoiCurrent
+            formData.RoadWork = formData.RoadCurrent
+            formData.DistricWork = formData.DistricCurrent
+            formData.AmphoeWork = formData.AmphoeCurrent
+            formData.ProvinceWork = formData.ProvinceCurrent
+            formData.ZipcodeWork = formData.ZipcodeCurrent
+            formData.CountryWork = formData.CountryCurrent
+            formData.CountryWorkid = formData.CountryCurrentid
+        }
+
+        if (formData.EducationLevelVal !== "" && formData.EducationLevelVal !== null && typeof formData
+            .EducationLevelVal !== "undefined") {
+            $("#EducationLevel").val(formData.EducationLevel)
+            $("#EducationLevelId").val(formData.EducationLevelVal)
+        }
+
+        if (formData.SourceOfInvestmentVal !== "" && formData.SourceOfInvestmentVal !== null && typeof formData
+            .SourceOfInvestmentVal !== "undefined") {
+            $("#SourceOfInvestment").val(formData.SourceOfInvestment)
+            $("#SourceOfInvestmentid").val(formData.SourceOfInvestmentVal)
+        }
+        if (formData.MonthlyIncomeVal !== "" && formData.MonthlyIncomeVal !== null && typeof formData
+            .MonthlyIncomeVal !== "undefined") {
+            $("#MonthlyIncome").val(formData.MonthlyIncome)
+            $("#MonthlyIncomeid").val(formData.MonthlyIncomeVal)
+        }
+        if (formData.CareerVal !== "" && formData.CareerVal !== null && typeof formData.CareerVal !== "undefined") {
+            $("#Career").val(formData.Career)
+            $("#Careerid").val(formData.CareerVal)
+        }
+        if (formData.BusinessTypeVal !== "" && formData.BusinessTypeVal !== null && typeof formData.BusinessTypeVal !==
+            "undefined") {
+            $("#BusinessType").val(formData.BusinessType)
+            $("#BusinessTypeid").val(formData.BusinessTypeVal)
+        }
+        if (formData.BankNameVal !== "" && formData.BankNameVal !== null && typeof formData.BankNameVal !==
+            "undefined") {
+            $("#BankName").val(formData.BankName)
+            $("#BankCode").val(formData.BankCode)
+        }
+        if (formData.BankBranchVal !== "" && formData.BankBranchVal !== null && typeof formData.BankBranchVal !==
+            "undefined") {
+            $("#BankBranch").val(formData.BankBranch)
+            $("#BankBranchCode").val(formData.BankBranchCode)
+        }
+        if (formData.SubBranchChoice == "Have") {
+            if (formData.SubBankNameVal !== "" && formData.SubBankNameVal !== null && typeof formData.SubBankNameVal !==
+                "undefined") {
+                $("#SubBankName").prop("disabled", false).val(formData.SubBankName)
+                $("#SubBankCode").prop("disabled", false).val(formData.SubBankCode)
+            }
+            if (formData.SubBankBranchVal !== "" && formData.SubBankBranchVal !== null && typeof formData
+                .SubBankBranchVal !== "undefined") {
+                $("#SubBankBranch").prop("disabled", false).val(formData.SubBankBranch)
+                $("#SubBankBranchCode").prop("disabled", false).val(formData.SubBankBranchCode)
+            }
+        }
+
+
+        let next_page = true;
+
+        //subbank
+        if (SubBranchChoice1.checked) {
+            if (formData.SubBankNo == "") {
+                $("#errorSubBankNo").html(`<div class="help-block form-error"">กรุณาระบุเลขบัญชี</div>`);
+                const element = document.getElementById("SubBankNo");
+                element.scrollIntoView();
+                $("#SubBankNo").attr("style", "border-color: red;");
+                next_page = false;
+            }
+            if (formData.SubBankNo.length < 10) {
+                $("#errorSubBankNo").html(`<div class="help-block form-error"">เลขบัญชีอย่างน้อย 10 ตัวอักษร</div>`);
+                $("#BankNo").attr("style", "border-color: red;");
+                const element = document.getElementById("SubBankNo");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.SubBankBranchVal == "") {
+                $("#errorSubBankBranchVal").html(`<div class="help-block form-error"">กรุณาเลือกสาขา</div>`);
+                $("#SubBankBranchVal-button").attr("style", "border-color: red;");
+                const element = document.getElementById("SubBankBranchVal");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.SubBankNameVal == "") {
+                $("#errorSubBankNameVal").html(`<div class="help-block form-error"">กรุณาเลือกธนาคาร</div>`);
+                $("#SubBankNameVal-button").attr("style", "border-color: red;");
+                const element = document.getElementById("SubBankNameVal");
+                element.scrollIntoView();
+                next_page = false;
+            }
+        }
+        //bank
+        if (formData.BankNo == "") {
+            $("#errorBankNo").html(`<div class="help-block form-error"">กรุณาระบุเลขบัญชี</div>`);
+            $("#BankNo").attr("style", "border-color: red;");
+            const element = document.getElementById("BankNo");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.BankNo.length < 10) {
+            $("#errorBankNo").html(`<div class="help-block form-error"">เลขบัญชีอย่างน้อย 10 ตัวอักษร</div>`);
+            $("#BankNo").attr("style", "border-color: red;");
+            const element = document.getElementById("BankNo");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.BankBranchVal == "") {
+            $("#errorBankBranchVal").html(`<div class="help-block form-error"">กรุณาเลือกสาขา</div>`);
+            $("#BankBranchVal-button").attr("style", "border-color: red;");
+            const element = document.getElementById("BankBranchVal");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.BankNameVal == "") {
+            $("#errorBankNameVal").html(`<div class="help-block form-error"">กรุณาเลือกธนาคาร</div>`);
+            $("#BankNameVal-button").attr("style", "border-color: red;");
+            const element = document.getElementById("BankNameVal");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        //investment objectives
+        if (!InvestmentObjectives1.checked && !InvestmentObjectives2.checked && !InvestmentObjectives3.checked && !
+            InvestmentObjectives4.checked) {
+            $("#errorInvestmentObjectives").html(
+                `<div class="help-block form-error"">กรุณาเลือกวัตถุประสงค์การลงทุน</div>`);
+            const element = document.getElementById("InvestmentObjectives1");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        //workaddress
+        if (!WorkChoice1.checked && !WorkChoice2.checked && !WorkChoice3.checked) {
+            $("#errorWorkChoice").html(`<div class="help-block form-error"">กรุณาเลือกที่อยู่</div>`);
+            const element = document.getElementById("WorkChoice1");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (WorkChoice3.checked) {
+            if (formData.CountryWork == "") {
+                $("#errorCountryWorkVal").html(
+                    `<div class="help-block form-error"">กรุณาเลือกประเทศ</div>`);
+                $("#CountryWork").attr("style", "border-color: red;");
+                const element = document.getElementById("CountryWork");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.ZipcodeWork == "") {
+                $("#errorZipcodeWork").html(`<div class="help-block form-error"">กรุณาระบุรหัสไปรษณีย์</div>`);
+                $("#ZipcodeWork").attr("style", "border-color: red;");
+                const element = document.getElementById("ZipcodeWork");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.ProvinceWork == "") {
+                $("#errorProvinceWork").html(`<div class="help-block form-error"">กรุณาระบุจังหวัด</div>`);
+                $("#ProvinceWork").attr("style", "border-color: red;");
+                const element = document.getElementById("ProvinceWork");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.AmphoeWork == "") {
+                $("#errorAmphoeWork").html(`<div class="help-block form-error"">กรุณาระบุเขต/อำเภอ</div>`);
+                $("#AmphoeWork").attr("style", "border-color: red;");
+                const element = document.getElementById("AmphoeWork");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.DistricWork == "") {
+                $("#errorDistricWork").html(`<div class="help-block form-error"">กรุณาระบุแขวง/ตำบล</div>`);
+                $("#DistricWork").attr("style", "border-color: red;");
+                const element = document.getElementById("DistricWork");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.AddressWork == "") {
+                $("#errorAddressWork").html(`<div class="help-block form-error"">กรุณาระบุเลขที่</div>`);
+                $("#AddressWork").attr("style", "border-color: red;");
+                const element = document.getElementById("AddressWork");
+                element.scrollIntoView();
+                next_page = false;
+            }
+        }
+        //career
+        if ($("#hideBusinessType").attr("hide-busi") != "yes") {
+            if (formData.BusinessTypeVal == "") {
+                $("#errorBusinessTypeVal").html(`<div class="help-block form-error"">กรุณาเลือกประเภทธุรกิจ</div>`);
+                $("#errorBusinessTypeVal").removeAttr('style')
+                $("#BusinessTypeVal-button").attr("style", "border-color: red;");
+                const element = document.getElementById("colorBusinessTypeVal");
+                element.scrollIntoView();
+                next_page = false;
+            }
+        }
+        if ($("#hidePosition").attr("hide-posi") != "yes") {
+            if (formData.Position == "") {
+                $("#errorPosition").html(`<div class="help-block form-error"">กรุณาระบุตำแหน่งงาน</div>`);
+                const element = document.getElementById("Position");
+                element.scrollIntoView();
+                next_page = false;
+                $("#Position").attr("style", "border-color: red;");
+            }
+        }
+        if ($("#hideWorkPlaceName").attr("hide-workplace") != "yes") {
+            if (formData.WorkPlaceName == "") {
+                $("#errorWorkPlaceName").html(`<div class="help-block form-error"">กรุณาระบุชื่อสถานที่ทำงาน</div>`);
+                const element = document.getElementById("WorkPlaceName");
+                element.scrollIntoView();
+                next_page = false;
+                $("#WorkPlaceName").attr("style", "border-color: red;");
+            }
+        }
+        if (formData.CareerVal == "") {
+            $("#errorCareerVal").html(`<div class="help-block form-error"">กรุณาเลือกอาชีพปัจุบัน</div>`);
+            $("#CareerVal-button").attr("style", "border-color: red;");
+            const element = document.getElementById("colorCareerVal");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.MonthlyIncomeVal == "") {
+            $("#errorMonthlyIncomeVal").html(`<div class="help-block form-error"">กรุณาเลือกรายได้ต่อเดือน</div>`);
+            $("#MonthlyIncomeVal-button").attr("style", "border-color: red;");
+            const element = document.getElementById("colorMonthlyIncomeVal");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.SourceOfInvestmentVal == "") {
+            $("#errorSourceOfInvestmentVal").html(
+                `<div class="help-block form-error"">กรุณาเลือกแหล่งที่มาของเงินทุน</div>`);
+            $("#SourceOfInvestmentVal-button").attr("style", "border-color: red;");
+            const element = document.getElementById("colorSourceOfInvestmentVal");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.EducationLevelVal == "") {
+            $("#errorEducationLevelVal").html(
+                `<div class="help-block form-error"">กรุณาเลือกระดับการรศึกษาสูงสุด</div>`);
+            $("#EducationLevelVal-button").attr("style", "border-color: red;");
+            const element = document.getElementById("colorEducationLevelVal");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        //current
+        if (!CurrentChoice1.checked && !CurrentChoice2.checked) {
+            $("#errorCurrentChoice").html(`<div class="help-block form-error"">กรุณาเลือกที่อยู่</div>`);
+            const element = document.getElementById("CurrentChoice1");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (CurrentChoice2.checked) {
+            if (formData.CountryCurrent == "") {
+                $("#errorCountryCurrentVal").html(
+                    `<div class="help-block form-error"">กรุณาเลือกประเทศ</div>`);
+                $("#CountryCurrent").attr("style", "border-color: red;");
+                const element = document.getElementById("CountryCurrent");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.ZipcodeCurrent == "") {
+                $("#errorZipcodeCurrent").html(`<div class="help-block form-error"">กรุณาระบุรหัสไปรษณีย์</div>`);
+                $("#ZipcodeCurrent").attr("style", "border-color: red;");
+                const element = document.getElementById("ZipcodeCurrent");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.ProvinceCurrent == "") {
+                $("#errorProvinceCurrent").html(`<div class="help-block form-error"">กรุณาระบุจังหวัด</div>`);
+                $("#ProvinceCurrent").attr("style", "border-color: red;");
+                const element = document.getElementById("ProvinceCurrent");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.AmphoeCurrent == "") {
+                $("#errorAmphoeCurrent").html(`<div class="help-block form-error"">กรุณาระบุเขต/อำเภอ</div>`);
+                $("#AmphoeCurrent").attr("style", "border-color: red;");
+                const element = document.getElementById("AmphoeCurrent");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.DistricCurrent == "") {
+                $("#errorDistricCurrent").html(`<div class="help-block form-error"">กรุณาระบุแขวง/ตำบล</div>`);
+                $("#DistricCurrent").attr("style", "border-color: red;");
+                const element = document.getElementById("DistricCurrent");
+                element.scrollIntoView();
+                next_page = false;
+            }
+            if (formData.AddressCurrent == "") {
+                $("#errorAddressCurrent").html(`<div class="help-block form-error"">กรุณาระบุเลขที่</div>`);
+                $("#AddressCurrent").attr("style", "border-color: red;");
+                const element = document.getElementById("AddressCurrent");
+                element.scrollIntoView();
+                next_page = false;
+            }
+        }
+        // address
+        if (formData.Zipcode == "") {
+            $("#errorZipcode").html(`<div class="help-block form-error"">กรุณาระบุรหัสไปรษณีย์</div>`);
+            $("#Zipcode").attr("style", "border-color: red;");
+            const element = document.getElementById("Zipcode");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.Province == "") {
+            $("#errorProvince").html(`<div class="help-block form-error"">กรุณาระบุจังหวัด</div>`);
+            $("#Province").attr("style", "border-color: red;");
+            const element = document.getElementById("Province");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.Amphoe == "") {
+            $("#errorAmphoe").html(`<div class="help-block form-error"">กรุณาระบุเขต/อำเภอ</div>`);
+            $("#Amphoe").attr("style", "border-color: red;");
+            const element = document.getElementById("Amphoe");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.Distric == "") {
+            $("#errorDistric").html(`<div class="help-block form-error"">กรุณาระบุแขวง/ตำบล</div>`);
+            $("#Distric").attr("style", "border-color: red;");
+            const element = document.getElementById("Distric");
+            element.scrollIntoView();
+            next_page = false;
+        }
+        if (formData.Address == "") {
+            $("#errorAddress").html(`<div class="help-block form-error"">กรุณาระบุเลขที่</div>`);
+            $("#Address").attr("style", "border-color: red;");
+            const element = document.getElementById("Address");
+            element.scrollIntoView();
+            next_page = false;
+        }
+
+        getJsonSendInvest();
+
+        if (next_page == true) {
+            $("#status_module").val("next_module");
+            $('#waiting_modal_dialog').addClass('show');
+
+            setTimeout(() => {
+                const wsurl = `${MAIN_URL}/api/clear-view-count`;
+                var data = {
+                    url: ""
+                };
+                fetch(wsurl, {
+                    method: "POST",
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.text())
+                    .then(function (result) {
+                        customInput(module).save();
+                        setTimeout(() => {
+                            validateAddress();
+                            validateBank();
+                        }, 2000);
+                    })
+                    .catch(error => console.log('error', error));
+            }, 1000);
+        }
+    }
+
+    function validateAddress() {
+        setTimeout(() => {
+            var textError = localStorage.getItem("message");
+
+            if (new RegExp(`idcard`).test(textError) || new RegExp(`Idcard`).test(textError)) {
+                $("#IdcardFill").removeClass("hidden").html("<span style='color:red'>กรุณาตรวจสอบความถูกต้อง</span>");
+                const element = document.getElementById("Address");
+                element.scrollIntoView();
+                setTimeout(() => {
+                    $('#waiting_modal_dialog').removeClass('show');
+                }, 300);
+                localStorage.removeItem("message");
+            }
+            else if (new RegExp(`current`).test(textError) || new RegExp(`Current`).test(textError)) {
+                $("#error_current_address").removeClass("hidden").html("<span style='color:red'>กรุณาตรวจสอบความถูกต้อง</span>");
+                const element = document.getElementById("AddressCurrent");
+                element.scrollIntoView();
+                setTimeout(() => {
+                    $('#waiting_modal_dialog').removeClass('show');
+                }, 300);
+                localStorage.removeItem("message");
+            }
+            else if (new RegExp(`work`).test(textError) || new RegExp(`Work`).test(textError)) {
+                $("#error_work_address").removeClass("hidden").html("<span style='color:red'>กรุณาตรวจสอบความถูกต้อง</span>");
+                const element = document.getElementById("AddressWork");
+                element.scrollIntoView();
+                setTimeout(() => {
+                    $('#waiting_modal_dialog').removeClass('show');
+                }, 300);
+                localStorage.removeItem("message");
+            } else {
+                setTimeout(() => {
+                    $('#waiting_modal_dialog').removeClass('show');
+                }, 300);
+                localStorage.removeItem("message");
+            }
+        }, 2000);
+
+    }
+
+    function validateBank() {
+        var textError = localStorage.getItem("message");
+        if (textError == "bank account name not match") {
+            $('#bankNotMathcPop').addClass('show');
+            $('#waiting_modal_dialog').removeClass('show');
+            localStorage.removeItem("message");
+        }
+    }
+
+    function btnBack() {
+        checkSession(module)
+
+        $("#status_module").val("back_module");
+        $('#waiting_modal_dialog').addClass('show');
+        setTimeout(() => {
+            const wsurl = `${MAIN_URL}/api/clear-view-count`;
+            var data = {
+                url: "/register/form/idcard"
+            };
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    var formData = $('#module_basicInfo').serializeArray().reduce(function (obj, item) {
+                        obj[item.name] = item.value;
+                        return obj;
+                    }, {});
+
+                    $("#CurrentChoiceVal").val(formData.CurrentChoice);
+                    $("#WorkChoiceVal").val(formData.WorkChoice);
+                    $("#SubBranchChoiceVal").val(formData.SubBranchChoice);
+
+                    if (formData.EducationLevelVal !== "" && formData.EducationLevelVal !== null &&
+                        typeof formData.EducationLevelVal !== "undefined") {
+                        $("#EducationLevel").val(formData.EducationLevel)
+                        $("#EducationLevelId").val(formData.EducationLevelVal)
+                    }
+
+                    if (formData.SourceOfInvestmentVal !== "" && formData.SourceOfInvestmentVal !== null &&
+                        typeof formData.SourceOfInvestmentVal !== "undefined") {
+                        $("#SourceOfInvestment").val(formData.SourceOfInvestment)
+                        $("#SourceOfInvestmentid").val(formData.SourceOfInvestmentVal)
+                    }
+                    if (formData.MonthlyIncomeVal !== "" && formData.MonthlyIncomeVal !== null &&
+                        typeof formData.MonthlyIncomeVal !== "undefined") {
+                        $("#MonthlyIncome").val(formData.MonthlyIncome)
+                        $("#MonthlyIncomeid").val(formData.MonthlyIncomeVal)
+                    }
+                    if (formData.CareerVal !== "" && formData.CareerVal !== null && typeof formData
+                        .CareerVal !== "undefined") {
+                        $("#Career").val(formData.Career)
+                        $("#Careerid").val(formData.CareerVal)
+                    }
+                    if (formData.BusinessTypeVal !== "" && formData.BusinessTypeVal !== null &&
+                        typeof formData.BusinessTypeVal !== "undefined") {
+                        $("#BusinessType").val(formData.BusinessType)
+                        $("#BusinessTypeid").val(formData.BusinessTypeVal)
+                    }
+                    if (formData.BankNameVal !== "" && formData.BankNameVal !== null && typeof formData
+                        .BankNameVal !== "undefined") {
+                        $("#BankName").val(formData.BankName)
+                        $("#BankCode").val(formData.BankCode)
+                    }
+                    if (formData.BankBranchVal !== "" && formData.BankBranchVal !== null && typeof formData
+                        .BankBranchVal !== "undefined") {
+                        $("#BankBranch").val(formData.BankBranch)
+                        $("#BankBranchCode").val(formData.BankBranchCode)
+                    }
+                    if (formData.SubBranchChoice == "Have") {
+                        if (formData.SubBankNameVal !== "" && formData.SubBankNameVal !== null &&
+                            typeof formData.SubBankNameVal !== "undefined") {
+                            $("#SubBankName").prop("disabled", false).val(formData.SubBankName)
+                            $("#SubBankCode").prop("disabled", false).val(formData.SubBankCode)
+                        }
+                        if (formData.SubBankBranchVal !== "" && formData.SubBankBranchVal !== null &&
+                            typeof formData.SubBankBranchVal !== "undefined") {
+                            $("#SubBankBranch").prop("disabled", false).val(formData.SubBankBranch)
+                            $("#SubBankBranchCode").prop("disabled", false).val(formData.SubBankBranchCode)
+                        }
+                    }
+                    getJsonSendInvest();
+
+
+                    customInput(module).save();
+                    validateAddress();
+                    validateBank();
+                })
+                .catch(error => console.log('error', error));
+        }, 1000);
+    }
+
+    $("#Address, #Floor, #Moo, #Mooban, #Soi, #Road, #Distric, #Amphoe, #Province, #Zipcode, #Country").on('keyup', function () {
+        fillAddressByEvent('')
+    })
+    $("#Address, #Floor #Moo, #Mooban, #Soi, #Road, #Distric, #Amphoe, #Province, #Zipcode, #Country").on('blur', function () {
+        fillAddressByEvent('')
+    })
+    $("#AddressCurrent, #FloorCurrent, #MooCurrent, #MoobanCurrent, #SoiCurrent, #RoadCurrent, #DistricCurrent, #AmphoeCurrent, #ProvinceCurrent, #ZipcodeCurrent, #CountryCurrent")
+        .on('keyup', function () {
+            fillAddressByEvent('Current')
+        })
+    $("#AddressCurrent, #FloorCurrent, #MooCurrent, #MoobanCurrent, #SoiCurrent, #RoadCurrent, #DistricCurrent, #AmphoeCurrent, #ProvinceCurrent, #ZipcodeCurrent, #CountryCurrent")
+        .on('blur', function () {
+            fillAddressByEvent('Current')
+        })
+    $("#AddressWork, #FloorWork #MooWork, #MoobanWork, #SoiWork, #RoadWork, #DistricWork, #AmphoeWork, #ProvinceWork, #ZipcodeWork, #CountryWork")
+        .on('keyup', function () {
+            fillAddressByEvent('Work')
+        })
+    $("#AddressWork, #FloorWork #MooWork, #MoobanWork, #SoiWork, #RoadWork, #DistricWork, #AmphoeWork, #ProvinceWork, #ZipcodeWork, #CountryWork")
+        .on('blur', function () {
+            fillAddressByEvent('Work')
+        })
+
+
+    $("#colorBankBranchVal").on('click', function () {
+        if ($("#BankNameVal").val() == '') {
+            $("#subBranchPop").addClass('show');
+        }
+    });
+    $("#colorSubBankBranchVal").on('click', function () {
+        if ($("#SubBankNameVal").val() == '') {
+            $("#subBranchPop").addClass('show');
+        }
+    });
+    $("#colorBusinessTypeVal").on('click', function () {
+        if ($("#CareerVal").val() == '') {
+            $("#bussiPop").addClass('show');
+        }
+    });
+    // colorBankBranchVal
+    function hidesubBranchPop() {
+        $('.modal').removeClass('show');
+    }
+    function hidebussiPop() {
+        $('.modal').removeClass('show');
+    }
+    function hideBankNotMathcPop() {
+        $('.modal').removeClass('show');
+    }
+
+</script>
+</body>
+
+</html>

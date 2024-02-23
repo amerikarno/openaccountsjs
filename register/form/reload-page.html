@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="logo">
+                    <a href="#"><img src="/assets/imgs/header/logo.png" class="img-responsive" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- CONTENT -->
+<div id="idcard">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 no-padding-mobile">
+                <form id="frm_register" action="" method="POST" class="form has-validation-callback" role="form">
+                    <div class="border z-index-5" style="display: block;" id="wording_content">
+                        <div class="content">
+                            <div class="col-xs-12 col-md-12 no-padding">
+                                <div class="content__title">
+
+                                    <span>เนื่องจากท่านได้ทำการโหลดหน้าเว็บใหม่ หรือ กดปุ่ม refresh
+                                        กรุณาทำรายการใหม่อีกครั้งค่ะ</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+                        <div class="bottom">
+                            <div class="col-xs-12 col-md-12 padding no-padding-mobile"><a href="/register/form/preinfo"
+                                    tabindex="-1"><input type="button" style="width: 245px;background-color:#fff;"
+                                        class="submit input" value="กดที่นี่เพื่อทำรายการใหม่"></a></div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="/assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="/assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="/assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script src="/assets/js/framework.js"></script>
+<script src="/assets/js/script.js"></script>
+</body>
+
+</html>

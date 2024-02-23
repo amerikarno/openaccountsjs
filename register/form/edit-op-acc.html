@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><!-- CONTENT -->
+<div id="home">
+    <div class="height-bigpc">
+        <div class="home">
+            <div class="container">
+                <div class="row align-items">
+                    <!-- banner -->
+                    <div class="col-xs-12 col-md-6">
+                        <div class="logo">
+                            <img src="/assets/imgs/logo-white.png" class="img-responsive" alt="" style="width: 215px;">
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="banner">
+                            <img src="assets/imgs/banner-openaccount.png" class="img" alt="">
+                            <div class="continue">
+                                <a href="/go-edit-op-acc">
+                                    <img src="assets/imgs/resume_btn.png" class="img" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 no-padding-mobile">
+                        <div class="tab">
+                            <li class="white">ตรวจสอบสถานะการทำรายการ</li>
+                        </div>
+                        <!-- form -->
+                        <form id="module_login" action="#" method="GET" class="form" role="form">
+                            <div class="content border-radius-bt-10 no-flex">
+                                <div class="col-xs-12">
+                                    <div class="formgroup">
+                                        <div class="content__title content__title--black">
+                                            กรุณากรอกหมายเลขบัตรประจำตัวประชาชน</div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="formgroup">
+                                        <input type="text" id="Idcard" name="Idcard" data-kyc="uid" maxlength="13"
+                                            oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1'); onkeyup=checkForm()" />
+                                        <span class="highlight"></span>
+                                        <span class="bar"></span>
+                                        <span class="right"><img src="assets/imgs/check.svg" alt=""></span>
+                                        <label for="Idcard">ตัวเลข 13 หลัก <span>*</span></label>
+                                        <div id="errorIdcard"></div>
+                                    </div>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bottom">
+                                    <div class="col-xs-6 col-md-4 padding">
+                                        <a href="/register/form/preinfo" class="arrow">
+                                            <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                                <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                                <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                            </svg>
+                                            <div>ย้อนกลับ</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-xs-6 col-md-offset-4 col-md-4 padding no-padding-mobile"><input
+                                            type="button" class="submit" value="ถัดไป" onclick="btnNext()"
+                                            style="background-color:#fff;"></div>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="clear"></div>
+
+                    <!-- Modal otp Maximum -->
+                    <div id="otpMaximum" class="modal fade" role="dialog">
+                        <div class="modal-dialog mr-top10">
+                            <div class="modal-content ">
+                                <div class="modal-header">
+                                </div>
+                                <div class="modal-body ">
+                                    <div class="formgroup">
+                                        <div class="content__CheckTransSta">
+                                            <div id="otpMaximumText" class="justify_center_modal_timeout">
+                                                
+                                            </div>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" id="otpMaximumButton">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Consent FDA -->
+                    <!-- <div id="ConsentFDA" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content ">
+                                <div class="modal-header headp30">
+                                    <div>
+                                        <h4 class="modal-title">Consent เรื่องการเห็นข้อมูลและการแชร์ข้อมูล
+                                            <span class="close5">&times;</span>
+                                            
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div id="bodyagreementindex" class="scroll-y">
+                                    <div class="modal-body ">
+                                        <div class="formgroup">
+                                            <div class="content__CheckTransSta">
+                                                <div id="ConsentFDAText" class="justify_center_modal_timeout">
+                                                    
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer mdf-center" id="ConsentFDAButton">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- Modal Consent Dip Chip -->
+                    <!-- <div id="ConsentDipChip" class="modal fade" role="dialog">
+                        <div class="modal-dialog">
+                            <div class="modal-content ">
+                                <div class="modal-header headp30">
+                                    <div>
+                                        <h4 class="modal-title">Consent เรื่องการเห็นข้อมูลและการแชร์ข้อมูล
+                                            <span class="close5">&times;</span>
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div id="bodyagreementindex" class="scroll-y">
+                                    <div class="modal-body ">
+                                        <div class="formgroup">
+                                            <div class="content__CheckTransSta">
+                                                <div id="ConsentDipChipText" class="justify_center_modal_timeout">
+                                                    
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer mdf-center" id="ConsentDipChipButton">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="/assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="/assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="/assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- JS -->
+<script src="/assets/js/framework.js"></script>
+<script src="/assets/js/script.js"></script>
+
+<!-- OTHER -->
+<script>
+$(document).ready(function() {
+    function disableBack() {
+        window.history.forward()
+    }
+    window.onload = disableBack();
+    window.onpageshow = function(e) {
+        if (e.persisted)
+            disableBack();
+    }
+});
+
+    let idCardInput = document.getElementById("Idcard");
+    idCardInput.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        // console.log("Y");
+        btnNext();
+    }
+    });
+
+function checkID(id) {
+    if (id.length != 13)
+        return false;
+    for (i = 0, sum = 0; i < 12; i++) {
+        sum += parseFloat(id.charAt(i)) * (13 - i);
+    }
+    if ((11 - sum % 11) % 10 != parseFloat(id.charAt(12))) {
+        return false;
+    }
+    return true;
+}
+
+function hideModalConsent() {
+    $('.modal').removeClass('show')
+}
+
+$(".close5").on("click", function() {
+    $('.modal').removeClass('show')
+})
+
+$("#Idcard").on("blur", function() {
+    let val = $("#Idcard").val();
+
+    if (val.length == 0) {
+        $("#errorIdcard").html(
+            `<div class="help-block form-error">กรุณาระบุ หมายเลขบัตรประชาชน 13 หลัก</div>`);
+        $("#Idcard").attr("style", "border-color: red;");
+    }
+});
+
+$("#Idcard").on("keyup", function() {
+    let val = $("#Idcard").val();
+
+    // if (val == "1124444444441") {
+    //     setTimeout(() => {
+    //         window.open(`${MAIN_URL}/exist-op-acc`, "_self");
+    //     }, 1000);
+    // }
+
+    if (val.length == 0) {
+        $("#errorIdcard").html(
+            `<div class="help-block form-error">กรุณาระบุ หมายเลขบัตรประชาชน 13 หลัก</div>`);
+        $("#Idcard").attr("style", "border-color: red;");
+    } else if (val.length != 13) {
+        $("#errorIdcard").html(`<div class="help-block form-error">ตัวเลข 13 หลักไม่ถูกต้อง</div>`);
+        $("#Idcard").attr("style", "border-color: red;");
+        for (i = 0, sum = 0; i < 12; i++) {
+            sum += parseFloat(val.charAt(i)) * (13 - i);
+        }
+        if ((11 - sum % 11) % 10 != parseFloat(val.charAt(12))) {
+            $("#errorIdcard").html(`<div class="help-block form-error">ตัวเลข 13 หลักไม่ถูกต้อง</div>`);
+            $("#Idcard").attr("style", "border-color: red;");
+        }
+    } else if (val.length == 13) {
+        $("#errorIdcard").html("");
+        $("#Idcard").removeAttr("style");
+        for (i = 0, sum = 0; i < 12; i++) {
+            sum += parseFloat(val.charAt(i)) * (13 - i);
+        }
+        if ((11 - sum % 11) % 10 != parseFloat(val.charAt(12))) {
+            $("#errorIdcard").html(`<div class="help-block form-error">ตัวเลข 13 หลักไม่ถูกต้อง</div>`);
+            $("#Idcard").attr("style", "border-color: red;");
+        }
+    }
+});
+
+function btnNext() {
+    let val = $("#Idcard").val();
+    let next_page = true;
+
+    // if (val == "1124444444441") {
+    //     setTimeout(() => {
+    //         window.open(`${MAIN_URL}/exist-op-acc`, "_self");
+    //     }, 1000);
+    // }
+
+    if (val.length == 0) {
+        $("#errorIdcard").html(`<div class="help-block form-error">กรุณาระบุ หมายเลขบัตรประชาชน 13 หลัก</div>`);
+        $("#Idcard").attr("style", "border-color: red;");
+        next_page = false;
+    } else if (val.length != 13) {
+        $("#errorIdcard").html(`<div class="help-block form-error">ตัวเลข 13 หลักไม่ถูกต้อง</div>`);
+        $("#Idcard").attr("style", "border-color: red;");
+        next_page = false;
+        for (i = 0, sum = 0; i < 12; i++) {
+            sum += parseFloat(val.charAt(i)) * (13 - i);
+        }
+        if ((11 - sum % 11) % 10 != parseFloat(val.charAt(12))) {
+            $("#errorIdcard").html(`<div class="help-block form-error">ตัวเลข 13 หลักไม่ถูกต้อง</div>`);
+            $("#Idcard").attr("style", "border-color: red;");
+            next_page = false;
+        }
+    } else if (val.length == 13) {
+        $("#errorIdcard").html("");
+        $("#Idcard").removeAttr("style");
+        for (i = 0, sum = 0; i < 12; i++) {
+            sum += parseFloat(val.charAt(i)) * (13 - i);
+        }
+        if ((11 - sum % 11) % 10 != parseFloat(val.charAt(12))) {
+            $("#errorIdcard").html(`<div class="help-block form-error">ตัวเลข 13 หลักไม่ถูกต้อง</div>`);
+            $("#Idcard").attr("style", "border-color: red;");
+            next_page = false;
+        }
+    }
+
+    if (next_page == true) {
+        $('#waiting_modal_dialog').addClass('show');
+        localStorage.setItem("Idcard", val);
+        // customInput('module_login').save();
+
+        riskCheck();
+    }
+}
+
+function riskCheck() {
+
+let data = {
+    id: localStorage.getItem("Idcard")
+}
+const wsurl = `${MAIN_URL}/api/get-risk-status`;
+fetch(wsurl, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+
+    .then(response => response.text())
+    .then(function(result) {
+        console.log(result)
+
+        if (result == '') ExistAcc();
+
+        let data = JSON.parse(result)
+    
+        if (data.message == 2) {
+            window.location = `${window.location.origin}/exist-op-acc`;
+        }
+        else {
+            ExistAcc();
+        }
+    })
+.catch(error => console.log('error', error));
+}
+
+function ExistAcc() {
+
+    let val = $("#Idcard").val();
+
+    var objRequest = {};
+        var dataElem = {
+            uid: val,
+        };
+        objRequest.module = "module_login";
+        objRequest.session = 2;
+        objRequest.sessionOTP = "";
+        objRequest.parameters = JSON.stringify(dataElem);
+
+        const wsurl = `${MAIN_URL}/api/saveTempdata`;
+
+        fetch(wsurl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(objRequest)
+        }).then(function(response) {
+            return response.json();
+        }).then(function(result) {
+            if (result.error == "RequestOTPSms maximum!") {
+                // $('#Idcard').val("").removeClass("input");
+                // $("#Idcard").attr("style", "border-color: red;");
+                // $("#errorIdcard").html(`<div class="help-block form-error" style="bottom: auto;font-size: 16px;line-height: 18px;">ท่านได้ทำการขอรหัส OTP เกิน 3 ครั้ง ไม่สามารถทำรายการได้</div>`)
+                
+                $('#otpMaximumText').append(`<span>ท่านได้ทำการขอรหัส OTP เกิน 3 ครั้ง กรุณารอ 5 นาที ค่อยกลับมาทำรายการใหม่อีกครั้งในภายหลัง</span>`);
+                $('#otpMaximumButton').append(`<button href="javascript:void(0)" onclick="OTPMax()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                $("#otpMaximum").addClass('show');
+                $('#waiting_modal_dialog').removeClass('show');
+                }
+            else {
+                if (result.success) {
+                    window.location = `${window.location.origin}/${result.next_module.url}`;
+                    // window.location = `/basic/form/suitfatca`;
+                } else if (result.success == false && result.error == "ยังไม่ได้ลงทะเบียน กรุณาลงทะเบียนก่อน") {
+                    // riskCheck();
+                    // ExistDipChip();
+                    window.location = `${window.location.origin}/exist-op-acc`;
+                }
+            }
+        }).catch(error => console.log('error', error));
+}
+
+// function ExistDipChip() {
+//     var IdExistDipChip = $("#Idcard").val();
+//     var textExistDipChip;
+//     for (var i = 0; i < 2000; i++) {
+//         textExistDipChip = "Existing DipChip " + textExistDipChip;
+//     }
+//     if (IdExistDipChip == "1124444444441") {
+//         $('#ConsentDipChipText').empty();
+//         $('#ConsentDipChipText').append("");
+//         $('#ConsentDipChipText').append(`<p style="text-indent: 30px;">${textExistDipChip}</p>`);
+//         $('#ConsentDipChipButton').empty();
+//         $('#ConsentDipChipButton').append("");
+//         $('#ConsentDipChipButton').append(`<button href="javascript:void(0)" onclick="AcceptConsentDipChip()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+//         $("#ConsentDipChip").addClass('show');
+//         $('#waiting_modal_dialog').removeClass('show');
+//     }
+//     else {
+//         ExistFSS();
+//     }
+// }
+
+// function ExistFSS() {
+//     var IdExistFSS = $("#Idcard").val();
+//     var textExistFss;
+//     for (var i = 0; i < 2000; i++) {
+//         textExistFss = "Existing FSS " + textExistFss;
+//     }
+//     if (IdExistFSS == "1100201287843") {
+//         $('#ConsentFDAText').empty();
+//         $('#ConsentFDAText').append("");
+//         $('#ConsentFDAText').append(`<p style="text-indent: 30px;">${textExistFss}</p>`);
+//         $('#ConsentFDAButton').empty();
+//         $('#ConsentFDAButton').append("");
+//         $('#ConsentFDAButton').append(`<button href="javascript:void(0)" onclick="AcceptConsentFDA()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+//         $("#ConsentFDA").addClass('show');
+//         $('#waiting_modal_dialog').removeClass('show');
+//     }
+//     else {
+//         window.location = `${window.location.origin}/exist-op-acc`;
+//     }
+// }
+
+// function AcceptConsentDipChip() {
+//     var objRequest = {};
+//     var dataElem = {
+//         uid: localStorage.getItem("Idcard"),
+//     };
+//     objRequest.module = "module_login";
+//     objRequest.session = 2;
+//     objRequest.sessionOTP = "";
+//     objRequest.parameters = JSON.stringify(dataElem);
+
+//     const wsurl = `${MAIN_URL}/api/saveTempdata`;
+
+//     fetch(wsurl, {
+//         method: 'POST',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(objRequest)
+//     }).then(function(response) {
+//         return response.json();
+//     }).then(function(result) {
+
+//     }).catch(error => console.log('error', error));
+// }
+
+// function AcceptConsentFDA() {
+//     var objRequest = {};
+//     var dataElem = {
+//         uid: localStorage.getItem("Idcard"),
+//     };
+//     objRequest.module = "module_login";
+//     objRequest.session = 2;
+//     objRequest.sessionOTP = "";
+//     objRequest.parameters = JSON.stringify(dataElem);
+
+//     const wsurl = `${MAIN_URL}/api/saveTempdata`;
+
+//     fetch(wsurl, {
+//         method: 'POST',
+//         headers: {
+//             'Accept': 'application/json',
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(objRequest)
+//     }).then(function(response) {
+//         return response.json();
+//     }).then(function(result) {
+
+//     }).catch(error => console.log('error', error));
+// }
+
+function checkForm() {
+    if (!checkID($("#Idcard").val()))
+        $('.right').fadeOut()
+    else
+        $('.right').fadeIn()
+}
+
+function keyPressE(e) {
+    var e = window.event || e;
+    var key = e.keyCode;
+
+    if (key == 13) {
+        btnNext()
+    }
+}
+
+function OTPMax() {
+    window.location.href = '/register';
+}
+</script>
+</body>
+
+</html>

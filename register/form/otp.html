@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="../../assets/js/jquery-3.4.1.min.js"></script>
+    <script src="../../assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="../../assets/js/jquery-ui.js"></script>
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="../../assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="logo">
+                    <a href="#"><img src="../../assets/imgs/header/logo.png" class="img-responsive" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- CONTENT -->
+<div id="otp">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 no-padding-mobile">
+                <!-- process -->
+                <div class="border">
+                    <div class="process">
+                        <div class="col-xs-12 col-md-5">
+                            <div class="process__title">ยืนยันหมายเลขโทรศัพท์ และ อีเมล</div>
+                        </div>
+                        <div class="col-xs-12 col-md-7">
+                            <div class="process__list">
+                                <li>
+                                    <div class="circle">
+                                        <svg x="0px" y="0px" viewBox="-89.3 2 29 24"
+                                            style="enable-background:new -89.3 2 29 24;">
+                                            <path class="tik" d="M-89.3,14l4-4l7,8l14-16l4,4l-18,20L-89.3,14z" />
+                                        </svg>
+                                    </div>
+                                    <div class="title">กรอกข้อมูล</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="30, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">2</text>
+                                    </svg>
+                                    <div class="title orange">ยืนยันตัวตน</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart ">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="80, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">3</text>
+                                    </svg>
+                                    <div class="title">รับรหัสผ่าน</div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <form id="module_otp" action="#" method="GET" class="form" role="form">
+                    <!-- กรุณายืนยันอีเมลและเบอร์โทรศัพท์เพื่อขอรับรหัส -->
+                    <div class="content no-flex chart">
+                        <div class="col-xs-12 no-padding-mobile">
+                            <div class="content__title">
+                                <span>กรุณายืนยัน "หมายเลขโทรศัพท์" และ "อีเมล" ของท่าน</span>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <!-- อีเมลสำหรับรับ -->
+                    <div class="border">
+                        <div class="content_notuse">
+                            <div class="content__title content__title--small hidden-md hidden-lg">
+                                <span>อีเมลสำหรับรับ Username, Password <br>และรับเอกสารจากทางบริษัท <span
+                                        class="orange">*</span></span>
+                            </div>
+                            <div class="otp_fda-fdapjsbt">
+                                <div class="otp_fda-fdapjsbt2">
+                                    <img src="../../assets/imgs/otp-phone.svg" class="img-responsive" alt="">
+                                    <div class="tr123">
+                                        <div class="content__title--small">
+                                            <div>
+                                                1. ยืนยันหมายเลขโทรศัพท์ของท่านผ่าน OTP <span class="orange">*</span>
+                                            </div>
+                                            <input type="text" id="Mobile" name="Mobile" maxlength="10"
+                                                data-kyc="mobile" 
+                                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');"
+                                                disabled />
+                                            <span class="bar"></span>
+                                            <div id="errorMobile"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otp_fda-fdapjsbt4">
+                                    <button class="btnEdite stroke-bedit" type="button"
+                                        onclick="editMobile()">แก้ไข</button>
+                                    <button class="btnConfirm stroke-bcon" type="button" role="button"
+                                        onclick="btnMobileOtp()">ยืนยัน</button>
+                                </div>
+                                <div class="hideotpconfirmotp otp_fda-fdapjsbt5" id="otpMobileConfirm"
+                                    style="padding-left:0; display:none;">
+                                    <span class="color-confirmotp"><i
+                                            class="fa-solid fa-check"></i>ยืนยันเรียบร้อย</span>
+                                </div>
+                            </div>
+                            <div class="clear"></div>
+
+                            <div class="otp_fda-fdapjsbt">
+                                <div class="otp_fda-fdapjsbt2">
+                                    <img src="../../assets/imgs/otp-mail.svg" class="img-responsive" alt="">
+                                    <div class="tr123">
+                                        <div class="content__title--small">
+                                            <div>2. ยืนยันอีเมลของท่าน <span class="orange">*</span></div>
+                                            <input type="text" id="Email" name="Email" data-kyc="email"
+                                                onblur="checkExistEmail()"
+                                                oninput="this.value = this.value.replace(/[^0-9-A-Za-z\s@._+-]/g, '').replace(/[^\S*$]/g, '');"
+                                                disabled />
+                                            <input type="hidden" id="emailCorrect" name="emailCorrect" value="Y"
+                                                disabled />
+                                            <span class="bar"></span>
+                                            <div id="errorEmail"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="otp_fda-fdapjsbt4">
+                                    <button class="btnEdite stroke-bedit" type="button"
+                                        onclick="editEmail()">แก้ไข</button>
+                                    <button class="btnConfirm stroke-bcon" type="button" role="button"
+                                        onclick="btnEmailOtp()">ยืนยัน</button>
+                                </div>
+                                <div class="col-md-2" id="otpEmailConfirm" style="padding-left:0; display:none;">
+                                    <span class="icon-confirm"><i class="fa-solid fa-check"></i>ยืนยันเรียบร้อย</span>
+                                </div>
+                            </div>
+                            <input type="hidden" id="status_module" name="status_module" data-kyc="status_module">
+                            <input type="hidden" id="idcard">
+                            <input type="hidden" id="ref_id">
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <!-- bottom -->
+                    <div class="col-xs-12 padding hidden-md hidden-lg">
+                        <div class="condition"><span>*</span> ข้อมูลสำคัญ กรุณากรอกให้ครบถ้วน</div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="bottom">
+                        <div class="clear hidden-md hidden-lg"></div>
+                        <div class="col-xs-12 col-md-4 padding order-1">
+                            <a onclick="btnBack()" class="arrow" role="button">
+                                <svg viewBox="0 0 132.4 100.4">
+                                    <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                    <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                </svg>
+                                <div>ย้อนกลับ</div>
+                            </a>
+                        </div>
+                        <div class="col-md-4 padding hidden-xs hidden-sm order-2">
+                            <div class="condition"><span>*</span> ข้อมูลสำคัญ กรุณากรอกให้ครบถ้วน</div>
+                        </div>
+                    </div>
+                </form>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<!-- Modal -->
+<!-- Modal Exist Email Mobile -->
+<div id="modalMobileOtp" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header headp30 center-item">
+                <h4 class="modal-title">
+                    กรุณายืนยันรหัส OTP 6 หลัก
+                    <button type="button" class="close modal-otpmark" data-dismiss="modal">&times;</button>
+                </h4>
+
+                <h4 class="modal-title">
+                    ระบบได้ทำการส่งรหัส OTP ไปยังหมายเลข <span id="mobile-no">xxx-xxx-xxxx</span> แล้ว
+                </h4>
+            </div>
+            <div class="modal-body bodyotp">
+                <h2 class="text-refcode">Ref Code : <span id="ref_id_text"></span></h2>
+                <div class="flex otp">
+                    <div class="col-xs-12 col-md-7">
+                        <div class="content__title content__title--small2">
+                            <span>รหัส OTP 6 หลัก <span class="orange">*</span></span>
+                        </div>
+                        <div class="formgroup">
+                            <input type="text" class="id-padding" id="OtpMobileCode" name="OtpMobileCode" value=""
+                                maxlength="6"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" />
+                            <span class="highlight"></span>
+                            <span class="bar"></span>
+                            <label for="OtpMobileCode" class="label-hide">******</label>
+                            <div id="errorOtpMobileCode"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btnConfirm stroke-bcon buttonwid" type="button" role="button"
+                            onclick="btnOtpMobileCode()">ยืนยัน OTP</button>
+                    </div>
+                </div>
+                </br></br></br></br>
+                <div class="col-md12 text-p">
+                    <p>กรุณาตรวจสอบรหัส OTP บนโทรศัพท์มือถือของท่านภายใน 5 นาที</p>
+                    <p>หากท่านไม่ได้รับรหัส OTP
+                        <a href="javascript:void(0)" onclick="resendOTPSMS()">
+                            <u class="text-u">กรุณาคลิกที่นี่เพื่อขอรับรหัส SMS-OTP ใหม่อีกครั้ง<u>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="msg_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+                <p id="msg_content"></p>
+            </div>
+            <div class="modal-footer">
+                <div class="button col-xs-offset-7 col-xs-5 col-md-offset-9 col-md-3">
+                    <a onclick="hideModal()" id="btn_ok_msg_dialog" tabindex="-1" role="button">ตกลง</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="../../assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="../../assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="../../assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- OTHER -->
+<script src="../../assets/js/framework.js"></script>
+<script src="../../assets/js/script.js"></script>
+<script>
+    let module = 'module_otp';
+
+    let emailDefault, mobileDefault = "";
+    let verify_sms = "N"
+    let emailExist, mobileExist = "N"
+    var validateMobile = "N";
+    $(document).ready(function () {
+        let v = parseInt('1');
+        $('#waiting_modal_dialog').addClass('show');
+        console.log(v)
+        if (v == 1) {
+            setTimeout(() => {
+                $('#waiting_modal_dialog').removeClass('show');
+            }, 300);
+        } else {
+            setTimeout(() => {
+                window.location.href = '/send-reload-page';
+            }, 1000);
+        }
+
+        initCurrenPage(module)
+
+        customLoad(module, function (data) {
+            console.log(data)
+            if (data.mobile !== "" && data.mobile !== null) {
+                $("#Mobile").val(data.mobile).addClass("input valid");
+                mobileDefault = data.mobile
+            }
+            if (data.email !== "" && data.email !== null) {
+                $("#Email").val(data.email).addClass("input valid");
+                emailDefault = data.email
+            }
+            if (data.verify_sms == "Y") {
+                verify_sms = "Y";
+                $("#otpMobileConfirm").removeAttr("style");
+            }
+        });
+
+        $("#Mobile").on("keyup", function () {
+            let val = $("#Mobile").val();
+            if (val.substring(0, 1) != 0) {
+                $("#errorMobile").html(
+                    `<div class="help-block form-error">หมายเลขโทรศัพท์มือถือ ไม่ถูกต้อง</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+                validateMobile = "N"
+            } else if (val.substring(1, 2) == 0 || val.substring(1, 2) == 1 || val.substring(1, 2) ==
+                2 || val.substring(1, 2) == 3 || val.substring(1, 2) == 4 || val.substring(1, 2) == 5 ||
+                val.substring(1, 2) == 7) {
+                $("#errorMobile").html(
+                    `<div class="help-block form-error">หมายเลขโทรศัพท์มือถือ ไม่ถูกต้อง</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+                validateMobile = "N"
+            } else if (val.length < 10) {
+                $("#errorMobile").html(
+                    `<div class="help-block form-error">หมายเลขโทรศัพท์มือถือ ไม่ถูกต้อง</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+                validateMobile = "N"
+            } else if (val.length == 10) {
+                $("#errorMobile").html("");
+                $("#Mobile").removeAttr("style");
+                validateMobile = "Y"
+                
+                checkExistMobile(val)
+            }
+            if (val == "") {
+                $("#errorMobile").html(
+                    `<div class="help-block form-error">กรุณาระบุ หมายเลขโทรศัพท์มือถือ</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+                validateMobile = "N"
+            }
+        });
+
+        $("#OtpMobileCode").on("blur", function () {
+            let val = $("#OtpMobileCode").val();
+            if (val.length < 6) {
+                $("#errorOtpMobileCode").html(
+                    `<div class="help-block form-error">กรุณาระบุ OTP ให้ครบ 6 หลัก</div>`);
+                $("#OtpMobileCode").attr("style", "border-color: red;");
+            } else if (val.length == 6) {
+                $("#errorOtpMobileCode").html("");
+                $("#OtpMobileCode").removeAttr("style");
+            }
+        });
+
+        $("#OtpMobileCode").on("keyup", function () {
+            let val = $("#OtpMobileCode").val();
+            if (val.length < 6) {
+                $("#errorOtpMobileCode").html(
+                    `<div class="help-block form-error">กรุณาระบุ OTP ให้ครบ 6 หลัก</div>`);
+                $("#OtpMobileCode").attr("style", "border-color: red;");
+            } else if (val.length == 6) {
+                $("#errorOtpMobileCode").html("");
+                $("#OtpMobileCode").removeAttr("style");
+            }
+        });
+
+        $("#Email").on("keyup", function () {
+            let val = $("#Email").val();
+            if (val.length < 1) {
+                $("#errorEmail").html(`<div class="help-block form-error">กรุณาระบุ อีเมล</div>`);
+                $("#Email").attr("style", "border-color: red;");
+            }
+        });
+
+        $("#Email").on('input', function () {
+
+            if (/^@/.test(this.value)) {
+                this.value = this.value.replace(/^@/, "")
+            }
+            if (/[@]{1}?/.test(this.value)) {
+                var i = 0;
+                this.value = this.value.replace(/[\@\%]/g, function (match) {
+                    return match === "@" ? (i++ === 0 ? '@' : '') : '';
+                });
+            }
+        });
+
+    })
+
+    function initCurrenPage(module) {
+        const wsurl = `${MAIN_URL}/api/current-page`;
+        var data = {
+            module: module
+        };
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                if (result.success == false) {
+                    window.location.href = '/send-reload-page';
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function checkSession(module) {
+        let session = 'Y';
+        if (session == "Y") {
+            const wsurl = `${MAIN_URL}/api/current-page`;
+            var data = {
+                module: module
+            };
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    let data = JSON.parse(result)
+                    if (data.success == false) {
+                        window.location.href = '/register';
+                    }
+                })
+                .catch(error => console.log('error', error));
+        } else {
+            window.location.href = '/register';
+        }
+    }
+
+    function btnOtpMobileCode() {
+        let val = $("#OtpMobileCode").val();
+
+        if (val.length < 6) {
+            $("#errorOtpMobileCode").html(`<div class="help-block form-error">กรุณาระบุ OTP</div>`);
+            $("#OtpMobileCode").attr("style", "border-color: red;");
+        } else if (val.length == 6) {
+            $("#errorOtpMobileCode").html("");
+            $("#OtpMobileCode").removeAttr("style");
+
+            const wsurl = `${MAIN_URL}/api/validate-otp-sms`;
+            var data = {
+                idCard: $("#idcard").val(),
+                ref_id: $("#ref_id").val(),
+                ref_code: val,
+                module: module
+            };
+
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    let data = JSON.parse(result);
+                    console.log(data)
+                    if (data.response.success) {
+                        $("#Mobile").prop("disabled", true)
+                        verify_sms = "Y"
+                        $("#modalMobileOtp").removeClass('show');
+                        $("#otpMobileConfirm").removeAttr("style");
+                    } else {
+                        $("#OtpMobileCode").attr("style", "border-color: red;");
+                        $("#errorOtpMobileCode").html(
+                            `<div class="help-block form-error" style="bottom: auto;font-size: 16px;line-height: 18px;">รหัส OTP ที่ท่านระบุไม่ถูกต้อง กรุณากรอกรหัส OTP ใหม่อีกครั้ง</div>`
+                        );
+                    }
+                })
+                .catch(error => console.log('error', error));
+        }
+    }
+
+    function btnMobileOtp() {
+        checkSession(module)
+
+
+        if (verify_sms == "N") {
+            let val = $("#Mobile").val();
+
+            let mobileCheck = true;
+            if (val.substring(0, 1) != 0) {
+                $("#errorMobile").html(`<div class="help-block form-error">หมายเลขโทรศัพท์มือถือ ไม่ถูกต้อง</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+                mobileCheck = false;
+            } else if (val.substring(1, 2) == 0 || val.substring(1, 2) == 1 || val.substring(1, 2) == 2 || val
+                .substring(1,
+                    2) == 3 || val.substring(1, 2) == 4 || val.substring(1, 2) == 5 || val.substring(1, 2) == 7) {
+                $("#errorMobile").html(`<div class="help-block form-error">หมายเลขโทรศัพท์มือถือ ไม่ถูกต้อง</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+                mobileCheck = false;
+            } else if (val.length < 10) {
+                $("#errorMobile").html(`<div class="help-block form-error">หมายเลขโทรศัพท์มือถือ ไม่ถูกต้อง</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+                mobileCheck = false;
+            } else if (val.length == 10) {
+                $("#errorMobile").html("");
+                $("#Mobile").removeAttr("style");
+            }
+            if (val == "") {
+                $("#errorMobile").html(
+                    `<div class="help-block form-error">กรุณาระบุ หมายเลขโทรศัพท์มือถือ</div>`);
+                $("#Mobile").attr("style", "border-color: red;");
+            }
+            if (mobileExist == "Y") {
+                $("#errorMobile").html(
+                    `<div class="help-block form-error" style="bottom: auto;display: block;border: none;color: #ce6214;font-size: 16px;text-align: right;line-height: normal;">ท่านไม่สามารถใช้เบอร์โทรศัพท์มือถือนี้ได้ เนื่องจากมีข้อมูลอยู่ในระบบกับทางบริษัทฯ อยู่แล้ว กรุณาติดต่อฝ่าย Contact Center โทรศัพท์ 02-088-4666</div>`
+                );
+                $("#Mobile").attr("style", "border-bottom:2px solid red !important;");
+                mobileCheck = false;
+            }
+            if (mobileCheck == true) {
+                var objRequest = {};
+                var dataElem = {
+                    mobile: $("#Mobile").val(),
+                    status_module: "next_module"
+                };
+                objRequest.module = module;
+                objRequest.session = 2;
+                objRequest.parameters = JSON.stringify(dataElem);
+
+                const wsurl = `${MAIN_URL}/api/saveTempdata`;
+
+                fetch(wsurl, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(objRequest)
+                }).then(function (response) {
+                    return response.json();
+                }).then(function (result) {
+                    console.log(result)
+                    if (result.data !== null) {
+                        let data = JSON.parse(result.data)
+                        if (data.success) {
+                            let mobileRes = data.mobile
+                            let mobileNo = mobileRes[0] + mobileRes[1] + "x-xxx-xx" + mobileRes[8] + mobileRes[
+                                9]
+                            $("#mobile-no").text(mobileNo)
+
+                            $("#ref_id_text").text(data.ref_id)
+                            $("#ref_id").val(data.ref_id)
+                            $("#idcard").val(data.uid)
+
+                            $("#OtpMobileCode").val("")
+
+                            $("#modalMobileOtp").addClass('show');
+                        }
+                    }
+                }).catch(error => console.log('error', error));
+            }
+        }
+    }
+
+    function hideModal() {
+        $('.modal').removeClass('show');
+    }
+
+    function editMobile() {
+        if (verify_sms == "N") {
+            $("#Mobile").prop("disabled", false)
+            $("#otpMobileConfirm").attr("style", "display: none;");
+        }else{
+            $("#Mobile").prop("disabled", true)
+            $("#otpMobileConfirm").attr("style", "display: block;");
+        }
+
+    }
+
+    function editEmail() {
+        if (verify_sms == "Y") {
+            $("#Email").prop("disabled", false)
+        } else {
+            let val = $("#Mobile").val()
+
+            $("#msg_content").text(`กรุณายืนยันหมายเลขโทรศัพท์ ${val} ของท่าน`)
+            $('#msg_modal_dialog').addClass('show');
+        }
+    }
+
+    const validateEmail = (email) => {
+        return email.match(
+            /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+        );
+    };
+
+    const validate = () => {
+        const $errorEmail = $('#errorEmail');
+        const email = $('#Email').val();
+        $errorEmail.text('');
+
+        if (validateEmail(email)) {
+            const emailArr = email.split(".");
+            const emailDot = emailArr[emailArr.length - 1];
+            if (emailDot == "con") {
+                $("#emailCorrect").val("N");
+                $("#errorEmail").html(`<div class="help-block form-error">อีเมล ไม่ถูกต้อง</div>`).attr("style",
+                    "display:block");
+            } else {
+                if (email.match(/\b[\w\.-]*[a-zA-Z0-9]@[\w\-]+\.\w{2,4}\b/gi)) {
+                    $("#emailCorrect").val("Y");
+                }
+                else {
+                    $("#emailCorrect").val("N");
+                    $("#errorEmail").html(`<div class="help-block form-error">อีเมล ไม่ถูกต้อง</div>`).attr("style", "display:block");
+                }
+            }
+        } else {
+            $("#emailCorrect").val("N");
+
+            $("#errorEmail").html(`<div class="help-block form-error">อีเมล ไม่ถูกต้อง</div>`);
+            $("#errorEmail").attr("style", "border-color: red;");
+        }
+        return false;
+    }
+
+    $('#Email').on('input', validate);
+
+
+    function btnEmailOtp() {
+        let emailCheck = true;
+        let val = $("#emailCorrect").val();
+        let emailValue = $("#Email").val();
+
+        if (val == "N") {
+            if (emailValue == "") {
+                $("#errorEmail").html(`<div class="help-block form-error">กรุณาระบุ อีเมล</div>`);
+            }
+            else {
+                $("#errorEmail").html(`<div class="help-block form-error">อีเมล ไม่ถูกต้อง</div>`);
+            }
+            $("#errorEmail").attr("style", "border-color: red;");
+            emailCheck = false;
+        }
+        if (emailExist == "Y") {
+            emailCheck = false;
+        }
+        if (verify_sms == "Y" && emailCheck) {
+            $('#waiting_modal_dialog').addClass('show');
+
+            var objRequest = {};
+            var dataElem = {
+                email: $("#Email").val(),
+                status_module: "next_module"
+            };
+            objRequest.module = module;
+            objRequest.session = 2;
+            objRequest.parameters = JSON.stringify(dataElem);
+
+            const wsurl = `${MAIN_URL}/api/saveTempdata`;
+
+            fetch(wsurl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(objRequest)
+            }).then(function (response) {
+                return response.json();
+            }).then(function (result) {
+                console.log(result)
+                if (result.data !== null) {
+                    window.open('/send-otpsuccess', "_self");
+                }
+            }).catch(error => console.log('error', error));
+        } else if (verify_sms == "N") {
+            let mobile = $("#Mobile").val()
+
+            $("#msg_content").text(`กรุณายืนยันหมายเลขโทรศัพท์ ${mobile} ของท่าน`)
+            $('#msg_modal_dialog').addClass('show');
+        }
+    }
+
+    function btnBack() {
+        $("#status_module").val("back_module");
+        $('#waiting_modal_dialog').addClass('show');
+        setTimeout(() => {
+            const wsurl = `${MAIN_URL}/api/clear-view-count`;
+            var data = {
+                url: "/basic/form/suitfatca"
+            };
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    window.open(result, "_self");
+                })
+                .catch(error => console.log('error', error));
+        }, 1000);
+    }
+
+    function checkExistEmail() {
+        let session = 'Y';
+        emailExist = "N"
+        if (session == "Y") {
+            if (emailDefault !== $("#Email").val() && $("#Email").val() !== "") {
+                sendCheckExistEmail()
+            }
+        } else {
+            sendCheckExistEmail()
+        }
+    }
+
+    function sendCheckExistEmail() {
+        const wsurl = `${MAIN_URL}/api/check-exist-email`;
+        let email = "";
+        email = $("#Email").val() !== "" ? $("#Email").val() : ""
+        var data = {
+            email: email
+        };
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                let data = JSON.parse(result)
+                if (data.success !== true) {
+                    emailExist = "Y"
+                    $("#errorEmail").html(
+                        `<div class="help-block form-error" style="bottom: auto; display: block;border: none;color: #ce6214;font-size: 16px;text-align: right;line-height: normal;">ท่านไม่สามารถใช้อีเมลนี้ได้ เนื่องจากมีข้อมูลอยู่ในระบบกับทางบริษัทฯ อยู่แล้ว กรุณาติดต่อฝ่าย Contact Center โทรศัพท์ 02-088-4666</div>`
+                    );
+                    $("#Email").attr("style", "border-color: red;");
+                    $("#existEMTerm").addClass('show');
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function checkExistMobile(val) {
+        let session = 'Y';
+        if (val.length == 10 && validateMobile == "Y") {
+            mobileExist = "N"
+            if (session == "Y") {
+                if (mobileDefault !== $("#Mobile").val() && $("#Mobile").val() !== "") {
+                    sendCeckExistMobile()
+                }
+            } else {
+                sendCeckExistMobile()
+            }
+        }
+    }
+
+    function sendCeckExistMobile() {
+        const wsurl = `${MAIN_URL}/api/check-exist-mobile`;
+        let mobile = "";
+        mobile = $("#Mobile").val() !== "" ? $("#Mobile").val() : ""
+        var data = {
+            mobile: mobile
+        };
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                let data = JSON.parse(result)
+                if (data.success !== true) {
+                    mobileExist = "Y"
+                    $("#errorMobile").html(
+                        `<div class="help-block form-error" style="bottom: auto;display: block;border: none;color: #ce6214;font-size: 16px;text-align: right;line-height: normal;">ท่านไม่สามารถใช้เบอร์โทรศัพท์มือถือนี้ได้ เนื่องจากมีข้อมูลอยู่ในระบบกับทางบริษัทฯ อยู่แล้ว กรุณาติดต่อฝ่าย Contact Center โทรศัพท์ 02-088-4666</div>`
+                    );
+                    $("#Mobile").attr("style", "border-bottom:2px solid red !important;");
+                } else {
+                    mobileExist = "N"
+                    $("#errorMobile").html("");
+                    $("#Mobile").removeAttr("style");
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function resendOTPSMS() {
+        var objRequest = {};
+        var dataElem = {
+            mobile: $("#Mobile").val(),
+            status_module: "next_module"
+        };
+        objRequest.module = module;
+        objRequest.session = 2;
+        objRequest.parameters = JSON.stringify(dataElem);
+
+        const wsurl = `${MAIN_URL}/api/saveTempdata`;
+
+        fetch(wsurl, {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(objRequest)
+        }).then(function (response) {
+            return response.json();
+        }).then(function (result) {
+            console.log(result)
+            if (result.data !== null) {
+                let data = JSON.parse(result.data)
+                if (data.success) {
+                    let mobileRes = data.mobile
+
+                    $("#ref_id_text").text(data.ref_id)
+                    $("#ref_id").val(data.ref_id)
+                    $("#idcard").val(data.uid)
+                    $("#OtpMobileCode").val("")
+                }
+            }
+        }).catch(error => console.log('error', error));
+    }
+
+    $('.close').on('click', function () {
+        $('#modalMobileOtp').removeClass('show');
+        $("#errorOtpMobileCode").html("");
+        $("#OtpMobileCode").removeClass("input");
+    });
+</script>
+
+</body>
+
+</html>

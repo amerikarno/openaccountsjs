@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <script src="assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><!-- CONTENT -->
+<div id="home">
+    <div class="height-bigpc">
+        <div class="home">
+            <div class="container">
+                <div class="row align-items">
+                    <!-- banner -->
+                    <div class="col-xs-12 col-md-6">
+                        <div class="logo">
+                            <img src="assets/imgs/logo-white.png" class="img-responsive" alt="">
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="banner">
+                            <img src="assets/imgs/banner-openaccount.png" class="img" alt="">
+                            <div class="continue">
+                                <a href="/edit-op-acc.html">
+                                    <img src="assets/imgs/resume_btn.png" class="img" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 no-padding-mobile">
+                        <button onclick="gotoRegister()" class="button-accept" type="button" style="text-alline:center;width: 100%;">เปิดบัญชีกับ FINANSIA DIGITAL ASSET</button>
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+
+<div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- OTHER -->
+<script>
+    function gotoRegister(){
+        window.open("/register/form/preinfo.html", "_self");
+    }
+</script>
+</body>
+
+</html>

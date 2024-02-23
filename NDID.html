@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="logo">
+                    <a href="#"><img src="/assets/imgs/header/logo.png" class="img-responsive" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- CONTENT -->
+<div id="otp">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 no-padding-mobile">
+                <!-- process -->
+                <div class="border">
+                    <div class="process">
+                        <div class="col-xs-12 col-md-5">
+                            <div class="process__title">ยืนยันตัวตนผ่าน NDID</div>
+                        </div>
+                        <div class="col-xs-12 col-md-7">
+                            <div class="process__list">
+                                <li>
+                                    <div class="circle">
+                                        <svg x="0px" y="0px" viewBox="-89.3 2 29 24"
+                                            style="enable-background:new -89.3 2 29 24;">
+                                            <path class="tik" d="M-89.3,14l4-4l7,8l14-16l4,4l-18,20L-89.3,14z" />
+                                        </svg>
+                                    </div>
+                                    <div class="title">กรอกข้อมูล</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="60, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">2</text>
+                                    </svg>
+                                    <div class="title orange">ยืนยันตัวตน</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart ">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="80, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">3</text>
+                                    </svg>
+                                    <div class="title">รับรหัสผ่าน</div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <form id="frm_register" action="" method="GET" class="form" role="form">
+                    <div class="border z-index-1">
+                        <div class="post-title">
+                           <p>กรุณาเลือก <b>“ผู้ให้บริการยืนยันตัวตน”</b> ที่เคยลงทะเบียนไว้เพื่อยืนยันตัวตน</p> 
+                           <p>และมีโมบายแอปพลิเคชันของผู้ให้บริการยืนยันตัวตน</p> 
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="border z-index-1">
+                        <div class="block-ndid_bank02">
+                            <div id="header-title-ndid" class="header-title" style="display:none;">
+                                <h2 class="bank_ndid_title_h">
+                                    ผู้ให้บริการยืนยันตัวตน ที่ลงทะเบียน NDID ไว้ สามารถยืนยันตัวตนได้ทันที
+                                </h2>
+
+                                <div class="ndid__checks02 mlr30 mb-30">
+                                    <div id="no-ndid-step-1" class="header-title02" style="display:none;">
+                                        <h4 class="mb-0">
+                                            1.กรุณา <b>“เลือก”</b> ผู้ให้บริการยืนยันตัวตน เพื่อยืนยันตัวตน
+                                        </h4>
+                                    </div>
+                                    <div id="radioCompany" class="app-wrapper__btn-radio">
+                                    </div>
+                                    <div id="no-ndid-step-2" class="header-title02" style="display:none;">
+                                        <h4 class="mb-0">
+                                            2.กดปุ่ม <b>“ยืนยัน”</b> และทำตามคำแนะนำ
+                                        </h4>
+                                    </div>
+                                </div>
+
+                                <div class="button-ndid">
+                                    <button type="button" class="btnConfirm" role="button"
+                                        onclick="btnConfirmNdid()">ยืนยัน</button>
+                                </div>
+                            </div>
+
+                            <div id="header-title-no-ndid" class="header-title02" style="display:none;">
+                                <h2 class="mb-0">
+                                    ท่านยังไม่มี NDID กับผู้ให้บริการยืนยันตัวตน
+                                </h2>
+                                <p>
+                                    ผู้ให้บริการที่นำท่านให้ลงทะเบียน NDID ก่อน จากนั้นจึงยืนยันตัวตนได้
+                                </p>
+
+                                <div class="ndid__checks02 mlr30 mb-60">
+                                    <div class="header-title02">
+                                        <h4 class="mb-0">
+                                            1.กรุณา <b>“เลือก”</b> ผู้ให้บริการยืนยันตัวตน เพื่อยืนยันตัวตน
+                                        </h4>
+                                    </div>
+                                    <div id="radioCompanyNo" class="block-ndid__checks02 app-wrapper__btn-radio">
+
+                                    </div>
+                                </div>
+
+                                <div class="ndid__checks02 mlr30">
+                                    <div class="header-title02">
+                                        <h4 class="mb-0">
+                                            2.กดปุ่ม <b>“ยืนยัน”</b> และทำตามคำแนะนำ
+                                        </h4>
+                                    </div>
+                                    <div class="group__btnEC">
+                                        <button class="btnConfirm" type="button" role="button"
+                                            onclick="btnConfirmNdid()">ยืนยัน</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div id="bank-ndid-other" class="border z-index-1">
+                        <div class="block-other__ndid">
+                            <div class="header-title">
+                                <h2>
+                                    ผู้ให้บริการยืนยันตัวตนอื่นที่รับลงทะเบียน NDID
+                                    <a onclick="gotoUrl('bank-no-ndid')" href="#">
+                                        <span>คลิกที่นี่</span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <p>(เมื่อลงทะเบียนแล้วจึงสามารถยืนยันตัวตนได้)</p>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+
+                    <div class="border z-index-1">
+                        <div class="block-no-kyc_ndid">
+                            <div class="header-title">
+                                <h2>
+                                    หากท่านไม่ประสงค์ยืนยันตัวตนผ่าน NDID สามารถ “เปลี่ยน” วิิธียืนยันตัวตน
+                                </h2>
+                                <a onclick="gotoUrl('identity/selection/type')" href="#">
+                                    <span>คลิกที่นี่</span>
+                                </a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </form>
+                <div class="clear"></div>
+
+                <!-- Modal NDID Response Timeout -->
+                <div id="ndidTimeout" class="modal fade" role="dialog">
+                    <div class="modal-dialog mr-top10">
+                        <div class="modal-content ">
+                            <div class="modal-header">
+                            </div>
+                            <div class="modal-body ">
+                                <div class="formgroup">
+                                    <div class="content__CheckTransSta">
+                                        <span>[NDID Response Timeout]</span>
+                                        เนื่องจาก NDID ไม่ตอบสนอง กรุณาลองใหม่อีกครั้งในภายหลัง หรือ
+                                        ท่านสามารถสอบถามข้อมูลเพิ่มเติมได้ที่ ฝ่าย Customer Experience
+                                        โทรศัพท์ 02-088-4666 ในวันและเวลาทำการหรืออีเมล
+                                        callcenter@finansiada.com
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button href="javascript:void(0)" onclick="hideModalndidTimeout()" class="button-accept"
+                                    type="button" aria-label="Close">ตกลง</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="/assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="/assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="/assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+    const MAIN_URL = window.location.origin;
+
+    $(document).ready(function () {
+        $('#waiting_modal_dialog').addClass('show');
+        let session = 'Y';
+        if (session == "N") {
+            setTimeout(() => {
+                window.location.href = '/send-reload-page';
+            }, 1000);
+        }
+
+        function disableBack() {
+            window.history.forward()
+        }
+        window.onload = disableBack();
+        window.onpageshow = function (e) {
+            if (e.persisted)
+                disableBack();
+        }
+
+        initNDID();
+    })
+
+    function hideModalndidTimeout() {
+        $('.modal').removeClass('show')
+    }
+
+    let uid = "";
+
+    function initNDID() {
+        const wsurl = `${MAIN_URL}/api/get-data-kyc`;
+
+        fetch(wsurl, {
+            method: "POST"
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                console.log(result + ":uid")
+                let data = JSON.parse(result);
+
+                if (data.uid !== "" && data.uid !== null) {
+                    uid = data.uid;
+                    loadAS(data.uid)
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
+
+    var arrIDP;
+    var arrONBOARD;
+    var arrAS;
+
+    function loadAS(id) {
+        const wsurl = `${MAIN_URL}/api/get-bank-ndid-data-as`;
+
+        let data = {
+            id: id
+        };
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                let data = JSON.parse(result)
+                let dataAS = JSON.parse(data)
+                if (dataAS.data_request_list != null) {
+                    arrAS = dataAS.data_request_list;
+                    loadONBOARD(id);
+                }
+            })
+            .catch(error => console.log('error', error));
+    }
+
+    function loadONBOARD(id) {
+        const wsurl = `${MAIN_URL}/api/get-bank-ndid-data-onboard`;
+        let data = {
+            id: id
+        };
+
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                let data = JSON.parse(result)
+                var dataONBOARD = JSON.parse(data);
+
+                arrONBOARD = dataONBOARD.data_request_list;
+                console.log(arrONBOARD.length)
+                if (arrONBOARD.length > 0) {
+                    let a = 0;
+                    for (let i = 0; i < arrONBOARD.length; i++) {
+                        var comId, nodeIDP, bankName;
+                        comId = JSON.parse(arrONBOARD[i].node_name).company_code;
+                        indusID = JSON.parse(arrONBOARD[i].node_name).industry_code;
+                        bankName = JSON.parse(arrONBOARD[i].node_name).marketing_name_th;
+                        nodeIDP = arrONBOARD[i].node_id;
+                        var bl = "";
+                        for (let j = 0; j < arrAS.length; j++) {
+                            if (comId == JSON.parse(arrAS[j].node_name).company_code && (indusID == "001" || indusID == "019" || indusID == "992")) {
+                                if (a > 5) {
+                                    $("#radioCompany").addClass("block-ndid__checks02")
+                                }
+
+                                var noImg = "";
+
+                                comId = indusID + comId;
+
+                                if (comId == "019001") {
+                                    noImg = "001002";
+                                } else if (comId == "019002") {
+                                    noImg = "001004";
+                                }
+                                $('#radioCompany').append(`<div class="item">
+                                                <div id="border-${comId}" class="style_00 ${bl}">
+                                                    <label for="${comId}" class="app-btn-radio radio" style="margin-top:0">
+                                                        <input type="radio" id="${comId}" name="nodeID"
+                                                            value="${nodeIDP}/${arrAS[j].node_id}" onchange="chooseIDP('${comId}')" class="input">
+                                                        <div class="app-btn-radio__images02">
+                                                            <img src="assets/imgs/company/${comId}.png" onerror="this.onerror=null; this.src='assets/imgs/company/${noImg}.png'" class="img-responsive"
+                                                                alt="" width="84" height="84">
+                                                        </div>
+                                                        <span class="checkround"></span>
+                                                    </label>
+                                                    <input type="hidden" id="bn-${comId}" value="${bankName}">
+                                                </div>
+                                            </div>`);
+                                a++;
+                            }
+                        }
+                        $("#bank-ndid-other").removeAttr("style")
+                        if (a == 9) {
+                            $("#bank-ndid-other").attr("style", "display:none")
+                            $("#header-title-ndid").removeAttr("style")
+                        } else if (a >= 1 && a <= 8) {
+                            $("#header-title-ndid").removeAttr("style")
+                        }
+                    }
+
+                    let v = parseInt('1');
+                    if (v == 1) {
+                        $('#waiting_modal_dialog').removeClass('show');
+                    } else {
+                        window.location.href = '/send-reload-page';
+                    }
+                } else {
+                    loadOnthefly(id)
+                }
+            }).catch(function (error) { });
+    }
+
+    function loadOnthefly(id) {
+        $("#header-title-ndid, #bank-ndid-other").attr("style", "display:none")
+        $("#header-title-no-ndid").removeAttr("style")
+
+        const wsurl = `${MAIN_URL}/api/get-bank-ndid-data-onthefly`;
+        let data = {
+            id: id
+        };
+
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                let data = JSON.parse(result)
+                var dataOnthefly = JSON.parse(data);
+
+                arrOnthefly = dataOnthefly.data_request_list;
+                let a = 0;
+                for (let i = 0; i < arrOnthefly.length; i++) {
+                    var comId, nodeIDP, indusID, bankName;
+                    comId = JSON.parse(arrOnthefly[i].node_name).company_code;
+                    nodeIDP = arrOnthefly[i].node_id;
+                    indusID = JSON.parse(arrOnthefly[i].node_name).industry_code;
+                    bankName = JSON.parse(arrOnthefly[i].node_name).marketing_name_th;
+                    var bl = "";
+                    for (let j = 0; j < arrAS.length; j++) {
+                        if (comId == JSON.parse(arrAS[j].node_name).company_code && indusID == JSON.parse(arrAS[j].node_name).industry_code && (indusID == "001" || indusID == "019" || indusID == "992")) {
+                            if (a > 5) {
+                                $("#radioCompanyNo").addClass("block-ndid__checks02")
+                            }
+
+                            comId = indusID + comId;
+
+                            var noImg = "";
+
+                            if (comId == "019001") {
+                                noImg = "001002";
+                            } else if (comId == "019002") {
+                                noImg = "001004";
+                            }
+
+                            $('#radioCompanyNo').append(`<div class="item">
+                                                <div id="border-${comId}" class="style_00 ${bl}">
+                                                    <label for="${comId}" class="app-btn-radio radio" style="margin-top:0">
+                                                        <input type="radio" id="${comId}" name="nodeID"
+                                                            value="${nodeIDP}/${arrAS[j].node_id}" onchange="chooseIDP('${comId}')" class="input">
+                                                        <div class="app-btn-radio__images02">
+                                                            <img src="assets/imgs/company/${comId}.png" onerror="this.onerror=null; this.src='assets/imgs/company/${noImg}.png'" class="img-responsive"
+                                                                alt="" width="84" height="84">
+                                                        </div>
+                                                        <span class="checkround"></span>
+                                                    </label>
+                                                    <input type="hidden" id="bn-${comId}" value="${bankName}">
+                                                </div>
+                                            </div>`);
+                            a++;
+                        }
+                    }
+                }
+
+                let v = parseInt('1');
+                if (v == 1) {
+                    $('#waiting_modal_dialog').removeClass('show');
+                } else {
+                    window.location.href = '/send-reload-page';
+                }
+            }).catch(function (error) { });
+    }
+
+    let idIDP = "";
+
+    function chooseIDP(id) {
+        idIDP = id;
+    }
+
+    function btnConfirmNdid() {
+        let bankCheck = document.getElementById(idIDP);
+
+        if (bankCheck.checked == true) {
+            let val = document.getElementById(idIDP).value;
+            let bank_name = document.getElementById('bn-' + idIDP).value;
+            const wsurl = `${MAIN_URL}/api/ndid-request`;
+            let data = {
+                id: uid,
+                idpVal: val,
+                idIDP: idIDP,
+                marketing_name_th: bank_name
+            };
+
+            console.log(data)
+
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    console.log(result)
+                    if (result != "") {
+                        let data = JSON.parse(result)
+                        let data2 = JSON.parse(data)
+                        if (data2.header.response_code == "0000" && bankCheck.checked == true) {
+                            gotoUrl("manual-ndid/" + idIDP)
+                        }
+                    } else {
+                        $("#ndidTimeout").addClass('show');
+                    }
+
+                })
+                .catch(error => console.log('error', error));
+        }
+    }
+
+    function gotoUrl(url) {
+        const wsurl = `${MAIN_URL}/api/clear-view-count`;
+        var data = {
+            url: ""
+        };
+        fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+            .then(response => response.text())
+            .then(function (result) {
+                window.open(`${MAIN_URL}/${url}`, "_self");
+            })
+            .catch(error => console.log('error', error));
+    }
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+</head>
+
+<body>
+    <!-- CONTENT -->
+    <div id="home">
+        <div class="height-bigpc">
+            <div class="home">
+                <div class="container">
+                    <div class="row align-items">
+                        <!-- banner -->
+                        <div class="col-xs-12 col-md-6">
+                            <div class="logo">
+                                <img src="/assets/imgs/logo-white.png" class="img-responsive" alt=""
+                                    style="width: 215px;">
+                                <div class="clear"></div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="banner">
+                                <img src="/assets/imgs/banner-openaccount.png" class="img" alt="">
+                                <div class="continue">
+                                    <a href="/go-edit-op-acc">
+                                        <img src="/assets/imgs/resume_btn.png" class="img" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ตรวจสอบสถานะการทำรายการ -->
+                        <div class="col-xs-12 col-md-6 no-padding-mobile">
+                            <div class="tab hidden-md hidden-lg">
+                                <li class="white">ตรวจสอบสถานะการทำรายการ</li>
+                            </div>
+                            <!-- form -->
+                            <form id="frm_register" action="" method="GET" class="form" role="form">
+
+                                <div class="content no-flex border-sha">
+                                    <div class="col-xs-7 otp-header">
+                                        <li class="white">ตรวจสอบสถานะการทำรายการ</li>
+                                    </div>
+                                    <div class="col-xs-12">
+                                        <div class="formgroup-verify-otp">
+
+                                            <div class="content__title content__title--small">
+                                                <span id="mobile"></span>
+                                            </div>
+                                            <div class="refcode">Ref Code : </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-xs-12">
+                                        <div class="col-xs-12 col-md-4 no-padding text-align-center">
+                                            <div class="content__title content__title--small2">
+                                                <span>รหัส OTP 6 หลัก <span class="orange">*</span></span>
+                                            </div>
+                                            <div class="formgroup margin-bottom-0">
+                                                <input type="text" id="OTP" name="OTP" maxlength="6"
+                                                    oninput="this.value = this.value.replace(/[^0-9]/g, '').replace(/(\..*)\./g, '$1');" />
+                                                <span class="highlight"></span>
+                                                <span class="bar"></span>
+                                                <label for="OTP" class="label-hide">******</label>
+                                                <div id="errorOTP"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4 no-padding-mobile adjustbutt">
+                                            <input type="button" id="btnOtpCon"
+                                                class="submit-otp submit-otp-padding no-padding-mobile pad-tb"
+                                                value="ยืนยัน OTP" onclick="btnOtpConfirm()">
+                                        </div>
+                                        <div class="col-xs-12 col-md-4 no-padding-mobile adjustbutt">
+                                            <div class="formgroup ">
+                                                <a href="/register"
+                                                    class="submit-cancle no-padding-mobile pad-tb">ยกเลิก</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-12" style="margin-top: 10px;">
+                                        <div class="sendagain">
+                                            หากท่านไม่ได้รหัส OTP ภายใน 5 นาที <br
+                                                class="hidden-md hidden-lg">กรุณากดขอให้ส่งอีกครั้ง <a
+                                                href="javascript:void(0)" onclick="resendOTPSMS()"><u>ที่นี่</u></a>
+                                            <div class="condition"><span>*</span> ข้อมูลสำคัญ กรุณากรอกให้ครบถ้วน</div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                                <input type="hidden" id="ref_id">
+                            </form>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <!-- Modal otp Maximum -->
+                        <div id="otpMaximum" class="modal fade" role="dialog">
+                            <div class="modal-dialog mr-top10">
+                                <div class="modal-content ">
+                                    <div class="modal-header">
+                                    </div>
+                                    <div class="modal-body ">
+                                        <div class="formgroup">
+                                            <div class="content__CheckTransSta">
+                                                <div id="otpMaximumText" class="justify_center_modal_timeout">
+
+                                                </div>
+                                                <br>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer" id="otpMaximumButton">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="waiting_modal_dialog" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-body mdb-msg" style="text-align:center;">
+                    <p>
+                        ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                    </p>
+                    <img src="/assets/imgs/wait.gif">
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- FOOTER -->
+    <div id="includedFooter"></div>
+    <!-- JS -->
+    <script src="/assets/js/framework.js"></script>
+    <script src="/assets/js/script.js"></script>
+    <script>
+        $("#includedFooter").load("/assets/layout/footer.php");
+    </script>
+    <!-- OTHER -->
+    <script>
+        $(document).ready(function () {
+            let v = parseInt('1');
+            if (v !== 1) {
+                $('#waiting_modal_dialog').addClass('show');
+                setTimeout(() => {
+                    window.location.href = '/send-reload-page';
+                }, 1000);
+            }
+
+            function disableBack() {
+                window.history.forward()
+            }
+            window.onload = disableBack();
+            window.onpageshow = function (e) {
+                if (e.persisted)
+                    disableBack();
+            }
+
+            initLoadConfirmOTP();
+        })
+
+        let otpinput = document.getElementById("OTP");
+        otpinput.addEventListener("keypress", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                btnOtpConfirm();
+            }
+        });
+
+        function initLoadConfirmOTP() {
+            const wsurl = `${MAIN_URL}/api/get-confirm-otp`;
+            var data = {
+                idcard: localStorage.getItem("Idcard")
+            };
+
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    let data = JSON.parse(result);
+                    let initData = JSON.parse(data.data);
+                    if (initData.success) {
+                        localStorage.setItem("sessionOTP", initData.sessionOTP);
+                        $('#OTP').val("").removeClass("input");
+                        $("#mobile").html(`ระบบได้ทำการส่งรหัส OTP ไปยังหมายเลข ${initData.mobile.substring(0, 4)}xxxxx${initData.mobile.substr(initData.mobile.length - 1)} แล้ว
+                                        <ol class="de-mr">
+                                            <li>กรอกรหัส OTP</li>
+                                            <li>กด ยืนยัน OTP</li>
+                                        </ol>`);
+                        $(".refcode").html(`Ref Code : ${initData.ref_id}`);
+                        $("#ref_id").val(initData.ref_id);
+                    }
+                    if (initData.error == "RequestOTPSms maximum!") {
+                        $('#OTP').val("").removeClass("input");
+                        $("#errorOTP").html(`<div class="help-block form-error" style="top:35px;font-size: 16px;line-height: 18px;">ท่านได้ทำการขอรหัส OTP เกิน 3 ครั้ง ไม่สามารถทำรายการได้</div>`)
+
+                        $('#otpMaximumText').append(`<span>ท่านได้ทำการขอรหัส OTP เกิน 3 ครั้ง กรุณารอ 5 นาที ค่อยกลับมาทำรายการใหม่อีกครั้งในภายหลัง</span>`);
+                        $('#otpMaximumButton').append(`<button href="javascript:void(0)" onclick="OTPMax()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                        $("#otpMaximum").addClass('show');
+                    }
+                })
+                .catch(error => console.log('error', error));
+        }
+
+        $("#OTP").on("blur", function () {
+            let val = $("#OTP").val();
+            if (val.length < 6) {
+                $("#errorOTP").html(`<div class="help-block form-error" style="font-size: 16px;line-height: 18px;">กรุณาระบุ OTP</div>`);
+                $("#OTP").attr("style", "border-color: red;");
+            } else if (val.length == 6) {
+                $("#errorOTP").html("");
+                $("#OTP").removeAttr("style");
+            }
+        });
+
+        $("#OTP").on("keyup", function () {
+            let val = $("#OTP").val();
+            if (val.length < 6) {
+                $("#errorOTP").html(`<div class="help-block form-error" style="font-size: 16px;line-height: 18px;">กรุณาระบุ OTP</div>`);
+                $("#OTP").attr("style", "border-color: red;");
+            } else if (val.length == 6) {
+                $("#errorOTP").html("");
+                $("#OTP").removeAttr("style");
+            }
+        });
+
+        function btnOtpConfirm() {
+            getStatus();
+        }
+
+        function validateEmail(getTimeClose) {
+            console.log(getTimeClose);
+            let val = $("#OTP").val();
+            $('#waiting_modal_dialog').addClass('show');
+            if (val.length < 6) {
+                $('#waiting_modal_dialog').removeClass('show');
+                $("#errorOTP").html(`<div class="help-block form-error" style="font-size: 16px;line-height: 18px;">กรุณาระบุ OTP</div>`);
+                $("#OTP").attr("style", "border-color: red;");
+            } else if (val.length == 6) {
+                $("#errorOTP").html("");
+                $("#OTP").removeAttr("style");
+                setTimeout(() => {
+                    const wsurl = `${MAIN_URL}/api/validate-otp-sms`;
+                    var data = {
+                        idCard: localStorage.getItem("Idcard"),
+                        ref_id: $("#ref_id").val(),
+                        ref_code: val,
+                        module: "module_login"
+                    };
+                    fetch(wsurl, {
+                        method: "POST",
+                        body: JSON.stringify(data)
+                    })
+                        .then(response => response.text())
+                        .then(function (result) {
+                            let data = JSON.parse(result);
+                            console.log(data)
+                            console.log("291")
+                            let ss = data.responseLogin.success;
+                            if (data.responseLogin.error == "ValidateOTP maximum!") {
+                                $("#OTP").attr("style", "border-color: red;");
+                                $("#errorOTP").html(`<div class="help-block form-error" style="top:35px;font-size: 16px;line-height: 18px;">รหัส OTP ที่ท่านระบุไม่ถูกต้องเกิน 3 ครั้ง ไม่สามารถทำรายการได้</div>`)
+
+                                $('#otpMaximumText').append(`<span>รหัส OTP ที่ท่านระบุไม่ถูกต้องเกิน 3 ครั้ง ไม่สามารถทำรายการได้</span>`);
+                                $('#otpMaximumButton').append(`<button href="javascript:void(0)" onclick="OTPMax()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                                $("#otpMaximum").addClass('show');
+                                $('#waiting_modal_dialog').removeClass('show');
+                            }
+                            else if (data.response.error == "ยืนยัน OTP SMS ไม่สำเร็จ และ ทำการยืนยันครบ 3 ครั้งแล้ว") {
+                                $('#waiting_modal_dialog').removeClass('show');
+                                $("#OTP").attr("style", "border-color: red;");
+                                $("#errorOTP").html(`<div class="help-block form-error" style="top:35px;font-size: 16px;line-height: 18px;">รหัส OTP ที่ท่านระบุไม่ถูกต้องเกิน 3 ครั้ง ไม่สามารถทำรายการได้</div>`)
+                            }
+                            else if (!data.responseLogin.success && data.responseLogin.error == "OTP Expire") {
+                                $('#waiting_modal_dialog').removeClass('show');
+                                $("#OTP").attr("style", "border-color: red;");
+                                $("#errorOTP").html(`<div class="help-block form-error" style="top:35px;font-size: 16px;line-height: 18px;">รหัส OTP ที่ท่านระบุหมดอายุ กรุณาขอรหัส OTP ใหม่อีกครั้ง</div>`)
+                            }
+                            else if (!data.responseLogin.success) {
+                                $('#waiting_modal_dialog').removeClass('show');
+                                $("#OTP").attr("style", "border-color: red;");
+                                $("#errorOTP").html(`<div class="help-block form-error" style="top:35px;font-size: 16px;line-height: 18px;">รหัส OTP ที่ท่านระบุไม่ถูกต้อง กรุณากรอกรหัส OTP ใหม่อีกครั้ง</div>`)
+                            }
+                            if (data.response.success) {
+                                gotoUrl(data.response, getTimeClose)
+                            }
+                        })
+                        .catch(error => console.log('error', error));
+                }, 1500);
+            }
+        }
+
+        function gotoUrl(dataRes, getTimeClose) {
+            console.log(dataRes)
+            const wsurl = `${MAIN_URL}/api/clear-view-count`;
+            var data = {
+                url: ""
+            };
+            fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+                .then(response => response.text())
+                .then(function (result) {
+                    if (dataRes.error ==
+                        "ยืนยัน OTP Email เรียบร้อยแล้ว กรุณาเช็คสถานะของท่าน") {
+                        window.location = `${window.location.origin}/email-check`;
+                    } else if (getTimeClose == "on") {
+                        window.location = `${window.location.origin}/timeout`;
+                    } else if (dataRes.next_module !== null) {
+                        window.location =
+                            `${window.location.origin}/${dataRes.next_module.url}`;
+                    }
+                })
+                .catch(error => console.log('error', error));
+        }
+
+        function getStatus() {
+            let data = {
+                id: localStorage.getItem("Idcard")
+            }
+            const wsurl = `${MAIN_URL}/api/get-status-ndid`;
+            fetch(wsurl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+
+                .then(response => response.text())
+                .then(function (result) {
+                    console.log(result)
+                    var getTimeClose = "off";
+                    if (result !== "" && result !== null && result !== "undefined" && typeof result !== "undefined") {
+                        let data = JSON.parse(result)
+                        console.log(data)
+
+                        if (data != null && data.data != null) {
+                            const success = data.success;
+                            const timed_out = data.data.timed_out;
+                            const closed = data.data.closed;
+                            const status = data.data.status;
+                            let val = $("#OTP").val();
+
+                            if (val.length == 6) {
+                                if (success == true && timed_out != undefined && closed != undefined && status !=
+                                    undefined) {
+                                    getTimeClose = "on";
+                                }
+                            }
+                        }
+                    }
+                    validateEmail(getTimeClose);
+                })
+                .catch(error => console.log('error', error));
+        }
+
+        function resendOTPSMS() {
+            var objRequest = {};
+            var dataElem = {
+                uid: localStorage.getItem("Idcard")
+            };
+            objRequest.module = "module_login";
+            objRequest.session = 2;
+            objRequest.sessionOTP = localStorage.getItem("sessionOTP");
+            objRequest.parameters = JSON.stringify(dataElem);
+
+            const wsurl = `${MAIN_URL}/api/saveTempdata`;
+
+            fetch(wsurl, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(objRequest)
+            }).then(function (response) {
+                return response.json();
+            }).then(function (result) {
+                let data = JSON.parse(result.data);
+                console.log("resendCount", result)
+                console.log("data", data)
+
+                if (result.error != "RequestOTPSms maximum!") {
+                    initLoadConfirmOTP()
+                }
+                else {
+                    $('#OTP').val("").removeClass("input");
+                    $("#OTP").attr("style", "border-color: red;");
+                    $("#errorOTP").html(`<div class="help-block form-error" style="top:35px;font-size: 16px;line-height: 18px;">ท่านได้ทำการขอรหัส OTP เกิน 3 ครั้ง ไม่สามารถทำรายการได้</div>`)
+
+                    $('#otpMaximumText').append(`<span>ท่านได้ทำการขอรหัส OTP เกิน 3 ครั้ง กรุณารอ 5 นาที ค่อยกลับมาทำรายการใหม่อีกครั้งในภายหลัง</span>`);
+                    $('#otpMaximumButton').append(`<button href="javascript:void(0)" onclick="OTPMax()" class="button-accept" type="button" aria-label="Close">ตกลง</button>`);
+                    $("#otpMaximum").addClass('show');
+                }
+
+            }).catch(error => console.log('error', error));
+        }
+
+        function OTPMax() {
+            window.location.href = '/register';
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,7289 @@
+/* db_heavent_med_v3.2 */
+@font-face {
+  font-family: "db_heavent_med";
+  src: url("../../assets/fonts/db_heavent_med_v3.2.eot");
+  src: url("../../assets/fonts/db_heavent_med_v3.2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/db_heavent_med_v3.2.woff2") format("woff2"),
+    url("../../assets/fonts/db_heavent_med_v3.2.woff") format("woff"),
+    url("../../assets/fonts/db_heavent_med_v3.2.ttf") format("truetype"),
+    url("../../assets/fonts/db_heavent_med_v3.2.svg#db_heavent_med_v3.2")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* db_heavent */
+@font-face {
+  font-family: "db_heavent_re";
+  src: url("../../assets/fonts/db_heavent.eot");
+  src: url("../../assets/fonts/db_heavent.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/db_heavent.woff2") format("woff2"),
+    url("../../assets/fonts/db_heavent.woff") format("woff"),
+    url("../../assets/fonts/db_heavent.ttf") format("truetype"),
+    url("../../assets/fonts/db_heavent.svg#db_heavent") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* db_heavent_li_v3.2 */
+@font-face {
+  font-family: "db_heavent_li";
+  src: url("../../assets/fonts/db_heavent_li_v3.2.eot");
+  src: url("../../assets/fonts/db_heavent_li_v3.2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/db_heavent_li_v3.2.woff2") format("woff2"),
+    url("../../assets/fonts/db_heavent_li_v3.2.woff") format("woff"),
+    url("../../assets/fonts/db_heavent_li_v3.2.ttf") format("truetype"),
+    url("../../assets/fonts/db_heavent_li_v3.2.svg#db_heavent_li_v3.2")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* db_heavent_bd_v3.2 */
+@font-face {
+  font-family: "db_heavent_bd";
+  src: url("../../assets/fonts/db_heavent_bd_v3.2.eot");
+  src: url("../../assets/fonts/db_heavent_bd_v3.2.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../assets/fonts/db_heavent_bd_v3.2.woff2") format("woff2"),
+    url("../../assets/fonts/db_heavent_bd_v3.2.woff") format("woff"),
+    url("../../assets/fonts/db_heavent_bd_v3.2.ttf") format("truetype"),
+    url("../../assets/fonts/db_heavent_bd_v3.2.svg#db_heavent_bd_v3.2")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0px;
+  color: #000;
+  font-family: "db_heavent_re";
+  font-size: 21px;
+  background: #f2f2f2;
+  line-height: 1.4;
+}
+
+a {
+  color: #000;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+a:link,
+a:visited {
+  outline: none;
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.img {
+  width: 100%;
+}
+
+.header-title {
+  font-family: "db_heavent_med" !important;
+  color: #f06e23 !important;
+  font-size: 32px !important;
+}
+
+button:focus {
+  outline: none;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.clear {
+  clear: both;
+}
+
+.no-padding {
+  margin: 0px;
+  padding: 0px;
+}
+
+.border {
+  background: #fff;
+  box-shadow: 0px 0px 15px -10px rgba(0, 0, 0, 0.75);
+}
+
+.process__title {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 34px;
+}
+
+.process__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.process__list li {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  color: #002661;
+  font-family: "db_heavent_bd";
+  font-size: 24px;
+  text-align: center;
+  align-items: center;
+}
+
+.process__list li .title {
+  font-family: "db_heavent_re";
+  font-size: 20px;
+}
+
+.process__list li .title.orange {
+  color: #f37021;
+}
+
+.process__list li svg {
+  margin-right: 5px;
+}
+
+.process__list li .arrow svg {
+  margin: 16px 5px 0px 5px;
+  width: 30px;
+}
+
+.process__list li .arrow .svg {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+
+.process__list li .circular-chart {
+  display: block;
+  width: 40px;
+  margin: 0 auto;
+}
+
+.process__list li .circle-bg {
+  fill: none;
+  stroke: #d9d9d9;
+  stroke-width: 3.8;
+}
+
+.process__list li .circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+}
+
+.process__list li .circular-chart.orange .circle {
+  stroke: #f37021;
+}
+
+.process__list li .percentage {
+  text-anchor: middle;
+}
+
+.process__list li .orange .percentage {
+  fill: #f37021;
+}
+
+.colororange {
+  color: #f37021;
+}
+
+.z-index-1 {
+  position: relative;
+  z-index: 1;
+}
+
+.z-index-2 {
+  position: relative;
+  z-index: 2;
+}
+
+.z-index-3 {
+  position: relative;
+  z-index: 3;
+}
+
+.z-index-4 {
+  position: relative;
+  z-index: 4;
+}
+
+.z-index-5 {
+  position: relative;
+  z-index: 5;
+}
+
+.z-index-6 {
+  position: relative;
+  z-index: 6;
+}
+
+.z-index-7 {
+  position: relative;
+  z-index: 7;
+}
+
+.right {
+  display: none;
+  position: absolute;
+  right: 8px;
+  top: 5px;
+}
+
+.right img {
+  width: 15px;
+}
+
+.content__title {
+  display: flex;
+  align-items: center;
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 30px;
+  line-height: 1em;
+}
+
+.content__title img {
+  display: block;
+  height: 20px;
+  margin-right: 15px;
+}
+
+.content__title .orange {
+  color: #f37021;
+}
+
+.laser-title .orange {
+  color: #f37021;
+}
+
+.content__title .title {
+  min-width: 400px;
+}
+
+.content__title--smallblue {
+  font-family: "db_heavent_re";
+  font-size: 24px !important;
+}
+
+.content__title--small {
+  font-family: "db_heavent_med";
+  color: #000 !important;
+  font-size: 24px !important;
+}
+
+.content__title--small .refcode {
+  font-family: "db_heavent_re";
+  color: #000 !important;
+  font-size: 21px;
+}
+
+.content__title--small2 {
+  font-family: "db_heavent_re";
+  color: #000 !important;
+  font-size: 21px;
+}
+
+.content .hand {
+  height: 14px;
+}
+
+.submit {
+  background: url("../../assets/imgs/submit.svg") no-repeat right 5px;
+  background-size: 50px;
+  width: 108px;
+  height: 65px;
+  float: right;
+  box-shadow: none;
+  padding-right: 108px;
+  color: #000;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+}
+
+.submit.input {
+  border: none !important;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.bottom .arrow {
+  display: flex;
+  align-items: center;
+  color: #000;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+}
+
+.bottom .arrow svg {
+  margin-right: 15px;
+  width: 30px;
+  transform: rotate(-180deg);
+}
+
+.bottom .arrow .svg {
+  fill: none;
+  stroke: #000;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+
+.condition {
+  color: #808080;
+  font-family: "db_heavent_li";
+  font-size: 16px;
+  text-align: center;
+}
+
+.condition span {
+  color: #f37021;
+}
+
+.show {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 9999999;
+  background: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+}
+
+.modal-dialog {
+  margin: 0 auto;
+  margin-top: 60px;
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+}
+
+.modal.fade .modal-dialog {
+  -o-transition: -o-transform 0.3s ease-out;
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+.modal-title {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+}
+
+.modal-body {
+  font-family: "db_heavent_re";
+  font-size: 20px;
+}
+
+.button a {
+  display: block;
+  background: #f37021;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #ccc;
+  padding: 8px 0px;
+  color: #fff;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  text-align: center;
+  line-height: 1em;
+}
+
+.button.button-computer {
+  padding: 0px 30px;
+}
+
+.button.button-computer a {
+  padding: 15px 0px;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+@media (max-width: 991px) {
+  .margin-top-mobile-10 {
+    margin-top: -8px;
+  }
+
+  .no-padding-mobile {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .no-padding-mobile-left {
+    margin: 0px;
+    padding-left: 0px;
+  }
+
+  .no-padding-mobile-right {
+    margin: 0px;
+    padding-right: 0px;
+  }
+
+  .border {
+    padding: 30px;
+    margin-bottom: 20px;
+  }
+
+  .border__padding {
+    padding: 30px 0px;
+  }
+
+  .process__title {
+    text-align: center;
+  }
+
+  .process__list li {
+    display: block;
+    font-size: 20px;
+    line-height: 2em;
+    text-align: center;
+  }
+
+  .process__list li .arrow {
+    margin-top: -40px;
+  }
+
+  .content__title {
+    font-size: 25px;
+  }
+
+  .content__title.align-top {
+    align-items: flex-start;
+  }
+
+  .content__title--smallblue {
+    font-size: 20px !important;
+  }
+
+  .content__title--small {
+    color: #000 !important;
+    font-size: 20px !important;
+  }
+
+  .content__title--small2 {
+    color: #000 !important;
+    font-size: 17px;
+  }
+
+  .show {
+    overflow-y: scroll;
+  }
+
+  .modal-dialog {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .no-padding-pc {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .container .row {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .border {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+
+  .border__padding {
+    padding: 0px;
+  }
+
+  .process__list li .title {
+    padding-left: 5px;
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+  }
+
+  .content .flex {
+    display: flex;
+  }
+
+  .no-flex {
+    display: block;
+  }
+
+
+  .modal-title {
+    font-size: 34px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* form starting stylings ------------------------------- */
+textarea {
+  display: block;
+  width: 100%;
+  height: 90px;
+  resize: none;
+  padding: 0px;
+  border: none;
+  border-bottom:1px solid #bfbfbf;
+  background: none;
+  color: #000;
+  font-family: "db_heavent_re";
+  font-size: 24px;
+}
+
+input[type="text"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  padding: 2px;
+  border: hidden;
+  border-bottom:1px solid #bfbfbf;
+  background: none;
+  box-shadow: none !important;
+  outline: none;
+  color: #454545;
+  font-family: "db_heavent_re";
+
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 991px) {
+  input[type="text"],
+  input[type="password"] {
+    font-size: 24px;
+  }
+}
+
+input[type="password"] {
+  position: relative;
+}
+
+input::placeholder {
+  color: #808080;
+  text-align: center;
+  opacity: 1;
+}
+
+input:read-only {
+  background-color: #ededed;
+}
+
+input[type="text"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type="submit"] {
+  border: none;
+  background-color: transparent;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+label,
+.label-drop {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 30;
+  cursor: pointer;
+  color: #4c4c4c;
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+label span,
+.label-drop span {
+  color: #f06e23;
+}
+
+.label-hide {
+  top: -15px;
+  font-size: 60px;
+}
+
+.label-drop {
+  display: none;
+  top: -15px;
+  color: #000;
+  font-size: 17px;
+}
+
+/* active state */
+input:focus ~ label,
+.input ~ label,
+textarea:focus ~ label,
+.uplabel {
+  top: -16px;
+  font-family: "db_heavent_re";
+  color: #000 !important;
+  font-size: 16px;
+}
+
+input:focus ~ .label-hide,
+.input ~ .label-hide {
+  display: none;
+}
+
+.input {
+  border-bottom: 2px solid #002561 !important;
+}
+
+.bar {
+  position: relative;
+  display: block;
+}
+
+.bar:before,
+.bar:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: #002561;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.bar:before {
+  left: 50%;
+}
+
+.bar:after {
+  right: 50%;
+}
+
+input:focus ~ .bar:before,
+input:focus ~ .bar:after,
+textarea:focus ~ .bar:before,
+textarea:focus ~ .bar:after {
+  width: 50%;
+}
+
+.highlight {
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+input:focus ~ .highlight,
+textarea:focus ~ .highlight {
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
+}
+
+@media (max-width: 500px) {
+  label {
+    top: 5px;
+    font-size: 17px;
+  }
+}
+
+/* CHECKBOX ======================================= */
+input:focus,
+button:focus {
+  outline: 0 !important;
+}
+
+/* Customize the label (the container) */
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox:hover input ~ .checkmark {
+  background-color: #000;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox input:checked ~ .checkmark {
+  background-color: #000;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkbox .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 10px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/*--FORM--*/
+.form {
+  margin: 0 auto;
+  padding: 0px;
+  width: 100%;
+}
+
+.formgroup {
+  position: relative;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.formgroup.margin-bottom-0 {
+  margin-bottom: 0px !important;
+}
+
+.form-error {
+  font-family: "db_heavent_re";
+  opacity: 1;
+}
+
+.form-error.help-block {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: -38px;
+  z-index: 1;
+  display: block;
+  border: none;
+  color: #ce6214;
+  font-size: 18px;
+  text-align: right;
+}
+
+.form-error.help-block2 {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+  display: block;
+  border: none;
+  color: #ce6214;
+  font-size: 18px;
+  text-align: right;
+}
+
+@media (max-width: 500px) {
+  .form-error.help-block {
+    bottom: -30px;
+    font-size: 14px;
+  }
+}
+
+.invalid-feedback {
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  bottom: -15px;
+  font-family: "db_heavent_re";
+  color: #ce6214;
+  text-align: right;
+}
+
+.radio {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  /* margin-top: 0px;
+  margin-bottom: 12px; */
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkround {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-color: #c0c0c0;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+}
+
+.checksquare.checkboxpart6b {
+  top: -34px;
+  left: 280px;
+}
+
+.checksquare {
+  position: absolute;
+  top: 4px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-color: #c0c0c0;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 4px;
+}
+
+.checksquare:hover {
+  cursor: pointer;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio input:checked ~ .checkround,
+.radio input:checked ~ .checksquare {
+  background-color: #fff;
+}
+
+.checkbox input:checked ~ .checkround,
+.checkbox input:checked ~ .checksquare {
+  background-color: #f37021;
+  border-color: #f37021;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkround:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checksquare:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio input:checked ~ .checkround:after,
+.radio input:checked ~ .checksquare:after {
+  display: block;
+}
+
+.checkbox input:checked ~ .checkround:after,
+.checkbox input:checked ~ .checksquare:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio .checkround:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f37021;
+}
+
+.checkbox .checkround:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f37021;
+}
+
+.radio .checksquare:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background: url("../imgs/checkbox.svg") no-repeat center top;
+}
+
+.checkbox .checksquare:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  -webkit-mask: url("../imgs/checkbox.svg") no-repeat 50% 50%;
+}
+
+/* The check */
+.check {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  padding-right: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border-color: #ccc;
+  border-style: solid;
+  border-width: 2px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.check input:checked ~ .checkmark {
+  background-color: #fff;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.check input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.check .checkmark:after {
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid;
+  border-color: #ccc;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media (max-width: 500px) {
+  .radio {
+    font-size: 12px;
+  }
+}
+
+#header {
+  background: url("../../assets/imgs/header/bg-header.jpg") no-repeat center top;
+  background-size: cover;
+}
+
+#header .container {
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+#header .logo {
+  padding-top: 16px;
+}
+
+#header .logo img {
+  width: 189px;
+}
+
+@media (max-width: 991px) {
+  #header .logo {
+    padding-bottom: 35px;
+  }
+
+  #header .logo img {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 992px) {
+  #header {
+    min-height: 127px;
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
+  }
+}
+
+#footer {
+  padding: 30px 0px;
+  background: #002661;
+}
+
+#footer .info__text {
+  color: #fff;
+  font-family: "db_heavent_re";
+  font-size: 22px;
+}
+
+#footer .info__call {
+  color: #fff;
+  font-family: "db_heavent_re";
+  font-size: 30px;
+  letter-spacing: 0.5px;
+}
+
+#footer .info__call a {
+  display: flex;
+  color: #f26f21;
+  column-gap: 8px;
+}
+
+#footer .info__call img {
+  margin: 8px;
+  width: 25px;
+  height: 25px;
+}
+
+#footer .info__call .email {
+  font-size: 30px;
+  font-family: "db_heavent_re";
+}
+
+#footer .info__call .email img {
+
+}
+
+#footer .copy,
+#footer .policy {
+  color: #fff;
+  font-family: "db_heavent_re";
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+#footer .policy {
+  padding-top: 15px;
+}
+
+#footer .policy a {
+  margin-left: 15px;
+  padding: 5px 15px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+@media (min-width: 992px) {
+  #footer .info__call {
+    display: flex;
+    column-gap: 15px;
+  }
+
+  #footer .info__call .call {
+    display: flex;
+  }
+
+  #footer .info__call .email {
+
+  }
+
+  #footer .copy,
+  #footer .policy {
+    text-align: right;
+  }
+}
+
+#home .logo img {
+  width: 165px;
+}
+
+#home .banner {
+  position: relative;
+  max-width: 413px;
+  margin: 0 auto;
+}
+
+#home .align-items {
+  align-items: center;
+}
+
+#home .tab {
+  position: relative;
+  z-index: 3;
+}
+
+#home .tab li {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: #fff;
+  padding: 10px 0px;
+  color: #f06e23;
+  font-family: "db_heavent_med";
+  font-size: 26px;
+  list-style: none;
+  text-align: center;
+}
+
+#home .tab a {
+  display: flex;
+}
+
+#home .tab a svg {
+  margin-left: 5px;
+  width: 15px;
+}
+
+#home .tab a .svg {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 10;
+  stroke-miterlimit: 10;
+}
+
+#home .content .header {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#home .content .header li {
+  background: #fff;
+  padding: 10px 0px;
+  color: #f06e23;
+  font-family: "db_heavent_med";
+  font-size: 26px;
+  list-style: none;
+  text-align: start;
+}
+
+#home .content {
+  background: #fff;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+#home .content .contact {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  line-height: 1em;
+}
+
+#home .content img {
+  height: 15px;
+}
+
+#home .content .flex {
+  display: flex;
+  column-gap: 10px;
+}
+
+#home .content .flex .formgroup {
+  flex-grow: 2;
+}
+
+#home .content .flex .img-email img {
+  margin-top: 10px;
+}
+
+#home .content .flex .mobile img {
+  height: 24px;
+  margin-top: 7px;
+}
+
+#home .content .col-xs-6 {
+  position: relative;
+  z-index: 1;
+}
+
+#home .content .z-index {
+  z-index: 20;
+}
+
+#home .content .z-index-2 {
+  z-index: 19;
+}
+
+#home .content .z-index-1 {
+  position: relative;
+  z-index: 1;
+}
+
+#home .content .agreement {
+  display: flex;
+}
+
+#home .content .agreement .agree-checkbox-container {
+  position: relative;
+  margin-top: -10px;
+  margin-left: 15px;
+}
+
+#home .content .agreement .agree-text {
+  font-family: "db_heavent_re";
+  color: #002661;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+#home .content .agreement .agree-text span {
+  color: #f37021;
+  font-family: "db_heavent_med";
+  font-size: 21px;
+}
+
+#home .content .agreement .agree-text span:hover {
+  cursor: pointer;
+}
+
+/* The Modal (background) */
+#home .content .agreement .agree-modal {
+  display: none;
+  position: fixed;
+  text-align: center;
+  z-index: 100;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content */
+#home .content .agreement .modal-content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 100%;
+}
+
+/* The Close Button */
+#home .content .agreement .modal-content .close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#home .content .agreement .modal-content #agree-accept-btn {
+  background-color: #f37021;
+  color: #ffffff;
+  border-radius: 6%;
+  border: none;
+  width: 100px;
+  height: 50px;
+  font-size: larger;
+}
+
+#home .content .agreement .modal-content .close:hover,
+#home .content .agreement .modal-content .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#home .content.border-radius-10 {
+  border-radius: 10px;
+  box-shadow: 0px -16px 16px 0px rgb(0 0 0 / 14%);
+}
+#home .content.border-radius-bt-10 {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#home .condition-submit {
+  display: flex;
+  align-items: center;
+}
+
+#home .condition {
+  color: #808080;
+  font-family: "db_heavent_li";
+  font-size: 16px;
+}
+
+#home .condition span {
+  color: #f37021;
+}
+
+#home .container .content .otp-header {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+#home .container .content .otp-header li {
+  background: #fff;
+  color: #f06e23;
+  font-family: "db_heavent_med";
+  font-size: 26px;
+  list-style: none;
+  text-align: start;
+}
+
+#home .continue {
+  position: absolute;
+  bottom: 30px;
+  right: 0px;
+  left: 0px;
+}
+
+#home .continue a {
+  display: block;
+  margin: 0 auto;
+}
+
+#home .submit-otp {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  color: #ffffff;
+  font-size: 24px;
+  background: #f37021;
+  border-radius: 4px;
+}
+
+#home .submit-otp:hover {
+  background: #f37021;
+}
+
+#home .submit-otp.input {
+  border: none !important;
+}
+
+#home .submit-otp.submit-otp-padding {
+  padding: 12px 0px;
+}
+
+#home .submit-cancle {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  color: #ffffff;
+  font-size: 24px;
+  background: #999;
+  border-radius: 4px;
+  padding: 12px 0px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+
+#home .sendagain {
+  font-family: "db_heavent_re";
+  color: #234372;
+  font-size: 21px;
+}
+
+#home .sendagain a {
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  color: #f66e34;
+}
+
+#home .sendagain .condition {
+  text-align: left;
+}
+
+@media (max-width: 991px) {
+  #home .banner {
+    margin-bottom: 20px;
+  }
+
+  #home .logo {
+    padding-bottom: 30px;
+  }
+
+  #home .logo img {
+    margin: 0 auto;
+  }
+
+  #home .home {
+    padding-top: 30px;
+    background: url("../../assets/imgs/bg-banner-mobile.jpg") no-repeat center
+      top;
+    background-size: cover;
+  }
+
+  #home .tab {
+    padding: 0px 15px;
+  }
+
+  #home .tab .padding-left-right {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #home .tab .padding-left-right a {
+    display: block;
+    text-align: center;
+    padding: 15px 0px;
+    font-family: "db_heavent_re";
+    font-size: 20px;
+    line-height: 1em;
+  }
+
+  #home .tab .padding-left-right a img {
+    width: 10px;
+  }
+
+  #home .content {
+    box-shadow: 0px 0px 25px -7px rgba(0, 0, 0, 0.75);
+  }
+
+  #home .content .col-xs-6 {
+    padding: 0px 5px;
+  }
+
+  #home .submit-otp {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  #home {
+    background: url("../../assets/imgs/bg-banner.jpg") no-repeat center top;
+  }
+
+  #home .banner {
+    margin-top: 50px;
+  }
+
+  #home .logo {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  #home .height-bigpc {
+    display: flex;
+    align-items: center;
+    min-height: 70vh;
+  }
+
+  #home .home {
+    padding-top: 20px;
+    padding-bottom: 56px;
+    width: 100%;
+  }
+
+  #home .home .container .row {
+    display: flex;
+  }
+
+  #home .tab {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 30px;
+  }
+
+  #home .tab li {
+    width: 100%;
+    padding: 20px 0px 0px 45px;
+    box-shadow: 0px -16px 16px 0px rgba(0, 0, 0, 0.14);
+    text-align: left;
+    border-bottom:1px solid #fff;
+  }
+
+  #home .content {
+    margin-bottom: 30px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-radius: 0px;
+    padding: 33px 30px;
+    box-shadow: 0px 9px 15px 0px rgba(0, 0, 0, 0.14);
+  }
+
+
+  #home .continue {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1500px) {
+  #home .height-bigpc {
+    min-height: 90vh;
+  }
+}
+
+#idcard {
+  position: relative;
+  z-index: 3;
+}
+
+
+#idcard .id-right-float {
+  float: right;
+}
+
+#idcard .id-duplicate {
+  color: #ce6214;
+  font-size: 20px;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.swal-wide {
+  font-size: 25px !important;
+}
+
+#idcard .container {
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+#idcard .formgroup {
+  margin-bottom: 0px;
+}
+
+#idcard .padding {
+  padding: 0px 5px;
+}
+
+#idcard .dropdown {
+  width: 100%;
+}
+
+#idcard .right {
+  display: none;
+  position: absolute;
+  right: 0px;
+  top: 7px;
+}
+
+#idcard .right img {
+  width: 15px;
+}
+
+#idcard .laser-title {
+  color: #4c4c4c;
+  font-family: "db_heavent_li";
+  font-size: 24px;
+}
+
+#idcard .laser {
+  display: flex;
+  justify-content: space-between;
+}
+
+#idcard .laser li {
+  list-style: none;
+  padding: 0px 5px;
+}
+
+#idcard .laser li.one {
+  display: block;
+  width: 60px;
+}
+
+#idcard .laser li.two {
+  display: block;
+  width: 60px;
+}
+
+#idcard .laser li.four {
+  display: block;
+  width: 60px;
+}
+
+#idcard .laser .laser-center {
+  text-align: center;
+}
+
+#idcard .choice {
+  display: flex;
+  align-items: center;
+}
+
+#idcard .choice li {
+  list-style: none;
+  position: relative;
+}
+
+#idcard .choice li label {
+  color: #000;
+  font-size: 24px;
+  font-family: "db_heavent_re";
+}
+
+@media (max-width: 991px) {
+  #idcard .formgroup {
+    margin-top: 15px;
+  }
+
+  #idcard .idcard-laser {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  #idcard .choice {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #idcard .choice li label {
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+
+  #idcard .choice li .radio {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #idcard .choice li a {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 992px) {
+  #idcard {
+    padding-top: 90px;
+    min-height: 90vh;
+  }
+  #idcard .choice li {
+    margin-left: 15px;
+  }
+}
+
+#general,
+#otp {
+  position: relative;
+  z-index: 3;
+}
+
+#general .container,
+#otp .container {
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+#general .padding,
+#otp .padding {
+  padding: 0px 5px;
+}
+
+#general .mobile-height,
+#otp .mobile-height {
+  clear: both;
+  height: 20px;
+}
+
+#general .choice,
+#otp .choice {
+  display: flex;
+  align-items: center;
+}
+
+#general .choice li,
+#otp .choice li {
+  list-style: none;
+  position: relative;
+}
+
+#general .choice li label,
+#otp .choice li label {
+  color: #000;
+  font-size: 24px;
+  font-family: "db_heavent_re";
+}
+
+#general .checkboxchoice li,
+#otp .checkboxchoice li {
+  list-style: none;
+  position: relative;
+}
+
+#general .checkboxchoice li label,
+#otp .checkboxchoice li label {
+  padding-top: 5px;
+  color: #000;
+  font-size: 24px;
+  font-family: "db_heavent_re";
+  line-height: 1em;
+}
+
+#general .checkboxchoice li label a,
+#otp .checkboxchoice li label a {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+#general .flex,
+#otp .flex {
+  display: flex;
+}
+
+#general .flex .formgroup,
+#otp .flex .formgroup {
+  flex-grow: 2;
+}
+
+#general .flex .mobile img,
+#otp .flex .mobile img {
+  margin-top: 10px;
+  margin-right: 15px;
+  height: 20px;
+}
+
+#general .income,
+#otp .income {
+  font-size: 24px;
+}
+
+#general .bggray,
+#otp .bggray {
+  padding: 40px;
+  background: #fafafa;
+}
+
+#general .bgwhite,
+#otp .bgwhite {
+  padding: 40px;
+}
+
+#general .bgwhite.padding-top-0,
+#otp .bgwhite.padding-top-0 {
+  padding-top: 20px;
+}
+
+#general .bggrayblack,
+#otp .bggrayblack {
+  padding: 40px;
+  background: #e6e6e6;
+}
+
+#general .chart,
+#otp .chart {
+  padding: 30px;
+}
+
+#general .chart .content__title,
+#otp .chart .content__title {
+  font-size: 30px;
+}
+
+#general .chart .yes,
+#otp .chart .yes {
+  color: #808080;
+  font-family: "db_heavent_re";
+  font-size: 18px;
+}
+
+#general .assessment,
+#otp .assessment {
+  padding: 30px 0px;
+  color: #000;
+  font-family: "db_heavent_re";
+  font-size: 18px;
+  line-height: 1em;
+}
+
+#general .assessment .title,
+#otp .assessment .title {
+  padding-bottom: 20px;
+}
+
+#general .assessment .result,
+#otp .assessment .result {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 30px;
+  line-height: 1em;
+}
+
+#general .assessment .result ul,
+#otp .assessment .result ul {
+  display: table;
+  padding: 0px;
+  list-style: none;
+  color: #000;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+}
+
+#general .assessment .circular-chart,
+#otp .assessment .circular-chart {
+  display: block;
+  width: 90px;
+}
+
+#general .assessment .circle-bg,
+#otp .assessment .circle-bg {
+  fill: none;
+  stroke: #d9d9d9;
+  stroke-width: 1.8;
+}
+
+#general .assessment .circle,
+#otp .assessment .circle {
+  fill: none;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+#general .assessment .circular-chart.orange .circle,
+#otp .assessment .circular-chart.orange .circle {
+  stroke: #f37021;
+}
+
+#general .assessment .percentage,
+#otp .assessment .percentage {
+  text-anchor: middle;
+}
+
+#general .assessment .orange .percentage,
+#otp .assessment .orange .percentage {
+  fill: #f37021;
+}
+
+#general #errorTermChoice1 .form-error.help-block,
+#otp #errorTermChoice1 .form-error.help-block,
+#general #errorTermChoice2 .form-error.help-block,
+#otp #errorTermChoice2 .form-error.help-block {
+  padding-left: 30px;
+  text-align: left !important;
+}
+
+#general #labelBeneficiaryDocType,
+#otp #labelBeneficiaryDocType,
+#general #labelControlDocType,
+#otp #labelControlDocType {
+  display: none !important;
+}
+
+#general #colorConcernedMoney .colororange,
+#otp #colorConcernedMoney .colororange {
+  display: none !important;
+}
+
+@media (max-width: 500px) {
+  #general .income,
+  #otp .income {
+    padding-top: 5px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  #general .choice,
+  #otp .choice,
+  #general .checkboxchoice,
+  #otp .checkboxchoice {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #general .choice li label,
+  #otp .choice li label,
+  #general .checkboxchoice li label,
+  #otp .checkboxchoice li label {
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+
+  #general .choice li .radio,
+  #otp .choice li .radio,
+  #general .checkboxchoice li .radio,
+  #otp .checkboxchoice li .radio {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #general .choice li a,
+  #otp .choice li a,
+  #general .checkboxchoice li a,
+  #otp .checkboxchoice li a {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  #general .bggray,
+  #otp .bggray {
+    padding: 30px;
+  }
+
+  #general .bgwhite,
+  #otp .bgwhite {
+    padding: 30px;
+  }
+
+  #general .bgwhite.padding-top-0,
+  #otp .bgwhite.padding-top-0 {
+    padding-top: 0px;
+  }
+
+  #general .assessment .line,
+  #otp .assessment .line {
+    padding-bottom: 20px;
+  }
+
+  #general .chart.padding-mobile-top-0,
+  #otp .chart.padding-mobile-top-0 {
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  #general,
+  #otp {
+    padding-top: 90px;
+    min-height: 90vh;
+  }
+
+  #general .border__padding--all,
+  #otp .border__padding--all {
+    padding: 20px 35px 0px 35px;
+  }
+
+  #general .choice,
+  #otp .choice {
+    justify-content: flex-end;
+  }
+
+  #general .choice li,
+  #otp .choice li {
+    margin-left: 15px;
+  }
+
+  #general .checkboxchoice,
+  #otp .checkboxchoice {
+    display: block;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+
+  #general .flex .mobile img,
+  #otp .flex .mobile img {
+    margin-top: -25px;
+  }
+
+  #general .chart,
+  #otp .chart {
+    padding: 30px 0px 50px 0px;
+  }
+
+  #general .assessment,
+  #otp .assessment {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 30px 0px;
+    color: #000;
+    font-family: "db_heavent_re";
+    font-size: 18px;
+    line-height: 1em;
+  }
+
+  #general .assessment .title,
+  #otp .assessment .title {
+    padding-bottom: 20px;
+  }
+
+  #general .assessment .line,
+  #otp .assessment .line {
+    border-left: 1px solid #bfbfbf;
+    padding: 0px 20px;
+  }
+
+  #general .assessment .line-right,
+  #otp .assessment .line-right {
+    border-right: 1px solid #bfbfbf !important;
+  }
+
+  #general .assessment .result,
+  #otp .assessment .result {
+    color: #002661;
+    font-family: "db_heavent_med";
+    font-size: 30px;
+    line-height: 1em;
+  }
+
+  #general .assessment .result ul,
+  #otp .assessment .result ul {
+    padding: 0px;
+    list-style: none;
+    color: #000;
+    font-family: "db_heavent_med";
+    font-size: 24px;
+  }
+
+  #general .assessment .circular-chart,
+  #otp .assessment .circular-chart {
+    display: block;
+    width: 90px;
+    margin: 0 auto;
+  }
+
+  #general .assessment .circle-bg,
+  #otp .assessment .circle-bg {
+    fill: none;
+    stroke: #d9d9d9;
+    stroke-width: 1.8;
+  }
+
+  #general .assessment .circle,
+  #otp .assessment .circle {
+    fill: none;
+    stroke-width: 0.8;
+    stroke-linecap: round;
+  }
+
+  #general .assessment .circular-chart.orange .circle,
+  #otp .assessment .circular-chart.orange .circle {
+    stroke: #f37021;
+  }
+
+  #general .assessment .percentage,
+  #otp .assessment .percentage {
+    text-anchor: middle;
+  }
+
+  #general .assessment .orange .percentage,
+  #otp .assessment .orange .percentage {
+    fill: #f37021;
+  }
+
+  #general #errorTermChoice1 .form-error.help-block,
+  #otp #errorTermChoice1 .form-error.help-block,
+  #general #errorTermChoice2 .form-error.help-block,
+  #otp #errorTermChoice2 .form-error.help-block {
+    padding-left: 60px;
+    text-align: left !important;
+  }
+}
+
+#otp .circle {
+  border-radius: 50%;
+  background: #002661;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#otp .circle svg {
+  margin-left: 5px;
+  width: 20px;
+}
+
+#otp .tik {
+  fill: #fff;
+}
+
+#otp .changeprofile a {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #002660;
+  border-radius: 5px;
+  color: #002660;
+  text-align: center;
+}
+
+#otp .changeprofile img {
+  width: 13px;
+  margin-right: 10px;
+}
+
+#otp .submit-otp {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  background: #f37021;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+#otp .submit-otp.input {
+  border: none !important;
+}
+
+#otp .submit-otp.submit-otp-padding {
+  padding: 12px 0px;
+}
+
+#otp .refcode {
+  color: #808080;
+  font-size: 20px;
+  font-family: "db_heavent_re";
+}
+
+#otp input::placeholder {
+  font-size: 60px;
+}
+
+#otp .sendagain {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 20px;
+  text-align: right;
+}
+
+#otp .sendagain a {
+  color: #f37021;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+#otp .sendagain .condition {
+  text-align: right;
+}
+
+#otp .justify-center {
+  justify-content: center;
+  text-align: center;
+}
+
+#otp .button a {
+  margin-top: 30px;
+}
+
+#otp .vdo-selfie {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: url("../imgs/vdo-selfie.jpg") no-repeat bottom left #fff;
+  height: 276px;
+}
+
+#otp .vdo-selfie .info {
+  padding-left: 35%;
+}
+
+#otp .vdo-selfie.vdo-call {
+  background: url("../imgs/vdo-call.jpg") no-repeat bottom left #fff;
+}
+
+#otp .vdo-selfie.vdo-call .button a {
+  background: #002661;
+}
+
+#otp .content__title a {
+  display: flex;
+  justify-content: center;
+  color: #002660;
+}
+
+#otp .content__title a svg {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#otp .content__title .tel-svg {
+  fill: none;
+  stroke: #002660;
+  stroke-width: 40;
+  stroke-miterlimit: 10;
+}
+
+#otp .content__title .tel-svg1 {
+  fill: #002660;
+  stroke: #002660;
+  stroke-miterlimit: 10;
+}
+
+#otp .bottom {
+  padding-top: 20px;
+}
+
+#otp .computer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+#otp .computer img {
+  width: 100%;
+  height: 142px;
+}
+
+#otp .step {
+  display: flex;
+  padding: 30px 0px;
+}
+
+#otp .step .circle {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 3px solid #002660;
+  color: #002660;
+  font-family: "db_heavent_bd";
+  font-size: 26px;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+#otp .step .title {
+  padding: 0px 20px;
+  width: 90%;
+  line-height: 1em;
+}
+
+@media (max-width: 991px) {
+  #otp .circle {
+    padding-top: 5px;
+  }
+
+  #otp .condition {
+    text-align: center;
+  }
+
+  #otp .bottom {
+    display: block;
+  }
+
+  #otp .bottom .arrow {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  #otp .submit-otp {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #otp .text-align-center {
+    text-align: center !important;
+  }
+
+  #otp .text-align-center .content__title--small2 {
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  #otp .sendagain {
+    text-align: center;
+  }
+
+  #otp .sendagain .condition {
+    padding: 20px 0px 30px 0px;
+    text-align: center;
+  }
+
+  #otp .vdo-selfie {
+    height: 256px;
+  }
+
+  #otp .no-flex-mbile {
+    display: block;
+  }
+
+  #otp .step .circle {
+    line-height: 1em;
+  }
+
+  #otp .otp .formgroup {
+    padding-top: 10px;
+  }
+
+  #otp .otp .mobile img {
+    height: 40px;
+  }
+
+  #otp .changeprofile a {
+    display: block;
+  }
+
+  #otp .changeprofile img {
+    margin-top: 7px;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  #otp .otp {
+    align-items: center;
+  }
+
+  #otp .otp .mobile img {
+    height: 70px;
+  }
+
+  #otp .submit-otp {
+    float: right;
+  }
+
+  #otp .bottom .order-1 {
+    order: 1;
+  }
+
+  #otp .bottom .order-2 {
+    order: 2;
+  }
+
+  #otp .bottom .order-3 {
+    order: 3;
+  }
+
+  #otp input::placeholder {
+    text-align: left;
+  }
+
+  #otp .content__title .mail {
+    padding-left: 15px;
+  }
+}
+
+/* ======================= 03-generalinfo.html ====================== */
+@media (min-width: 992px) {
+  .Sub-title {
+    text-align: left;
+  }
+}
+
+.Sub-title {
+  color: #000000;
+  font-family: "db_heavent_li";
+  font-size: 16px;
+}
+
+.mr19 {
+  margin-top: 19px;
+}
+
+.chk-input {
+  height: 24px;
+  width: 24px;
+  border: 2px solid #c0c0c0;
+  border-radius: 4px;
+}
+
+.text-pad9 {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 24px;
+  padding-left: 9px;
+}
+
+.hand {
+  height: 30px;
+}
+
+.pad-15 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+#forbox {
+  height: 24px;
+  width: 24px;
+}
+
+.fortext {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 24px;
+  color: #000000;
+  vertical-align: middle;
+  padding-left: 9px;
+}
+
+.pad-80 {
+  padding-left: 80px;
+}
+
+input[type="text"]::placeholder {
+  text-align: left !important;
+}
+
+.text-note {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #4c4c4c;
+  text-decoration-line: underline;
+}
+
+.text-acc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: #4c4c4c;
+}
+
+.star {
+  color: #f06e23;
+}
+
+/* ================= New CSS Style  ================= */
+/* Style Button */
+
+.btnEdite {
+  background-color: #a9a9a9;
+  border: 2px solid #a9a9a9;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  margin-right: 12px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 125px;
+}
+
+.btnEdite:hover {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+}
+
+.btnConfirm {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 125px;
+}
+
+.content__title--smallblue02 {
+  font-family: "db_heavent_re";
+  font-size: 21px !important;
+}
+
+@media (min-width: 992px) {
+  .card-kyc_online {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px 24px 30px 24px;
+    margin-bottom: 20px;
+    height: 300px;
+  }
+
+  .card-body {
+    padding: 0 !important;
+  }
+}
+
+.card-kyc_online {
+  background: #fff;
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+  margin-bottom: 30px;
+  padding: 30px 24px 30px 24px;
+}
+
+.card-kyc_online h2 {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 30px;
+  line-height: 1em;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.button-kyc_online {
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+
+.detail-kyc_online p {
+  margin: 0 0 8px 0;
+  padding: 0;
+  color: #002561;
+  line-height: 1em;
+}
+
+.img-kyc_online {
+  margin: auto;
+}
+
+.img-kyc_online img {
+  width: 324px;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+@media (min-width: 992px) {
+  .d-lg-flex {
+    display: flex !important;
+    justify-content: center;
+  }
+
+  .mt-lg-0,
+  .my-lg-0 {
+    margin-top: 0 !important;
+  }
+}
+
+.ml-auto,
+.mx-auto {
+  margin-left: auto !important;
+}
+
+.button-kyc_online .btnConfirm {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 135px;
+}
+
+.btn-ndid {
+  background-color: #002561 !important;
+  border: 2px solid #002561 !important;
+}
+
+@media (min-width: 992px) {
+  .card-otpsuccess {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.card-otpsuccess {
+  text-align: center;
+  background: #fff;
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+}
+
+.card-otpsuccess h2 {
+  font-family: "db_heavent_med";
+  font-size: 40px;
+  color: #002661;
+}
+
+.card-otpsuccess h2 span {
+  color: #f37021;
+}
+
+.detail-mail {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 21px;
+  margin-top: 30px;
+}
+
+.detail-phone {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 21px;
+  margin-top: 30px;
+}
+
+.line-r {
+  border-right: 1px solid #bfbfbf;
+  padding-top: 15px;
+}
+
+.line-top {
+  padding-top: 15px;
+  border-top: 1px solid #bfbfbf;
+}
+
+.line-top-6b {
+  padding-top: 15px;
+  border-bottom:1px solid #bfbfbf;
+}
+
+.line-right .result {
+  display: inline-block;
+}
+
+.tableStyle {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+/* 06-evaluate.html */
+@media (min-width: 992px) {
+  .select-information {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.select-information {
+  background: #fff;
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+}
+
+.select-information .head-title {
+  font-family: "db_heavent_med";
+  color: #ef602e;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.select-information .select__information h4 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.select-information .select__information .orange {
+  color: #f37021;
+}
+
+.radio-select__information .information .label {
+  position: relative;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 0;
+  cursor: pointer;
+  color: #4c4c4c;
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+  transition: 0.2s ease all;
+  padding: 0;
+  margin-left: 7px;
+}
+
+.radio-select__information .information {
+  margin-top: 16px;
+}
+
+.information .label .radiobutton-text {
+  color: #2c2c2e;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.check_yes-list {
+  margin-bottom: 16px;
+  margin-left: 25px;
+}
+
+.check_yes-list .mb16 {
+  margin-bottom: 30px;
+}
+
+.check_yes-list .check-list .label {
+  position: relative;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 0;
+  cursor: pointer;
+  color: #4c4c4c;
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+  transition: 0.2s ease all;
+}
+
+.check_yes-list .check-list .checkboxbutton-text {
+  display: inline-block !important;
+  color: #000000;
+  margin-left: 0 !important;
+}
+
+.test-on label,
+.test-down label {
+  color: #4c4c4c;
+  font-family: "db_heavent_re";
+  font-size: 21px;
+}
+
+
+.from-fatca .FromBorder {
+  border: 1px solid #bfbfbf;
+}
+
+.from-detail__FW9 {
+  padding: 30px 30px;
+}
+
+.from-detail__FW9 .ListDetail h4 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.ListDetail .mb-24 {
+  margin-bottom: 24px;
+}
+
+.ListDetail .mb-30 {
+  margin-bottom: 30px;
+}
+
+.Check_Choice3 input[type="checkbox"],
+.Check_Choice3 input[type="radio"] {
+  margin: 0 0;
+  line-height: normal;
+}
+
+.Check_Choice3 .d-flex {
+  display: flex !important;
+}
+
+.Check_Choice3 .align-items-start {
+  -webkit-box-align: start !important;
+  align-items: flex-start !important;
+}
+
+
+.FromW9-head {
+  padding: 0 0;
+  border-bottom:1px solid #bfbfbf;
+}
+
+.FromW9-head h2 {
+  font-family: "db_heavent_med";
+  font-size: 30px;
+  line-height: 1em;
+  margin: 0 0;
+}
+
+.FromW9-head h2 span {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.card-head p {
+  color: #808080;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-headCenter p {
+  display: inline-block;
+  color: #808080;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.card-headCenter img {
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .col260 {
+    width: 260px;
+  }
+
+  .col428 {
+    width: 428px;
+  }
+
+  .col220 {
+    width: 220px;
+  }
+
+  .col220spe {
+    width: 220px;
+  }
+
+  .col508 {
+    width: 508px;
+  }
+}
+
+.col260 {
+  float: left;
+}
+
+.col428 {
+  float: left;
+}
+
+.col220 {
+  float: left;
+  padding-left: 30px !important;
+}
+
+.col220spe {
+  float: left;
+  padding-left: 34px !important;
+  text-align: center;
+  position: relative;
+  padding: 16px 16px;
+  height: 124px;
+}
+
+.col508 {
+  float: left;
+  padding-left: 30px !important;
+}
+
+.col260,
+.col428 {
+  text-align: center;
+  position: relative;
+  padding: 16px 16px;
+  border-right: 1px solid #bfbfbf;
+  height: 124px;
+}
+
+.col220,
+.col508 {
+  text-align: center;
+  position: relative;
+  padding: 16px 16px;
+  border-right: 1px solid #bfbfbf;
+  height: 124px;
+}
+
+.card-headCenter .text-left {
+  text-align: left;
+}
+
+.padt-15 {
+  padding-top: 15px;
+}
+
+.col-md-6.line-top.hi93 {
+  height: 78px;
+}
+
+.NoteBody {
+  padding: 15px;
+}
+
+.NoteBody .note-detail {
+  font-family: "db_heavent_re";
+  font-size: 18px;
+  line-height: 1em;
+}
+
+.NoteBody .note-detail span {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 21px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.head__PART-I {
+  border-top: 1px solid #bfbfbf;
+  border-bottom:1px solid #bfbfbf;
+}
+
+.head__PART-I .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.head__PART-I .bg-part_1 {
+  background: #000000;
+}
+
+.ListDetail h4 {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
+
+.ListDetail h4 span {
+  font-family: "db_heavent_med";
+  display: inline-block;
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
+
+.ListDetail h4 span:nth-child(2),
+.ListDetail h4 span:nth-child(3),
+.ListDetail h4 span:nth-child(5),
+.ListDetail h4 span:nth-child(6),
+.ListDetail h4 span:nth-child(8),
+.ListDetail h4 span:nth-child(10) {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
+
+.ListDetail h4 span:nth-child(2) {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+  width: 16%;
+}
+
+.ListDetail h4 span:nth-child(4) {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+  width: 16%;
+}
+
+.ListDetail h4 span:nth-child(7) {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+  width: 15%;
+}
+
+.ListDetail h4 span:nth-child(9) {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+  width: 100%;
+}
+
+.ListDetail h4 span:nth-child(4),
+.ListDetail h4 span:nth-child(6),
+.ListDetail h4 span:nth-child(7),
+.ListDetail h4 span:nth-child(10) {
+  margin-top: 8px;
+}
+
+.ListDetail h4 span:nth-child(11) {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+  width: 100%;
+}
+
+.head-part_1 {
+  font-family: "db_heavent_med";
+  color: #ffffff;
+  font-size: 24px;
+  padding: 5px 16px;
+}
+
+.headTitle-part_1 {
+  padding-top: 8px;
+  font-family: "db_heavent_med";
+  text-align: center;
+  font-size: 21px;
+  margin: 0;
+}
+
+.head__PART-I .col-sm-3,
+.head__PART-I .col-sm-9 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.detailpart_1 {
+  margin-bottom: 16px;
+}
+
+.digit-group input {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #bfbfbf;
+  line-height: 50px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  color: #151050;
+  margin: 0 8px 0 0;
+}
+
+.taxpayer-number label {
+  position: relative;
+}
+
+.detailpart_1,
+.note-part_1 {
+  font-family: "db_heavent_re";
+  font-size: 21px;
+  line-height: 1em;
+  margin-bottom: 16px;
+}
+
+.head__PART-II {
+  border-top: 1px solid #bfbfbf;
+  border-bottom:1px solid #bfbfbf;
+}
+
+.head__PART-II .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.head__PART-II .bg-part_11 {
+  background: #000000;
+}
+
+.head-part_11 {
+  font-family: "db_heavent_med";
+  color: #ffffff;
+  font-size: 24px;
+  padding: 5px 16px;
+}
+
+.IBO-detail__infor input[type="text"] {
+  border: none;
+}
+
+span.text-bold {
+  font-family: "db_heavent_med";
+  font-weight: lighter;
+}
+
+.body-part_1w-9 {
+  padding: 30px;
+}
+
+.headTitle-part_11 {
+  padding-top: 8px;
+  font-family: "db_heavent_med";
+  text-align: center;
+  font-size: 21px;
+  margin: 0;
+}
+
+.head__PART-II .col-sm-3,
+.head__PART-II .col-sm-9 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.head-pad30 {
+  padding-bottom: 30px;
+}
+
+.body-part_11 {
+  padding: 15px 0px;
+}
+
+.body-part_11w-9 {
+  padding: 30px;
+}
+
+span.mr-top30 {
+  padding-top: 22px;
+}
+
+.body-part_11 h5 {
+  font-family: "db_heavent_re";
+  font-size: 16px;
+}
+
+.Check_accept_agreementW9 {
+  margin-top: 24px;
+}
+
+.Check_accept_agreementW9 label {
+  display: inline-block;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+}
+
+.taxpayer-number p {
+  margin: 8px 0;
+}
+
+@media (min-width: 992px) {
+  .col187 {
+    width: 187px;
+  }
+
+  .col574 {
+    width: 574px;
+  }
+}
+
+.col187 {
+  float: left;
+}
+
+.col574 {
+  float: left;
+  border-left: 1px solid #bfbfbf;
+  border-right: 1px solid #bfbfbf;
+}
+
+.col187,
+.col574 {
+  text-align: center;
+  position: relative;
+  padding: 16px 16px;
+  height: 198px;
+}
+
+.Fromw8text__Des {
+  text-align: left;
+  padding: 0 68px;
+  margin: 0 0 4px;
+}
+
+.FromW8-head h2 {
+  font-family: "db_heavent_med";
+  font-size: 30px;
+  line-height: 1em;
+  margin: 0;
+}
+
+.FromW8-head h2 span {
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 0;
+}
+
+.FromW8-head .mb-f8-16 {
+  margin-bottom: 16px;
+}
+
+.from-detail__FW8 {
+  padding: 30px 30px;
+}
+
+.FromW8-head {
+  padding: 0 0;
+}
+
+.text-center {
+  margin-top: 70px;
+}
+
+.Fw8-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #bfbfbf;
+  font-family: "db_heavent_med";
+  padding: 15px;
+}
+
+.downstair {
+  position: relative;
+  top: 18px;
+}
+
+.Fw8-group-detail__form {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+  padding: 0px 15px 15px;
+  position: relative;
+  display: block;
+  background-color: #fff;
+}
+
+.widget-content-wrapper {
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.widget-heading {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.imgsign {
+  width: 50px;
+  height: 100px;
+  position: relative;
+  top: -74px;
+  left: 100px;
+}
+
+.headsub {
+  font-family: "db_heavent_re";
+  font-weight: 600;
+}
+
+.aligcenter {
+  text-align: center;
+}
+
+.row.padding-row15 {
+  border-top: 1px solid #bfbfbf;
+  padding: 15px 15px 10px;
+}
+
+.widget-content-right {
+  margin-left: auto;
+}
+
+.head__PART-III {
+  border-top: 1px solid #bfbfbf;
+  border-bottom:1px solid #bfbfbf;
+}
+
+.head__PART-III .row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.head__PART-III .bg-part_11 {
+  background: #000000;
+}
+
+.head__PART-III .col-sm-3,
+.head__PART-III .col-sm-9 {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.body-part_111 {
+  padding: 30px 30px;
+}
+
+.detail-part_111 h5 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+}
+
+.detail-part_111 ul li {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+}
+
+.detail-part_111 ul {
+  padding: 0 0 0 16px;
+}
+
+.Check_accept_agreementW8 {
+  margin-top: 24px;
+}
+
+.Check_accept_agreementW8 label {
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  position: relative;
+  top: 0;
+  margin-bottom: 0;
+}
+
+.text-AcceptForm_w8w9 {
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  margin: 0;
+  margin-top: 30px;
+}
+
+.tableStyle thead .table-header th {
+  font-family: "db_heavent_re";
+  text-align: center;
+  font-size: 21px;
+  font-weight: 400;
+  color: #000;
+  padding: 8px 16px;
+  border: 1px solid #bfbfbf !important;
+}
+
+.tableStyle tbody tr td {
+  font-family: "db_heavent_re";
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+  padding: 4px 16px;
+  border: 1px solid #bfbfbf !important;
+}
+
+.tableStyle tbody tr .num-text {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .card-evaluate-DtatFATCA {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.card-evaluate-DtatFATCA {
+  background: #fff;
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+  margin-bottom: 20px;
+}
+
+.card-evaluate-DtatFATCA .head-title {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.ListFatca {
+  margin-bottom: 30px;
+}
+
+.ListFatca h4 {
+  color: #000000;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ListFatca span {
+  display: block;
+  margin-left: 25px;
+}
+
+.check-boxstyle .label {
+  position: relative;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  z-index: 0;
+  cursor: pointer;
+  color: #4c4c4c;
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  font-weight: normal;
+  text-align: left;
+  transition: 0.2s ease all;
+}
+
+.check-boxstyle {
+  margin-bottom: 0;
+}
+
+.form-check-inline {
+  display: inline-flex;
+  align-items: center;
+  padding-left: 0;
+  margin-right: 0.75rem;
+}
+
+.card-knowle-dge-test {
+  background: #fff;
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+}
+
+@media (min-width: 992px) {
+  .card-knowle-dge-test {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.KGT__header .head-title {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 30px;
+  margin: 0;
+}
+
+.KGT__header {
+  display: flex;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.KGT__header .from-knowle-dge-test {
+  margin-left: 30px;
+}
+
+.KDTselect__information h4 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 24px;
+  margin: 0 0 16px 0;
+}
+
+.KDTselect__information h4 span {
+  color: #ff0000;
+}
+
+.KDTselect__information {
+  margin-bottom: 30px;
+}
+
+.Show__detailAnswer .title_answer {
+  font-family: "db_heavent_re";
+  color: #ff0000;
+  font-size: 21px;
+}
+
+.from-detail__FW9 a:link,
+.from-detail__FW9 a:visited {
+  outline: none;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Modal Detail 1 */
+.head-title__modal-detail {
+  align-items: center;
+  justify-content: center;
+}
+
+.modal__detail {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(77, 77, 77, 0.7);
+  transition: all 0.4s;
+  z-index: 999;
+}
+
+.modal__detail:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__content {
+  border-radius: 4px;
+  position: relative;
+  width: 739px;
+  max-width: 100%;
+  background: #fff;
+}
+
+.modal__close {
+  position: absolute;
+  top: 8px;
+  right: 30px;
+  color: #9d9d99 !important;
+  font-size: 36px;
+}
+
+/* Modal Detail 1 */
+
+/* Modal Detail 4 */
+
+.modal__see-instructions .modal-header {
+  padding: 0 0;
+  border-top: 1px solid #e5e5e5;
+  border-bottom:1px solid #e5e5e5;
+}
+
+.modal-FromW9-head {
+  text-align: center;
+  position: relative;
+  padding: 0;
+  margin-top: 48px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.modal-FromW9-head .card-headCenter h2 {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 30px;
+  line-height: 1em;
+  margin: 0 0;
+}
+
+.modal-FromW9-head .card-headCenter {
+  padding: 16px 0;
+}
+
+.modal-FromW9-head .card-head {
+  text-align: left;
+  border-left: 1px solid #e5e5e5;
+  border-right: 1px solid #e5e5e5;
+  height: 100%;
+  padding: 24px 16px;
+}
+
+.modal-FromW9-head .card-head h2 {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 30px;
+  line-height: 1em;
+  margin: 0 0;
+}
+
+.modal-FromW9-head .card-head h2 span {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 30px;
+  line-height: 1em;
+  margin: 0 0;
+}
+
+.W9__modai-head-title h2 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 24px;
+  margin: 16px 0 16px;
+}
+
+.w9__B3 {
+  margin: 30px 0;
+}
+
+.W9__modai-detail .w9__B1 {
+  margin-bottom: 30px;
+}
+
+.W9__modai-detail .w9__B1 h2,
+.W9__modai-detail .w9__B2 h2 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
+
+.w9__body-detail ul {
+  padding: 0 0 0 16px;
+}
+
+.ml-24 {
+  margin-left: 24px;
+}
+
+.W9__modai-head-title .mt-30 {
+  margin-top: 30px;
+}
+
+.w9__body-detail h5 {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 18px;
+  margin: 0 0 16px;
+}
+
+.w9__body-detail h5 span {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 18px;
+}
+
+.text-002661 span {
+  font-family: "db_heavent_med";
+  color: #000000;
+}
+
+.text-002661 {
+  font-family: "db_heavent_re";
+  color: #000000;
+}
+
+.W9__modai-detail h2 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+.W9__modai-detail h5 {
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 18px;
+  margin: 0 0 8px;
+}
+
+.btn-RmoreW9 {
+  outline: none;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-Rmore-detail {
+  outline: none;
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modalFormW9 {
+  display: none;
+  position: fixed;
+  padding: 5rem 9.25rem 5rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+/* Modal Content */
+.modalFormW9-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 100%;
+}
+
+/* The Close Button */
+.close4 {
+  color: #9d9d99;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  position: relative;
+  top: 8px;
+  right: 22px;
+}
+
+.close4:hover,
+.close4:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close5 {
+  color: #9d9d99;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+  position: relative;
+}
+
+.close5:hover,
+.close5:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Modal Detail 4 */
+
+.btn-send_answer {
+  text-align: center;
+  margin: 48px 0 30px;
+}
+
+.btn-send_answer .btnConfirm {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 135px;
+}
+
+@media (min-width: 992px) {
+  .card-conditiont {
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px;
+    margin-bottom: 20px;
+  }
+}
+
+.card-conditiont {
+  background: #fff;
+  box-shadow: 0px 0px 15px -10px rgb(0 0 0 / 75%);
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  .KGT__header {
+    padding: 20px;
+  }
+}
+
+/* ==========กรุณาอ่านและทำเครื่องหมายในช่องสี่เหลี่ยม ================= */
+.scroll-y {
+  padding: 0px 30px 0px;
+  height: 60vh;
+  overflow-y: scroll;
+  text-align: justify;
+}
+
+.DemoModal__detail {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 999;
+}
+
+.DemoModal__detail .modal-dialog {
+  margin-top: 0;
+  padding-top: 0 0;
+  max-width: 739px;
+  border-radius: 4px;
+}
+
+.DemoModal__detail .modal-content {
+  background-color: #ffffff;
+  width: 739px;
+}
+
+.DemoModal__detail .modal-header {
+  padding: 30px 24px;
+}
+
+.DemoModal__detail .bodydetail01 {
+  padding: 30px 30px;
+}
+
+.alink {
+  outline: none;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.alink:hover {
+  cursor: pointer;
+  outline: none;
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.headerdetail01 {
+  padding: 30px;
+}
+
+.titledetail01 {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 43px;
+  margin: 15px 0px 15px 15px;
+}
+
+.bodydetail01 {
+  padding-right: 30px;
+}
+
+.ModalDetail-group-detail__form {
+  position: relative;
+  display: block;
+  padding: 16px 0;
+  background-color: #fff;
+  border-top: 1px dashed rgba(0, 0, 0, 0.125);
+}
+
+.style-tb-0 {
+  padding: 0 0 16px;
+  border-top: 1px dashed rgba(0, 0, 0, 0);
+}
+
+.widget-content-modai_detail .header-title {
+  display: inline-block;
+  font-family: "db_heavent_med";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
+
+.widget-content-modai_detail .sub-title {
+  display: inline-block;
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  margin: 0;
+}
+
+.modalFormW9-content .modal-body {
+  padding: 30px 60px;
+  overflow-x: hidden;
+  height: 60vh;
+}
+
+.dis-inblock {
+  display: inline-block;
+}
+
+.style-check label,
+.style-check .label-drop {
+  font-family: "db_heavent_re";
+  font-size: 21px !important;
+}
+
+ul.pad-lft0 li {
+  display: inline-block;
+  width: 48%;
+}
+
+/* CSS Check Trans Status */
+.block-CheckTransSta .header-title {
+  font-family: "db_heavent_med";
+  color: #f06e23;
+  font-size: 32px;
+}
+
+.content__CheckTransSta {
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  color: #022561;
+  line-height: 1em;
+  margin-bottom: 30px;
+}
+
+.content__CheckTransSta span {
+  text-transform: uppercase;
+}
+
+.detail__contact h5 {
+  font-family: "db_heavent_re";
+  font-size: 21px;
+}
+
+@media (min-width: 992px) {
+  .detail__contact img {
+    margin-top: 0 !important;
+  }
+}
+
+.detail__contact img {
+  margin-top: 0 !important;
+  margin-right: 8px !important;
+  height: 24px !important;
+}
+
+.detail__contact .info__call .call span,
+.detail__contact .info__call .email span {
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  color: #022561;
+}
+
+/* button */
+.button-accept {
+  font-size: 1em;
+  color: #fff;
+  background: #f37021;
+  width: 126px;
+  height: 40px;
+  padding: 0px;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.34em;
+  transition: all 0.2s ease-out;
+}
+.button-accept.btn-w-25 {
+  width: 25%;
+}
+
+#Term1 .button-accept[disabled] {
+  background: #a9a9a9;
+  cursor: not-allowed;
+}
+
+.button.button-accept {
+  width: 167px !important;
+  height: 57px;
+  background: #ef602e;
+  border-radius: 4px;
+}
+
+.modal-header.headp30 {
+  padding: 30px 30px;
+}
+
+#Term2 .button-accept[disabled] {
+  background: #a9a9a9;
+  cursor: not-allowed;
+}
+
+.agree-text {
+  font-family: "db_heavent_re";
+  color: #002661;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.block-ndid_bank .header-title h2 {
+  font-family: "db_heavent_med";
+  text-align: center;
+  color: #151050;
+  font-size: 30px;
+  line-height: 16px;
+  margin-bottom: 30px;
+}
+
+.ndid__checks {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.border-left {
+  border-left: 1px solid #d9d9d9;
+  height: 84px;
+}
+
+.block-ndid__checks .content-ndid__checks {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.button-ndid {
+  text-align: center;
+}
+
+.button-ndid.btnConfirm {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  width: 135px;
+}
+
+.checkbox,
+.radio {
+  position: relative;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.block-other__ndid {
+  text-align: center;
+}
+
+.block-other__ndid .header-title h2 {
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #151050;
+  font-size: 30px;
+  line-height: 16px;
+}
+
+.block-other__ndid .header-title h2 span {
+  text-decoration: underline;
+}
+
+.block-other__ndid p {
+  color: #808080;
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  margin: 0;
+}
+
+.block-no-kyc_ndid {
+  text-align: center;
+}
+
+.block-no-kyc_ndid .header-title h2 {
+  display: inline-block;
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #f37021;
+  font-size: 30px;
+}
+
+.block-no-kyc_ndid .header-title h2 span {
+  text-decoration: underline;
+  color: #f37021;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.block-no-kyc_ndid .header-title a {
+  font-family: "db_heavent_med";
+  color: #f37021;
+  font-size: 30px;
+  line-height: 16px;
+  text-decoration: underline;
+}
+
+.block-ndid_bank02 {
+  text-align: center;
+}
+
+.header-title02 {
+  margin-bottom: 30px;
+}
+
+.post-title {
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #808080;
+  font-size: 30px;
+}
+
+.block-ndid_bank02 .header-title02 h2 {
+  font-family: "db_heavent_med";
+  text-align: center;
+  color: #151050;
+  font-size: 30px;
+}
+
+.block-ndid_bank02 p {
+  color: #808080;
+  font-family: "db_heavent_re";
+  font-size: 24px;
+  margin: 0;
+}
+
+.ndid__checks02 {
+  text-align: left;
+}
+
+.mlr30 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.app-wrapper__btn-radio {
+  display: flex;
+  justify-content: center;
+}
+
+.app-btn-radio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.app-btn-radio__images02 {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.app-wrapper__btn-radio .checkround {
+  position: relative;
+  height: 20px;
+  width: 20px;
+  background-color: #f2f2f2;
+  border-color: #c0c0c0;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 50%;
+  margin: 8px 0;
+}
+
+.app-wrapper__btn-radio .radio .checkround:after {
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #f37021;
+}
+
+.block-ndid_bank02 .block-ndid__checks02 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 130px));
+  grid-template-rows: 80px;
+  grid-gap: 48px;
+}
+
+.block-ndid_bank02 .mb-60 {
+  margin-bottom: 60px;
+}
+
+.block-ndid_bank02 .mb-30 {
+  margin-bottom: 30px;
+}
+
+.header-title02 .mb-0 {
+  font-family: "db_heavent_re";
+  color: #151050;
+  font-size: 24px;
+}
+
+.ndid__checks02 .group__btnEC {
+  text-align: center;
+}
+
+.ndid__checks02 .group__btnEC .btnEdite {
+  background-color: #a9a9a9;
+  border: 2px solid #a9a9a9;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  margin-right: 12px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 135px;
+}
+
+.ndid__checks02 .group__btnEC .btnEdite:hover {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+}
+
+.ndid__checks02 .group__btnEC .btnConfirm {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 135px;
+}
+
+.block-ndidQr-code .header-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.block-ndidQr-code .header-title h2 {
+  font-family: "db_heavent_med";
+  text-align: center;
+  color: #151050;
+  font-size: 34px;
+  line-height: 16px;
+}
+
+.block-ndidQr-code .header-title h2 .or-color {
+  color: #f37020;
+}
+
+.QrCode {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-qrcode_dowload {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-qrcode_dowload a {
+  color: #ffffff;
+}
+
+.btn-qrcode_dowload .btn-link {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 98px;
+}
+
+.detail-link {
+  text-align: center;
+}
+
+.detail-link span {
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #f37020;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.detail-link .click-link {
+  font-family: "db_heavent_re";
+  color: #000000;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.card1 .title1 {
+  font-family: "db_heavent_med";
+  color: #002661;
+  font-size: 30px;
+  line-height: 1em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.title2 {
+  font-family: "db_heavent_med";
+  color: #f06e23;
+  font-size: 24px;
+  line-height: 1em;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.text-TraRef {
+  font-family: "db_heavent_re";
+  text-align: center;
+  font-size: 21px;
+  line-height: 16px;
+  color: #a9a9a9;
+  margin-bottom: 30px;
+}
+
+.card2 .kbank_header .header {
+  font-family: "db_heavent_med";
+  text-align: center;
+  color: #151050;
+  font-size: 30px;
+}
+
+.kbank_body_title_text {
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.kbank_body_title_text span {
+  font-weight: 600;
+  font-size: 23px;
+}
+
+.card2 .kbank_body_title {
+  background: linear-gradient(
+    90.13deg,
+    rgba(0, 38, 97, 0) 0.09%,
+    rgba(0, 38, 97, 0.4) 22.67%,
+    rgba(0, 29, 75, 0.6) 44.85%,
+    rgba(0, 25, 64, 0.6) 55.21%,
+    rgba(0, 24, 61, 0.6) 58.88%,
+    rgba(0, 38, 97, 0.4) 75.19%,
+    rgba(0, 38, 97, 0) 99.89%
+  );
+  mix-blend-mode: darken;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card2 .kbank_body_title #kbank_body_title_text {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+.card2 .kbank_body_title #kbank_body_title_text span {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.list__Kbank-detail {
+  display: block;
+  list-style-type: none;
+  text-align: start;
+  padding: 0 0;
+}
+
+.list__Kbank-detail li {
+  font-family: "db_heavent_re";
+  color: #002661;
+  font-size: 21px;
+  line-height: 1em;
+  margin-bottom: 8px;
+}
+
+.list__Kbank-detail li span {
+  font-family: "db_heavent_med";
+}
+
+.ImgExKbank img {
+  float: right;
+  width: 139px;
+}
+
+.note-text {
+  text-align: left;
+}
+
+.note-text span {
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #f37020;
+  font-size: 21px;
+  line-height: 16px;
+}
+
+.kbank_bottom .kbank_text {
+  font-family: "db_heavent_re";
+  color: #f37020;
+  font-size: 21px;
+}
+
+.note-text p {
+  font-family: "db_heavent_re";
+  color: #002661;
+  font-size: 21px;
+}
+
+.kbank_text {
+  font-family: "db_heavent_re";
+  color: #f37020;
+  font-size: 21px;
+  line-height: 16px;
+}
+
+.bbl_bottom .ndid_cancel {
+  font-family: "db_heavent_re";
+  text-decoration: underline;
+  color: #f37020;
+  font-size: 21px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.bbl_text {
+  font-family: "db_heavent_re";
+  color: #f37020;
+  font-size: 21px;
+  line-height: 16px;
+}
+
+.kbank_bottom .ndid_cancel {
+  font-family: "db_heavent_re";
+  text-decoration: underline;
+  color: #f37020;
+  font-size: 21px;
+  line-height: 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.kbank_bottom {
+  text-align: center;
+}
+
+.kbank_bottom .btn__close {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  margin: 30px 0 24px;
+  width: 119px;
+}
+
+.bbl_bottom {
+  text-align: center;
+}
+
+.bbl_bottom .btn__close {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  margin: 30px 0 24px;
+  width: 119px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.bbl_header {
+  background: linear-gradient(
+    90.13deg,
+    rgba(0, 38, 97, 0) 0.09%,
+    rgba(0, 163, 255, 0.1) 9.97%,
+    rgba(0, 163, 255, 0.1) 88.45%,
+    rgba(0, 38, 97, 0) 99.89%
+  );
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.bbl_header .bbl_logo {
+  width: 55px;
+}
+
+.bbl_header .header {
+  font-family: "db_heavent_med";
+  text-align: center;
+  color: #151050;
+  font-size: 30px;
+  line-height: 16px;
+}
+
+.list__bbl-detail {
+  display: block;
+  list-style-type: none;
+  text-align: start;
+  padding: 0 0;
+}
+
+.list__bbl-detail li {
+  font-family: "db_heavent_re";
+  color: #002661;
+  font-size: 21px;
+  line-height: 1em;
+  margin-bottom: 8px;
+}
+
+.list__bbl-detail li span {
+  font-family: "db_heavent_med";
+}
+
+.askmore-title {
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #002661;
+  font-size: 21px;
+  line-height: 16px;
+}
+
+.card2 .kbank_header {
+  background: linear-gradient(
+    90.13deg,
+    rgba(0, 38, 97, 0) 0.09%,
+    rgba(0, 163, 255, 0.1) 9.97%,
+    rgba(0, 163, 255, 0.1) 88.45%,
+    rgba(0, 38, 97, 0) 99.89%
+  );
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card2 .kbank_header .kbank_logo {
+  width: 55px;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_body {
+  font-family: "db_heavent_re";
+  text-align: center;
+  color: #002661;
+  font-size: 36px;
+  line-height: 1em;
+  margin: 30px 0 40px;
+  font-weight: 500;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_footer .modal_btnBack {
+  background-color: #a9a9a9;
+  border: 2px solid #a9a9a9;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  padding: 6px 16px;
+  margin-right: 12px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 120px;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_footer .modal_btnBack:hover {
+  background-color: #f37020;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_footer .modal_btnFinish {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 120px;
+}
+
+#bbl_modal_cancel .modal_dialog {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  text-align: center;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 30px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_footer .modal_btnBack {
+  background-color: #a9a9a9;
+  border: 2px solid #a9a9a9;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  margin-right: 12px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 135px;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_footer .modal_btnBack:hover {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_footer .modal_btnFinish {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  width: 135px;
+}
+
+#bbl_modal_close .modal_dialog {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  text-align: center;
+}
+
+/* ================= End New CSS Style  ================= */
+
+/** bbl_ndid */
+#general,
+#bbl_ndid {
+  position: relative;
+  z-index: 3;
+}
+
+#general .container,
+#bbl_ndid .container {
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+#general .padding,
+#bbl_ndid .padding {
+  padding: 0px 5px;
+}
+
+#general .mobile-height,
+#bbl_ndid .mobile-height {
+  clear: both;
+  height: 20px;
+}
+
+#general .choice,
+#bbl_ndid .choice {
+  display: flex;
+  align-items: center;
+}
+
+#general .choice li,
+#bbl_ndid .choice li {
+  list-style: none;
+  position: relative;
+}
+
+#general .choice li label,
+#bbl_ndid .choice li label {
+  color: #000;
+  font-size: 24px;
+  font-family: "db_heavent_re";
+}
+
+#general .checkboxchoice li,
+#bbl_ndid .checkboxchoice li {
+  list-style: none;
+  position: relative;
+}
+
+#general .checkboxchoice li label,
+#bbl_ndid .checkboxchoice li label {
+  padding-top: 5px;
+  color: #000;
+  font-size: 24px;
+  font-family: "db_heavent_re";
+  line-height: 1em;
+}
+
+#general .checkboxchoice li label a,
+#bbl_ndid .checkboxchoice li label a {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+#general .flex,
+#bbl_ndid .flex {
+  display: flex;
+}
+
+#general .flex .formgroup,
+#bbl_ndid .flex .formgroup {
+  flex-grow: 2;
+}
+
+#general .flex .mobile img,
+#bbl_ndid .flex .mobile img {
+  margin-top: 10px;
+  margin-right: 15px;
+  height: 20px;
+}
+
+#general .income,
+#bbl_ndid .income {
+  font-size: 24px;
+}
+
+#general .bggray,
+#bbl_ndid .bggray {
+  padding: 40px;
+  background: #fafafa;
+}
+
+#general .bgwhite,
+#bbl_ndid .bgwhite {
+  padding: 40px;
+}
+
+#general .bgwhite.padding-top-0,
+#bbl_ndid .bgwhite.padding-top-0 {
+  padding-top: 20px;
+}
+
+#general .bggrayblack,
+#bbl_ndid .bggrayblack {
+  padding: 40px;
+  background: #e6e6e6;
+}
+
+#general .chart,
+#bbl_ndid .chart {
+  padding: 30px;
+}
+
+#general .chart .content__title,
+#bbl_ndid .chart .content__title {
+  font-size: 30px;
+}
+
+#general .chart .yes,
+#bbl_ndid .chart .yes {
+  color: #808080;
+  font-family: "db_heavent_re";
+  font-size: 18px;
+}
+
+#general .assessment,
+#bbl_ndid .assessment {
+  padding: 30px 0px;
+  color: #000;
+  font-family: "db_heavent_re";
+  font-size: 18px;
+  line-height: 1em;
+}
+
+#general .assessment .title,
+#bbl_ndid .assessment .title {
+  padding-bottom: 20px;
+}
+
+#general .assessment .result,
+#bbl_ndid .assessment .result {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 30px;
+  line-height: 1em;
+}
+
+#general .assessment .result ul,
+#bbl_ndid .assessment .result ul {
+  padding: 0px;
+  list-style: none;
+  color: #000;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+}
+
+#general .assessment .circular-chart,
+#bbl_ndid .assessment .circular-chart {
+  display: block;
+  width: 90px;
+}
+
+#general .assessment .circle-bg,
+#bbl_ndid .assessment .circle-bg {
+  fill: none;
+  stroke: #d9d9d9;
+  stroke-width: 1.8;
+}
+
+#general .assessment .circle,
+#bbl_ndid .assessment .circle {
+  fill: none;
+  stroke-width: 0.8;
+  stroke-linecap: round;
+}
+
+#general .assessment .circular-chart.orange .circle,
+#bbl_ndid .assessment .circular-chart.orange .circle {
+  stroke: #f37021;
+}
+
+#general .assessment .percentage,
+#bbl_ndid .assessment .percentage {
+  text-anchor: middle;
+}
+
+#general .assessment .orange .percentage,
+#bbl_ndid .assessment .orange .percentage {
+  fill: #f37021;
+}
+
+#general #errorTermChoice1 .form-error.help-block,
+#bbl_ndid #errorTermChoice1 .form-error.help-block,
+#general #errorTermChoice2 .form-error.help-block,
+#bbl_ndid #errorTermChoice2 .form-error.help-block {
+  padding-left: 30px;
+  text-align: left !important;
+}
+
+#general #labelBeneficiaryDocType,
+#bbl_ndid #labelBeneficiaryDocType,
+#general #labelControlDocType,
+#bbl_ndid #labelControlDocType {
+  display: none !important;
+}
+
+#general #colorConcernedMoney .colororange,
+#bbl_ndid #colorConcernedMoney .colororange {
+  display: none !important;
+}
+
+@media (max-width: 500px) {
+  #general .income,
+  #bbl_ndid .income {
+    padding-top: 5px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  #general .choice,
+  #bbl_ndid .choice,
+  #general .checkboxchoice,
+  #bbl_ndid .checkboxchoice {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #general .choice li label,
+  #bbl_ndid .choice li label,
+  #general .checkboxchoice li label,
+  #bbl_ndid .checkboxchoice li label {
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+
+  #general .choice li .radio,
+  #bbl_ndid .choice li .radio,
+  #general .checkboxchoice li .radio,
+  #bbl_ndid .checkboxchoice li .radio {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #general .choice li a,
+  #bbl_ndid .choice li a,
+  #general .checkboxchoice li a,
+  #bbl_ndid .checkboxchoice li a {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  #general .bggray,
+  #bbl_ndid .bggray {
+    padding: 30px;
+  }
+
+  #general .bgwhite,
+  #bbl_ndid .bgwhite {
+    padding: 30px;
+  }
+
+  #general .bgwhite.padding-top-0,
+  #bbl_ndid .bgwhite.padding-top-0 {
+    padding-top: 0px;
+  }
+
+  #general .assessment .line,
+  #bbl_ndid .assessment .line {
+    padding-bottom: 20px;
+  }
+
+  #general .chart.padding-mobile-top-0,
+  #bbl_ndid .chart.padding-mobile-top-0 {
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  #general,
+  #bbl_ndid {
+    padding-top: 90px;
+    min-height: 90vh;
+  }
+
+  #general .border__padding--all,
+  #bbl_ndid .border__padding--all {
+    padding: 20px 35px 0px 35px;
+  }
+
+  #general .choice,
+  #bbl_ndid .choice {
+    justify-content: flex-end;
+  }
+
+  #general .choice li,
+  #bbl_ndid .choice li {
+    margin-left: 15px;
+  }
+
+  #general .checkboxchoice,
+  #bbl_ndid .checkboxchoice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #general .checkboxchoice li,
+  #bbl_ndid .checkboxchoice li {
+    margin-left: 15px;
+  }
+
+  #general .flex .mobile img,
+  #bbl_ndid .flex .mobile img {
+    margin-top: -25px;
+  }
+
+  #general .chart,
+  #bbl_ndid .chart {
+    padding: 30px 0px 50px 0px;
+  }
+
+  #general .assessment,
+  #bbl_ndid .assessment {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 30px 15px;
+    color: #000;
+    font-family: "db_heavent_re";
+    font-size: 18px;
+    line-height: 1em;
+  }
+
+  #general .assessment .title,
+  #bbl_ndid .assessment .title {
+    padding-bottom: 20px;
+  }
+
+  #general .assessment .line,
+  #bbl_ndid .assessment .line {
+    border-left: 1px solid #bfbfbf;
+    padding: 0px 20px;
+  }
+
+  #general .assessment .result,
+  #bbl_ndid .assessment .result {
+    color: #002661;
+    font-family: "db_heavent_med";
+    font-size: 30px;
+    line-height: 1em;
+  }
+
+  #general .assessment .result ul,
+  #bbl_ndid .assessment .result ul {
+    padding: 0px;
+    list-style: none;
+    color: #000;
+    font-family: "db_heavent_med";
+    font-size: 24px;
+  }
+
+  #general .assessment .circular-chart,
+  #bbl_ndid .assessment .circular-chart {
+    display: block;
+    width: 90px;
+    margin: 0 auto;
+  }
+
+  #general .assessment .circle-bg,
+  #bbl_ndid .assessment .circle-bg {
+    fill: none;
+    stroke: #d9d9d9;
+    stroke-width: 1.8;
+  }
+
+  #general .assessment .circle,
+  #bbl_ndid .assessment .circle {
+    fill: none;
+    stroke-width: 0.8;
+    stroke-linecap: round;
+  }
+
+  #general .assessment .circular-chart.orange .circle,
+  #bbl_ndid .assessment .circular-chart.orange .circle {
+    stroke: #f37021;
+  }
+
+  #general .assessment .percentage,
+  #bbl_ndid .assessment .percentage {
+    text-anchor: middle;
+  }
+
+  #general .assessment .orange .percentage,
+  #bbl_ndid .assessment .orange .percentage {
+    fill: #f37021;
+  }
+
+  #general #errorTermChoice1 .form-error.help-block,
+  #bbl_ndid #errorTermChoice1 .form-error.help-block,
+  #general #errorTermChoice2 .form-error.help-block,
+  #bbl_ndid #errorTermChoice2 .form-error.help-block {
+    padding-left: 60px;
+    text-align: left !important;
+  }
+}
+
+#bbl_ndid .circle {
+  border-radius: 50%;
+  background: #002661;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bbl_ndid .circle svg {
+  margin-left: 5px;
+  width: 20px;
+}
+
+#bbl_ndid .tik {
+  fill: #fff;
+}
+
+#bbl_ndid .changeprofile a {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #002660;
+  border-radius: 5px;
+  color: #002660;
+  text-align: center;
+}
+
+#bbl_ndid .changeprofile img {
+  width: 13px;
+  margin-right: 10px;
+}
+
+#bbl_ndid .submit-bbl_ndid {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  background: #f37021;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+#bbl_ndid .submit-bbl_ndid.input {
+  border: none !important;
+}
+
+#bbl_ndid .submit-bbl_ndid.submit-bbl_ndid-padding {
+  padding: 12px 0px;
+}
+
+#bbl_ndid .refcode {
+  color: #808080;
+  font-size: 20px;
+  font-family: "db_heavent_re";
+}
+
+#bbl_ndid input::placeholder {
+  font-size: 60px;
+}
+
+#bbl_ndid .sendagain {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 20px;
+  text-align: right;
+}
+
+#bbl_ndid .sendagain a {
+  color: #f37021;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+#bbl_ndid .sendagain .condition {
+  text-align: right;
+}
+
+#bbl_ndid .justify-center {
+  justify-content: center;
+  text-align: center;
+}
+
+#bbl_ndid .button a {
+  margin-top: 30px;
+}
+
+#bbl_ndid .vdo-selfie {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: url("../imgs/vdo-selfie.jpg") no-repeat bottom left #fff;
+  height: 276px;
+}
+
+#bbl_ndid .vdo-selfie .info {
+  padding-left: 35%;
+}
+
+#bbl_ndid .vdo-selfie.vdo-call {
+  background: url("../imgs/vdo-call.jpg") no-repeat bottom left #fff;
+}
+
+#bbl_ndid .vdo-selfie.vdo-call .button a {
+  background: #002661;
+}
+
+#bbl_ndid .content__title a {
+  display: flex;
+  justify-content: center;
+  color: #002660;
+}
+
+#bbl_ndid .content__title a svg {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#bbl_ndid .content__title .tel-svg {
+  fill: none;
+  stroke: #002660;
+  stroke-width: 40;
+  stroke-miterlimit: 10;
+}
+
+#bbl_ndid .content__title .tel-svg1 {
+  fill: #002660;
+  stroke: #002660;
+  stroke-miterlimit: 10;
+}
+
+#bbl_ndid .bottom {
+  padding-top: 20px;
+}
+
+#bbl_ndid .computer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+#bbl_ndid .computer img {
+  width: 100%;
+  height: 142px;
+}
+
+#bbl_ndid .step {
+  display: flex;
+  padding: 30px 0px;
+}
+
+#bbl_ndid .step .circle {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 3px solid #002660;
+  color: #002660;
+  font-family: "db_heavent_bd";
+  font-size: 26px;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+#bbl_ndid .step .title {
+  padding: 0px 20px;
+  width: 90%;
+  line-height: 1em;
+}
+
+@media (max-width: 991px) {
+  #bbl_ndid .circle {
+    padding-top: 5px;
+  }
+
+  #bbl_ndid .condition {
+    text-align: center;
+  }
+
+  #bbl_ndid .bottom {
+    display: block;
+  }
+
+  #bbl_ndid .bottom .arrow {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  #bbl_ndid .submit-bbl_ndid {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #bbl_ndid .text-align-center {
+    text-align: center !important;
+  }
+
+  #bbl_ndid .text-align-center .content__title--small2 {
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  #bbl_ndid .sendagain {
+    text-align: center;
+  }
+
+  #bbl_ndid .sendagain .condition {
+    padding: 20px 0px 30px 0px;
+    text-align: center;
+  }
+
+  #bbl_ndid .vdo-selfie {
+    height: 256px;
+  }
+
+  #bbl_ndid .no-flex-mbile {
+    display: block;
+  }
+
+  #bbl_ndid .step .circle {
+    line-height: 1em;
+  }
+
+  #bbl_ndid .bbl_ndid .formgroup {
+    padding-top: 10px;
+  }
+
+  #bbl_ndid .bbl_ndid .mobile img {
+    height: 40px;
+  }
+
+  #bbl_ndid .changeprofile a {
+    display: block;
+  }
+
+  #bbl_ndid .changeprofile img {
+    margin-top: 7px;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  #bbl_ndid .bbl_ndid {
+    align-items: center;
+  }
+
+  #bbl_ndid .bbl_ndid .mobile {
+    padding-right: 30px;
+  }
+
+  #bbl_ndid .bbl_ndid .mobile img {
+    height: 70px;
+  }
+
+  #bbl_ndid .submit-bbl_ndid {
+    float: right;
+  }
+
+  #bbl_ndid .bottom .order-1 {
+    order: 1;
+  }
+
+  #bbl_ndid .bottom .order-2 {
+    order: 2;
+  }
+
+  #bbl_ndid .bottom .order-3 {
+    order: 3;
+  }
+
+  #bbl_ndid input::placeholder {
+    text-align: left;
+  }
+
+  #bbl_ndid .content__title .mail {
+    padding-left: 15px;
+  }
+}
+
+#bbl_ndid .card1 .title1 {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  line-height: 1em;
+  text-align: center;
+}
+
+#bbl_ndid .card1 #trans_ref {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 16px;
+  text-align: center;
+  color: #a9a9a9;
+}
+
+#bbl_ndid .card1 .title2 {
+  color: #f06e23;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  line-height: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#bbl_ndid .card2 {
+  text-align: center;
+  justify-content: center;
+}
+
+#bbl_ndid .card2 .bbl_header {
+  background: linear-gradient(
+    90.13deg,
+    rgba(0, 38, 97, 0) 0.09%,
+    rgba(0, 163, 255, 0.1) 9.97%,
+    rgba(0, 163, 255, 0.1) 88.45%,
+    rgba(0, 38, 97, 0) 99.89%
+  );
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#bbl_ndid .card2 .bbl_header #bbl_logo {
+  width: 55px;
+}
+
+#bbl_ndid .card2 .bbl_header #title {
+  color: #151050;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+}
+
+#bbl_ndid .card2 .bbl_body {
+  display: flex;
+  justify-content: center;
+}
+
+#bbl_ndid .card2 .bbl_body #bbl_screen {
+  width: 130px;
+  object-fit: contain;
+}
+
+#bbl_ndid .card2 .bbl_body #bbl_step {
+  display: block;
+  list-style-type: none;
+  text-align: start;
+}
+
+#bbl_ndid .card2 .bbl_body #bbl_step li {
+  color: #002661;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+#bbl_ndid .card2 .bbl_body #bbl_step li span {
+  font-weight: 600;
+}
+
+#bbl_ndid .card2 .bbl_body #bbl_text {
+  color: #002661;
+  text-align: start;
+  font-style: normal;
+  margin-left: 35px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+}
+
+#bbl_ndid .card2 .bbl_body #bbl_text span {
+  color: #ec2424;
+}
+
+#bbl_ndid .card2 .bbl_bottom #bbl_btn {
+  margin-top: 46px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 30px;
+  max-width: 80px;
+  background: #f37021;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  color: #fff;
+}
+
+#bbl_ndid .card2 .bbl_bottom #bbl_text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  color: #f06e23;
+}
+
+#bbl_ndid .card2 .bbl_bottom #bbl_text #ndid_cancel {
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 20px;
+  line-height: 16px;
+  color: #f06e23;
+}
+
+#bbl_ndid .card2 .bbl_bottom #bbl_text #ndid_cancel:hover {
+  cursor: pointer;
+}
+
+/* Cancel Modal */
+
+#bbl_modal_cancel .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_body {
+  color: #002661;
+  font-family: "db_heavent_re";
+  margin: 1em 0em 0.5em 0em;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 16px;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0em 8em;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_footer .modal_btn {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-size: 24px;
+  min-width: 120px;
+  max-width: 80px;
+
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_footer #back_btn {
+  background: #a9a9a9;
+}
+
+#bbl_modal_cancel .modal_dialog .modal_footer #done_btn {
+  background: #f37021;
+}
+
+/* Close Modal */
+
+#bbl_modal_close .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#bbl_modal_close .modal_dialog .modal_body {
+  color: #002661;
+  font-family: "db_heavent_re";
+  margin: 1em 0em 0.5em 0em;
+  padding: 0px 90px;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+#bbl_modal_close .modal_dialog .modal_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0em 8em;
+}
+
+#bbl_modal_close .modal_dialog .modal_footer .modal_btn {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-size: 24px;
+  min-width: 120px;
+  max-width: 80px;
+
+  background: #f37021;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+/* Timeout Modal */
+#bbl_modal_timeout .modal_dialog {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  text-align: center;
+}
+
+#bbl_modal_timeout .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#bbl_modal_timeout .modal_dialog .modal_body {
+  color: #002661;
+  font-family: "db_heavent_re";
+  margin: 1em 0em 0.5em 0em;
+  padding: 0px 90px;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+#bbl_modal_timeout .modal_dialog .modal_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0em 8em;
+}
+
+#bbl_modal_timeout .modal_dialog .modal_footer .modal_btn {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-size: 24px;
+  min-width: 120px;
+  max-width: 80px;
+
+  background: #f37021;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+/* NDID Status Modal */
+#modal_ndid_status .modal_dialog {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  text-align: center;
+}
+
+#modal_ndid_status .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#modal_ndid_status .modal_dialog .modal_body {
+  color: #002661;
+  font-family: "db_heavent_re";
+  margin: 1em 0em 0.5em 0em;
+  padding: 0px 90px;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+#modal_ndid_status .modal_dialog .modal_footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 15px;
+}
+
+#modal_ndid_status .modal_dialog .modal_footer .modal_btn {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-size: 24px;
+  min-width: 120px;
+  max-width: 80px;
+
+  background: #f37021;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+/* kbank_ndid */
+#general,
+#kbank_ndid {
+  position: relative;
+  z-index: 3;
+}
+
+#general .container,
+#kbank_ndid .container {
+  max-width: 1090px;
+  margin: 0 auto;
+}
+
+#general .padding,
+#kbank_ndid .padding {
+  padding: 0px 5px;
+}
+
+#general .mobile-height,
+#kbank_ndid .mobile-height {
+  clear: both;
+  height: 20px;
+}
+
+#general .choice,
+#kbank_ndid .choice {
+  display: flex;
+  align-items: center;
+}
+
+#general .choice li,
+#kbank_ndid .choice li {
+  list-style: none;
+  position: relative;
+}
+
+#general .choice li label,
+#kbank_ndid .choice li label {
+  color: #000;
+  font-size: 24px;
+  font-family: "db_heavent_re";
+}
+
+#general .checkboxchoice li,
+#kbank_ndid .checkboxchoice li {
+  list-style: none;
+  position: relative;
+}
+
+#general .checkboxchoice li label,
+#kbank_ndid .checkboxchoice li label {
+  padding-top: 5px;
+  color: #000;
+  font-size: 24px;
+  font-family: "db_heavent_re";
+  line-height: 1em;
+}
+
+#general .checkboxchoice li label a,
+#kbank_ndid .checkboxchoice li label a {
+  font-size: 18px;
+  text-decoration: underline;
+}
+
+#general .flex,
+#kbank_ndid .flex {
+  display: flex;
+}
+
+#general .flex .formgroup,
+#kbank_ndid .flex .formgroup {
+  flex-grow: 2;
+}
+
+#general .flex .mobile img,
+#kbank_ndid .flex .mobile img {
+  margin-top: 10px;
+  margin-right: 15px;
+  height: 20px;
+}
+
+#general .income,
+#kbank_ndid .income {
+  font-size: 24px;
+}
+
+#general .bggray,
+#kbank_ndid .bggray {
+  padding: 40px;
+  background: #fafafa;
+}
+
+#general .bgwhite,
+#kbank_ndid .bgwhite {
+  padding: 40px;
+}
+
+#general .bgwhite.padding-top-0,
+#kbank_ndid .bgwhite.padding-top-0 {
+  padding-top: 20px;
+}
+
+#general .bggrayblack,
+#kbank_ndid .bggrayblack {
+  padding: 40px;
+  background: #e6e6e6;
+}
+
+#general .chart,
+#kbank_ndid .chart {
+  padding: 30px;
+}
+
+#general .chart .content__title,
+#kbank_ndid .chart .content__title {
+  font-size: 30px;
+}
+
+#general .chart .yes,
+#kbank_ndid .chart .yes {
+  color: #808080;
+  font-family: "db_heavent_re";
+  font-size: 18px;
+}
+
+#general .assessment,
+#kbank_ndid .assessment {
+  padding: 30px 0px;
+  color: #000;
+  font-family: "db_heavent_re";
+  font-size: 18px;
+  line-height: 1em;
+}
+
+#general .assessment .title,
+#kbank_ndid .assessment .title {
+  padding-bottom: 20px;
+}
+
+#general .assessment .result,
+#kbank_ndid .assessment .result {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 30px;
+  line-height: 1em;
+}
+
+#general .assessment .result ul,
+#kbank_ndid .assessment .result ul {
+  padding: 0px;
+  list-style: none;
+  color: #000;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+}
+
+#general .assessment .circular-chart,
+#kbank_ndid .assessment .circular-chart {
+  display: block;
+  width: 90px;
+}
+
+#general .assessment .circle-bg,
+#kbank_ndid .assessment .circle-bg {
+  fill: none;
+  stroke: #d9d9d9;
+  stroke-width: 1.8;
+}
+
+#general .assessment .circle,
+#kbank_ndid .assessment .circle {
+  fill: none;
+  stroke-width: 0.8;
+  stroke-linecap: round;
+}
+
+#general .assessment .circular-chart.orange .circle,
+#kbank_ndid .assessment .circular-chart.orange .circle {
+  stroke: #f37021;
+}
+
+#general .assessment .percentage,
+#kbank_ndid .assessment .percentage {
+  text-anchor: middle;
+}
+
+#general .assessment .orange .percentage,
+#kbank_ndid .assessment .orange .percentage {
+  fill: #f37021;
+}
+
+#general #errorTermChoice1 .form-error.help-block,
+#kbank_ndid #errorTermChoice1 .form-error.help-block,
+#general #errorTermChoice2 .form-error.help-block,
+#kbank_ndid #errorTermChoice2 .form-error.help-block {
+  padding-left: 30px;
+  text-align: left !important;
+}
+
+#general #labelBeneficiaryDocType,
+#kbank_ndid #labelBeneficiaryDocType,
+#general #labelControlDocType,
+#kbank_ndid #labelControlDocType {
+  display: none !important;
+}
+
+#general #colorConcernedMoney .colororange,
+#kbank_ndid #colorConcernedMoney .colororange {
+  display: none !important;
+}
+
+@media (max-width: 500px) {
+  #general .income,
+  #kbank_ndid .income {
+    padding-top: 5px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 991px) {
+  #general .choice,
+  #kbank_ndid .choice,
+  #general .checkboxchoice,
+  #kbank_ndid .checkboxchoice {
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  #general .choice li label,
+  #kbank_ndid .choice li label,
+  #general .checkboxchoice li label,
+  #kbank_ndid .checkboxchoice li label {
+    padding-top: 5px;
+    font-size: 20px;
+    line-height: 1.3em;
+  }
+
+  #general .choice li .radio,
+  #kbank_ndid .choice li .radio,
+  #general .checkboxchoice li .radio,
+  #kbank_ndid .checkboxchoice li .radio {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #general .choice li a,
+  #kbank_ndid .choice li a,
+  #general .checkboxchoice li a,
+  #kbank_ndid .checkboxchoice li a {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+
+  #general .bggray,
+  #kbank_ndid .bggray {
+    padding: 30px;
+  }
+
+  #general .bgwhite,
+  #kbank_ndid .bgwhite {
+    padding: 30px;
+  }
+
+  #general .bgwhite.padding-top-0,
+  #kbank_ndid .bgwhite.padding-top-0 {
+    padding-top: 0px;
+  }
+
+  #general .assessment .line,
+  #kbank_ndid .assessment .line {
+    padding-bottom: 20px;
+  }
+
+  #general .chart.padding-mobile-top-0,
+  #kbank_ndid .chart.padding-mobile-top-0 {
+    padding-top: 0px;
+  }
+}
+
+@media (min-width: 992px) {
+  #general,
+  #kbank_ndid {
+    padding-top: 90px;
+    min-height: 90vh;
+  }
+
+  #general .border__padding--all,
+  #kbank_ndid .border__padding--all {
+    padding: 20px 35px 0px 35px;
+  }
+
+  #general .choice,
+  #kbank_ndid .choice {
+    justify-content: flex-end;
+  }
+
+  #general .choice li,
+  #kbank_ndid .choice li {
+    margin-left: 15px;
+  }
+
+  #general .checkboxchoice,
+  #kbank_ndid .checkboxchoice {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  #general .checkboxchoice li,
+  #kbank_ndid .checkboxchoice li {
+    margin-left: 15px;
+  }
+
+  #general .flex .mobile img,
+  #kbank_ndid .flex .mobile img {
+    margin-top: -25px;
+  }
+
+  #general .chart,
+  #kbank_ndid .chart {
+    padding: 30px 0px 50px 0px;
+  }
+
+  #general .assessment,
+  #kbank_ndid .assessment {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    color: #000;
+    font-family: "db_heavent_re";
+    font-size: 18px;
+    line-height: 1em;
+  }
+
+  #general .assessment .title,
+  #kbank_ndid .assessment .title {
+    padding-bottom: 20px;
+  }
+
+  #general .assessment .line,
+  #kbank_ndid .assessment .line {
+    border-left: 1px solid #bfbfbf;
+    padding: 0px 20px;
+  }
+
+  #general .assessment .result,
+  #kbank_ndid .assessment .result {
+    color: #002661;
+    font-family: "db_heavent_med";
+    font-size: 30px;
+    line-height: 1em;
+  }
+
+  #general .assessment .result ul,
+  #kbank_ndid .assessment .result ul {
+    padding: 0px;
+    list-style: none;
+    color: #000;
+    font-family: "db_heavent_med";
+    font-size: 24px;
+  }
+
+  #general .assessment .circular-chart,
+  #kbank_ndid .assessment .circular-chart {
+    display: block;
+    width: 90px;
+    margin: 0 auto;
+  }
+
+  #general .assessment .circle-bg,
+  #kbank_ndid .assessment .circle-bg {
+    fill: none;
+    stroke: #d9d9d9;
+    stroke-width: 1.8;
+  }
+
+  #general .assessment .circle,
+  #kbank_ndid .assessment .circle {
+    fill: none;
+    stroke-width: 0.8;
+    stroke-linecap: round;
+  }
+
+  #general .assessment .circular-chart.orange .circle,
+  #kbank_ndid .assessment .circular-chart.orange .circle {
+    stroke: #f37021;
+  }
+
+  #general .assessment .percentage,
+  #kbank_ndid .assessment .percentage {
+    text-anchor: middle;
+  }
+
+  #general .assessment .orange .percentage,
+  #kbank_ndid .assessment .orange .percentage {
+    fill: #f37021;
+  }
+
+  #general #errorTermChoice1 .form-error.help-block,
+  #kbank_ndid #errorTermChoice1 .form-error.help-block,
+  #general #errorTermChoice2 .form-error.help-block,
+  #kbank_ndid #errorTermChoice2 .form-error.help-block {
+    padding-left: 60px;
+    text-align: left !important;
+  }
+}
+
+#kbank_ndid .circle {
+  border-radius: 50%;
+  background: #002661;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#kbank_ndid .circle svg {
+  margin-left: 5px;
+  width: 20px;
+}
+
+#kbank_ndid .tik {
+  fill: #fff;
+}
+
+#kbank_ndid .changeprofile a {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #002660;
+  border-radius: 5px;
+  color: #002660;
+  text-align: center;
+}
+
+#kbank_ndid .changeprofile img {
+  width: 13px;
+  margin-right: 10px;
+}
+
+#kbank_ndid .submit-kbank_ndid {
+  display: block;
+  width: 100%;
+  max-width: 250px;
+  background: #f37021;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+#kbank_ndid .submit-kbank_ndid.input {
+  border: none !important;
+}
+
+#kbank_ndid .submit-kbank_ndid.submit-kbank_ndid-padding {
+  padding: 12px 0px;
+}
+
+#kbank_ndid .refcode {
+  color: #808080;
+  font-size: 20px;
+  font-family: "db_heavent_re";
+}
+
+#kbank_ndid input::placeholder {
+  font-size: 60px;
+}
+
+#kbank_ndid .sendagain {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 20px;
+  text-align: right;
+}
+
+#kbank_ndid .sendagain a {
+  color: #f37021;
+  font-size: 22px;
+  text-decoration: underline;
+}
+
+#kbank_ndid .sendagain .condition {
+  text-align: right;
+}
+
+#kbank_ndid .justify-center {
+  justify-content: center;
+  text-align: center;
+}
+
+#kbank_ndid .button a {
+  margin-top: 30px;
+}
+
+#kbank_ndid .vdo-selfie {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: url("../imgs/vdo-selfie.jpg") no-repeat bottom left #fff;
+  height: 276px;
+}
+
+#kbank_ndid .vdo-selfie .info {
+  padding-left: 35%;
+}
+
+#kbank_ndid .vdo-selfie.vdo-call {
+  background: url("../imgs/vdo-call.jpg") no-repeat bottom left #fff;
+}
+
+#kbank_ndid .vdo-selfie.vdo-call .button a {
+  background: #002661;
+}
+
+#kbank_ndid .content__title a {
+  display: flex;
+  justify-content: center;
+  color: #002660;
+}
+
+#kbank_ndid .content__title a svg {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#kbank_ndid .content__title .tel-svg {
+  fill: none;
+  stroke: #002660;
+  stroke-width: 40;
+  stroke-miterlimit: 10;
+}
+
+#kbank_ndid .content__title .tel-svg1 {
+  fill: #002660;
+  stroke: #002660;
+  stroke-miterlimit: 10;
+}
+
+#kbank_ndid .bottom {
+  padding-top: 20px;
+}
+
+#kbank_ndid .computer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+
+#kbank_ndid .computer img {
+  width: 100%;
+  height: 142px;
+}
+
+#kbank_ndid .step {
+  display: flex;
+  padding: 30px 0px;
+}
+
+#kbank_ndid .step .circle {
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: 3px solid #002660;
+  color: #002660;
+  font-family: "db_heavent_bd";
+  font-size: 26px;
+  line-height: 1.3em;
+  text-align: center;
+}
+
+#kbank_ndid .step .title {
+  padding: 0px 20px;
+  width: 90%;
+  line-height: 1em;
+}
+
+@media (max-width: 991px) {
+  #kbank_ndid .circle {
+    padding-top: 5px;
+  }
+
+  #kbank_ndid .condition {
+    text-align: center;
+  }
+
+  #kbank_ndid .bottom {
+    display: block;
+  }
+
+  #kbank_ndid .bottom .arrow {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  #kbank_ndid .submit-kbank_ndid {
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  #kbank_ndid .text-align-center {
+    text-align: center !important;
+  }
+
+  #kbank_ndid .text-align-center .content__title--small2 {
+    margin-top: 50px;
+    justify-content: center;
+  }
+
+  #kbank_ndid .sendagain {
+    text-align: center;
+  }
+
+  #kbank_ndid .sendagain .condition {
+    padding: 20px 0px 30px 0px;
+    text-align: center;
+  }
+
+  #kbank_ndid .vdo-selfie {
+    height: 256px;
+  }
+
+  #kbank_ndid .no-flex-mbile {
+    display: block;
+  }
+
+  #kbank_ndid .step .circle {
+    line-height: 1em;
+  }
+
+  #kbank_ndid .kbank_ndid .formgroup {
+    padding-top: 10px;
+  }
+
+  #kbank_ndid .kbank_ndid .mobile img {
+    height: 40px;
+  }
+
+  #kbank_ndid .changeprofile a {
+    display: block;
+  }
+
+  #kbank_ndid .changeprofile img {
+    margin-top: 7px;
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 992px) {
+  #kbank_ndid .kbank_ndid {
+    align-items: center;
+  }
+
+  #kbank_ndid .kbank_ndid .mobile {
+    padding-right: 30px;
+  }
+
+  #kbank_ndid .kbank_ndid .mobile img {
+    height: 70px;
+  }
+
+  #kbank_ndid .submit-kbank_ndid {
+    float: right;
+  }
+
+  #kbank_ndid .bottom .order-1 {
+    order: 1;
+  }
+
+  #kbank_ndid .bottom .order-2 {
+    order: 2;
+  }
+
+  #kbank_ndid .bottom .order-3 {
+    order: 3;
+  }
+
+  #kbank_ndid input::placeholder {
+    text-align: left;
+  }
+
+  #kbank_ndid .content__title .mail {
+    padding-left: 15px;
+  }
+}
+
+#kbank_ndid .card1 .title1 {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  line-height: 1em;
+  text-align: center;
+}
+
+#kbank_ndid .card1 #trans_ref {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 16px;
+  text-align: center;
+  color: #a9a9a9;
+}
+
+#kbank_ndid .card1 .title2 {
+  color: #f06e23;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#kbank_ndid .card2 {
+  text-align: center;
+  justify-content: center;
+}
+
+#kbank_ndid .card2 .kbank_header {
+  background: linear-gradient(
+    90.13deg,
+    rgba(0, 38, 97, 0) 0.09%,
+    rgba(0, 163, 255, 0.1) 9.97%,
+    rgba(0, 163, 255, 0.1) 88.45%,
+    rgba(0, 38, 97, 0) 99.89%
+  );
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+#kbank_ndid .card2 .kbank_header #kbank_logo {
+  width: 55px;
+}
+
+#kbank_ndid .card2 .kbank_header #title {
+  color: #151050;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+#kbank_ndid .card2 .kbank_body {
+  display: flex;
+  justify-content: center;
+}
+
+#kbank_ndid .card2 .kbank_body_title {
+  background: linear-gradient(
+    90.13deg,
+    rgba(0, 38, 97, 0) 0.09%,
+    rgba(0, 38, 97, 0.4) 22.67%,
+    rgba(0, 29, 75, 0.6) 44.85%,
+    rgba(0, 25, 64, 0.6) 55.21%,
+    rgba(0, 24, 61, 0.6) 58.88%,
+    rgba(0, 38, 97, 0.4) 75.19%,
+    rgba(0, 38, 97, 0) 99.89%
+  );
+  mix-blend-mode: darken;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+#kbank_ndid .card2 .kbank_body_title #kbank_body_title_text {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+#kbank_ndid .card2 .kbank_body_title #kbank_body_title_text span {
+  font-weight: 600;
+  font-size: 23px;
+}
+
+#kbank_ndid .card2 .kbank_body #empty_box {
+  width: 70px;
+}
+
+#kbank_ndid .card2 .kbank_body #kbank_screen {
+  width: 140px;
+  object-fit: contain;
+}
+
+#kbank_ndid .card2 .kbank_body #kbank_step {
+  display: block;
+  list-style-type: none;
+  text-align: start;
+}
+
+#kbank_ndid .card2 .kbank_body #kbank_step li {
+  color: #002661;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+}
+
+#kbank_ndid .card2 .kbank_body #kbank_step li span {
+  font-weight: 600;
+}
+
+#kbank_ndid .card2 .kbank_body #kbank_text {
+  color: #002661;
+  text-align: start;
+  font-style: normal;
+  margin-left: 35px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 25px;
+}
+
+#kbank_ndid .card2 .kbank_body #kbank_text span {
+  color: #ec2424;
+}
+
+#kbank_ndid .card2 .kbank_bottom #kbank_btn {
+  margin-top: 46px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 30px;
+  max-width: 80px;
+  background: #f37021;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  color: #fff;
+}
+
+#kbank_ndid .card2 .kbank_bottom #kbank_text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 16px;
+  color: #f06e23;
+}
+
+#kbank_ndid .card2 .kbank_bottom #kbank_text #ndid_cancel {
+  font-style: normal;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 20px;
+  line-height: 16px;
+  color: #f06e23;
+}
+
+#kbank_ndid .card2 .kbank_bottom #kbank_text #ndid_cancel:hover {
+  cursor: pointer;
+}
+
+.modal.fade .modal_dialog {
+  -o-transition: -o-transform 0.3s ease-out;
+  -webkit-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+}
+
+/* Cancel Modal */
+#kbank_modal_cancel .modal_dialog {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  text-align: center;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0em 8em;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_footer .modal_btn {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-size: 24px;
+  min-width: 120px;
+  max-width: 80px;
+
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_footer #back_btn {
+  background: #a9a9a9;
+}
+
+#kbank_modal_cancel .modal_dialog .modal_footer #done_btn {
+  background: #f37021;
+}
+
+/* Close Modal */
+#kbank_modal_close .modal_dialog {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  text-align: center;
+}
+
+#kbank_modal_close .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#kbank_modal_close .modal_dialog .modal_body {
+  color: #002661;
+  font-family: "db_heavent_re";
+  margin: 1em 0em 0.5em 0em;
+  padding: 0px 90px;
+  font-weight: 500;
+  font-size: 36px;
+  text-align: center;
+  color: #002661;
+  line-height: 1em;
+}
+
+#kbank_modal_close .modal_dialog .modal_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0em 8em;
+}
+
+#kbank_modal_close .modal_dialog .modal_footer .modal_btn {
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-size: 24px;
+  min-width: 120px;
+  max-width: 80px;
+
+  background: #f37021;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+/* Timeout Modal */
+#kbank_modal_timeout .modal_dialog {
+  margin: 0 auto;
+  margin-top: 200px;
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  text-align: center;
+}
+
+#kbank_modal_timeout .modal_dialog .modal_content {
+  background-color: #ffffff;
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 80%;
+}
+
+#kbank_modal_timeout .modal_dialog .modal_body {
+  color: #002661;
+  font-family: "db_heavent_re";
+  margin: 1em 0em 0.5em 0em;
+  padding: 0px 90px;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+#kbank_modal_timeout .modal_dialog .modal_footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0em 8em;
+}
+
+#kbank_modal_timeout .modal_dialog .modal_footer .modal_btn {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  width: 100%;
+  font-size: 24px;
+  min-width: 120px;
+  max-width: 80px;
+
+  background: #f37021;
+  border: white;
+  border-radius: 5px;
+  box-shadow: 3px 5px 10px #ccc;
+  padding: 5px 0px;
+  color: #fff;
+}
+
+/* end kbank */
+
+.form-input-mb {
+  margin-bottom: 0px !important;
+}
+
+.help-block.form-error {
+  left: auto;
+}
+
+.formgroup.has-success.de-mr30 {
+  margin-bottom: 0px;
+}
+
+.body-part_11.padd30 {
+  padding: 30px;
+}
+
+input#next-btn {
+  background-color: #fff;
+}
+
+select:disabled + span {
+  background-color: #ededed;
+}
+
+/*  Get OTP */
+.icon-confirm,
+.color-confirmotp {
+  color: #5bc142;
+}
+
+.stroke-bedit {
+  border-color: #002661;
+}
+
+.stroke-bcon {
+  border-color: #002661;
+}
+
+.stroke-bedit:hover,
+.stroke-bcon:hover {
+  background-color: #f37020;
+  border: 2px solid #002661;
+}
+
+.center-item {
+  text-align: center;
+  border: none;
+  padding-bottom: 0px !important;
+}
+
+.bodyotp {
+  padding-top: 0px;
+  padding: 0px 30px 30px 30px;
+}
+
+.text-refcode {
+  padding-left: 15px;
+  color: #002661;
+}
+
+.buttonwid {
+  width: 300px;
+  margin-top: 21px;
+}
+
+.text-p {
+  color: #002661;
+  padding-left: 15px;
+}
+
+.text-p p {
+  margin-bottom: 0px !important;
+}
+
+.text-u {
+  color: #002661;
+}
+
+button.close.modal-otpmark {
+  font-size: 40px;
+  top: -25px;
+  left: 10px;
+  position: relative;
+}
+
+/* modal timeout */
+.mr-top10 {
+  margin-top: 10px;
+}
+
+/* op-acc */
+#frm_register .content.no-flex.border-sha {
+  box-shadow: 8px -8px 20px 10px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  margin-bottom: 0px;
+}
+
+#frm_register .otp-header li.white {
+  margin-bottom: 30px;
+}
+
+.de-mr {
+  margin-bottom: 0px;
+}
+
+input#OTP {
+  width: 100%;
+}
+
+.col-xs-12.col-md-4.no-padding-mobile.adjustbutt {
+  padding-right: 0px;
+  margin-top: 10px;
+}
+
+.pad-tb {
+  padding-top: 6px !important;
+  padding-bottom: 6px !important;
+  box-shadow: 5px 5px 9px 0px rgb(0 0 0 / 14%);
+}
+
+/* 09-edit-op-acc */
+.text-headde {
+  margin-top: 0px;
+  color: #022561;
+  font-family: "db_heavent_med";
+  font-size: 26px;
+  line-height: 1em;
+}
+
+.font-span {
+  font-family: "db_heavent_med";
+  font-size: 26px;
+  line-height: 1em;
+}
+
+.arrow-wei {
+  margin-top: 40px;
+}
+
+.colo-ora {
+  color: #f06e23;
+  font-weight: bold;
+}
+
+.detail__contactchecksta {
+  margin-top: 40px;
+}
+
+.detail__contactchecksta h5 {
+  color: #002661;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  line-height: 1em;
+}
+
+@media (min-width: 992px) {
+  .detail__contactchecksta img {
+    margin-top: 0 !important;
+  }
+}
+
+.detail__contactchecksta img {
+  margin-top: 0 !important;
+  margin-right: 8px !important;
+  height: 21px !important;
+}
+
+.detail__contactchecksta .info__calll .calll span,
+.detail__contactchecksta .info__calll .emaill span {
+  font-size: 25px !important;
+  color: #022561 !important;
+}
+
+.modalKnowPass-content {
+  padding: 15px;
+  width: 25%;
+  height: 50px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modalKnowPass-content .modal-header {
+  background: #fff;
+  padding-left: 15px;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-bottom: 0;
+  border-bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.modalKnowPass-content .modal-body {
+  background: #fff;
+  text-align: center;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.modal-body.mdb-msg {
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  color: #002661;
+}
+.modal-footer.mdf-center {
+  text-align: center;
+}
+
+.suit_cursor {
+  cursor: pointer;
+}
+.suit_margin {
+  margin-top: 10px;
+}
+
+.email_check_font_size {
+  font-size: 40px;
+}
+
+.laser input[type="text"]::placeholder {
+  text-align: center !important;
+}
+
+.button-term-ndid {
+  text-align: right;
+}
+.button-term-ndid .btnConfirm {
+  background-color: #f37020;
+  border: 2px solid #f37020;
+  border-radius: 6px;
+  box-shadow: rgb(27 31 35 / 10%) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.button-cancel-term-ndid a.confirm {
+  display: inline-block;
+  background: #f37021;
+  border-radius: 5px;
+  box-shadow: 5px 5px 10px #ccc;
+  padding: 8px 40px;
+  color: #fff;
+  font-family: "db_heavent_med";
+  font-size: 24px;
+  text-align: center;
+  line-height: 1em;
+}
+
+.bank_ndid_title_h {
+  color: #002660;
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+
+.detail__contact_pending {
+  font-family: "db_heavent_med" !important;
+  font-size: 24px !important;
+}
+
+.justify_center_modal_timeout {
+  justify-content: center;
+  text-align: center;
+}
+
+.progress-space {
+  padding: 0 0 0 0;
+  height: 1rem;
+  margin: 0 0 0 0;
+}
+.progress-bar-back-color {
+  background-color: #f37021;
+}
+.block {
+  border: 1px solid #f37021;
+  text-align: center;
+  vertical-align: middle;
+}
+.circle {
+  background: #f5f5f5;
+  border-radius: 55px;
+  color: #000000;
+  height: 55px;
+  font-weight: bold;
+  width: 55px;
+  display: table;
+}
+.progress-padding {
+  padding: 0 8px 0 0;
+}
+.progress-flex {
+  flex: 1;
+}
+.text-circle {
+  vertical-align: middle;
+  display: table-cell;
+  text-align: center;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.stepper-process {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.response_text_bold {
+  font-weight: bold;
+}
+
+.paddingPayee {
+  padding-top: 10px;
+}
+
+/* ------ NEW STYLE CSS 05 ------ */
+@media (max-width: 991px) {
+  .otp_fda-fdapjsbt2 img {
+    width: 40px !important;
+    margin-right: 8px !important;
+  }
+
+  .otp_fda-fdapjsbt2,
+  .otp_fda-fdapjsbt4 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .otp_fda-fdapjsbt4 {
+    float: right !important;
+  }
+
+  .otp_fda-fdapjsbt4 .btnEdite {
+    font-size: 18px !important;
+    width: 104px !important;
+  }
+
+  .otp_fda-fdapjsbt4 .btnConfirm {
+    font-size: 18px !important;
+    width: 104px !important;
+  }
+
+  .content__title--small {
+    font-size: 18px !important;
+  }
+
+  .otp_fda-fdapjsbt3 {
+    margin: 0 0 1.5rem 0 !important;
+    padding: 0 0 0 0 !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .otp_fda-fdapjsbt {
+    display: inline-block !important;
+  }
+}
+
+
+.otp_fda-fdapjsbt {
+  display: flex;
+  width: 100%;
+  margin-bottom: 47px;
+  align-items: center;
+}
+
+.otp_fda-fdapjsbt1 {
+  margin-right: 1rem;
+}
+
+.otp_fda-fdapjsbt2 img {
+  width: 70px;
+}
+
+.otp_fda-fdapjsbt2 {
+  align-items: center;
+  display: flex;
+}
+
+.otp_fda-fdapjsbt4 {
+  flex: 1 0 auto;
+  margin-top: 30px;
+}
+
+.otp_fda-fdapjsbt5 {
+  margin-top: 30px;
+}
+
+.tr123 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tr123 label {
+  display: flex;
+}
+
+.tr123 .content__title--small {
+  font-family: "db_heavent_med";
+  color: #000 !important;
+  font-size: 24px !important;
+  width: 400px;
+  padding: 0 1rem 0 1rem;
+}
+
+.tr123 label,
+.label-drop {
+  left: 0px;
+  right: 0px;
+  z-index: 30;
+  cursor: pointer;
+  color: #4c4c4c;
+  font-family: "db_heavent_re";
+  font-weight: normal;
+  text-align: left;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.formgroup-verify-otp {
+  margin-bottom: 30px;
+}

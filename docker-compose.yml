@@ -1,0 +1,12 @@
+version: '3'
+services:
+  open_accounts:
+    image: nginx:latest
+    container_name: open_accounts
+    ports:
+      - '8080:80'
+    expose:
+      - 80
+    volumes:
+      - ./:/var/www/html/website
+      - ./nginx:/etc/nginx

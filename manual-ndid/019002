@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="logo">
+                    <a href="#"><img src="/assets/imgs/header/logo.png" class="img-responsive" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- CONTENT -->
+
+<div id="kbank_ndid">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 no-padding-mobile">
+                <!-- process -->
+                <div class="border">
+                    <div class="process">
+                        <div class="col-xs-12 col-md-5">
+                            <div class="process__title">ยืนยันตัวตนผ่าน NDID</div>
+                        </div>
+                        <div class="col-xs-12 col-md-7">
+                            <div class="process__list">
+                                <li>
+                                    <div class="circle">
+                                        <svg x="0px" y="0px" viewBox="-89.3 2 29 24"
+                                            style="enable-background:new -89.3 2 29 24;">
+                                            <path class="tik" d="M-89.3,14l4-4l7,8l14-16l4,4l-18,20L-89.3,14z" />
+                                        </svg>
+                                    </div>
+                                    <div class="title">กรอกข้อมูล</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="60, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">2</text>
+                                    </svg>
+                                    <div class="title orange">ยืนยันตัวตน</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart ">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="80, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">3</text>
+                                    </svg>
+                                    <div class="title">รับรหัสผ่าน</div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <div class="card1">
+                    <div class="border">
+                        <div class="info">
+                            <div class="title1">ท่านกำลังยืนยันตัวตนเพื่อใช้ตามวัตถุประสงค์ของบริษัทฟินันเซีย ดิจิทัล
+                                แอสเซท จำกัด <br> และประสงค์ให้ส่งข้อมูลจากธนาคารกสิกรไทย และบริษัท ข้อมูลเครดิตแห่งชาติ</div>
+                            <div id="trans_ref" class="text-TraRef">(Transaction Ref:<span id="ref_no">12345678</span>)
+                            </div>
+                            <div class="title2">กรุณายืนยันตัวตนที่โมบายแอปพลิเคชันของธนาคารที่ท่านเลือกภายใน 60
+                                นาที</div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="border">
+                        <div class="kbank_header">
+                            <img class="kbank_logo" src="/assets/imgs/kbank_logo.png" alt="">
+                            <div class="header">ขั้นตอนการยืนยันตัวตนผ่าน NDID กับธนาคารกสิกรไทย</div>
+                            <div id="emptyDiv"></div>
+                        </div>
+                        <div class="step-Applicants">
+                            <div class="kbank_body_title">
+                                <div class="kbank_body_title_text">
+                                    1. เข้า App Kplus ของท่าน เพื่อ<span> สมัคร
+                                        NDID</span> ดังนี้
+                                </div>
+                            </div>
+                            <div class="kbank-body">
+                                <div class="row">
+                                    <div class="col-lg-4 ml-auto">
+                                        <div class="ImgExKbank">
+                                            <img id="kbank_screen" src="/assets/imgs/kbank_screen_1.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 ml-auto">
+                                        <div class="kbank-step">
+                                            <ul class="list__Kbank-detail">
+                                                <li>1. เลือก <span>“ธุรกรรม”</span></li>
+                                                <li>
+                                                    2. เลือกเมนู <span>“บริการอื่นๆ”</span> และ เลือก
+                                                    <span>“บริการ NDID”</span>
+                                                </li>
+                                                <li>
+                                                    3. กด <span>“ลงทะเบียน”</span> และ กด <span>“ยอมรับ”</span>
+                                                    ข้อตกลง
+                                                </li>
+                                                <li>4. <span>“สแกนใบหน้า”</span> เพื่อยืนยันตัวตน</li>
+                                                <li>5. กด <span>“ยืนยัน”</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="note-text">
+                                            <span>หมายเหตุ:</span>
+                                            <p>
+                                                หากท่านเข้าไปที่ App KPLUS แล้ว ไม่พบข้อมูลให้ “ลงทะเบียน”
+                                                ให้ท่านติดต่อเคาน์เตอร์ธนาคารกสิกรไทย เพื่อยืนยันตัวตนก่อน
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="step-Applicants">
+                            <div class="kbank_body_title">
+                                <div class="kbank_body_title_text">
+                                    2. เข้า App Kplus ของท่าน เพื่อ <span>ยืนยันตัวตน</span>
+                                    ดังนี้
+                                </div>
+                            </div>
+                            <div class="kbank-body">
+                                <div class="row">
+                                    <div class="col-lg-4 ml-auto">
+                                        <div class="ImgExKbank">
+                                            <img id="kbank_screen" src="/assets/imgs/kbank_screen_2.png" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-8 ml-auto">
+                                        <div class="kbank-step">
+                                            <ul class="list__Kbank-detail">
+                                                <li>1. เลือก <span>“การแจ้งเตือน”</span></li>
+                                                <li>
+                                                    2. เลือก คำขอยืนยันตัวตรของ <span>“ฟินันเซีย”</span> กด
+                                                    <span>“ยืนยัน”</span> และ และกด
+                                                    <span>“ยินยอม”</span>
+                                                </li>
+                                                <li>
+                                                    3. <span>“ถ่ายรูป”</span> เพื่อยืนยันตัวตน
+                                                </li>
+                                                <li>
+                                                    4. กด <span>“ยืนยัน”</span> เพื่อนำส่งข้อมูล และกด
+                                                    <span>“ยอมรับ”</span>
+                                                </li>
+                                                <li>
+                                                    5. กด <span>รหัสผ่าน</span> ทางอีเมล
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="note-text mt-40">
+                                            ท่านต้องทำรายการให้สำเร็จ <span>ภายใน 1 ชม.</span>
+                                            หากไม่สำเร็จให้ท่านเข้า Email ที่สมัครเพื่อทำรายการใหม่อีกครั้ง
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="kbank_bottom">
+                                <button id="kbank_btn" class="" role="button" type="button"
+                                    onclick="btnBack()">ปิด</button>
+                                <div class="kbank_text">
+                                    หากท่านต้องการ “ยกเลิก” ยืนยันตัวตน NDID กรุณา
+                                    <span onclick="getStatusNDID()" class="ndid_cancel" style="cursor: pointer;">คลิกที่นี่</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="content no-flex bottom">
+                    <div class="askmore-title">
+                        สอบถามเพิ่มเติม 02-088-4666 กด 3
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <!-- </form> -->
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div><div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="/assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="/assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="/assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<div id="modal_ndid_status" class="modal fade" role="dialog">
+    <div class="modal_dialog">
+        <div id="modal_ndid_status_content" class="modal_content"></div>
+    </div>
+</div>
+
+
+<!-- OTHER -->
+<script>
+const MAIN_URL = window.location.origin;
+
+function RefNumberRandom() {
+    var min = Math.pow(10, 7);
+    var max = 9 * Math.pow(10, 7);
+    var random = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    return random;
+}
+
+$(document).ready(() => {
+    let v = parseInt('1');
+    $('#waiting_modal_dialog').addClass('show');
+    if (v == 1) {
+        setTimeout(() => {
+            $('#waiting_modal_dialog').removeClass('show');
+        }, 300);
+    } else {
+        setTimeout(() => {
+            window.location.href = '/send-reload-page';
+        }, 1000);
+    }
+
+    function disableBack() {
+        window.history.forward()
+    }
+    window.onload = disableBack();
+    window.onpageshow = function(e) {
+        if (e.persisted)
+            disableBack();
+    }
+
+    initNDID();
+})
+
+let uid = "";
+
+function initNDID() {
+    const wsurl = `${MAIN_URL}/api/get-data-kyc`;
+
+    fetch(wsurl, {
+            method: "POST"
+        })
+        .then(response => response.text())
+        .then(function(result) {
+            let data = JSON.parse(result);
+
+            if (data.uid !== "" && data.uid !== null) {
+                uid = data.uid;
+                initTransRef()
+            }
+        })
+        .catch(error => console.log('error', error));
+}
+
+function initTransRef() {
+    const wsurl = `${MAIN_URL}/api/get-trans-ref`;
+    let data = {
+        id: uid
+    }
+
+    fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(function(result) {
+            let data = JSON.parse(result);
+
+            const refNo = document.getElementById("ref_no");
+            refNo.textContent = data.tran_Ref;
+            
+        })
+        .catch(error => console.log('error', error));
+}
+
+function getStatusNDID() {
+    let objReq = {
+        id: uid
+    }
+    const wsurl = `${MAIN_URL}/api/get-status-ndid`;
+    fetch(wsurl, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(objReq)
+    }).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        console.log(data)
+        if (data.success) {
+            setStatus(data.data.status, data.data.timed_out, data.data.closed, data.data.code_status, data.message, '')
+        } else {
+            setStatus('unknow', false, false, '', data.message)
+        }
+    }).catch(function(error) {});
+}
+
+function setStatus(_status, _timed_out, _closed, _error_code, _message, _desc) {
+    let status = _status
+    const timed_out = _timed_out
+    const closed = _closed
+    const error_code = _error_code
+    const message = _message;
+
+    let dd = `<div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body mdb-msg">
+                <p id="msg_content">ท่านเคยกรอกข้อมูลแล้ว กรุณาคลิก ตกลง
+                    เพื่อกรอกข้อมูลเปิดบัญชีต่อ</p>
+            </div>
+            <div class="modal-footer">
+                <button href="javascript:void(0)" onclick="ok_btn('1')" class="button-accept btn-w-25"
+                    type="button" aria-label="Close">ตกลง</button>
+            </div>`;
+
+    let case1 = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('1')" class="modal_btn">เสร็จสิ้น</button>
+                    </div>`;
+    let case2 = `<div class="modal-body mdb-msg">
+                        <p>ยืนยัน “ยกเลิก” NDID เพื่อเปลี่ยนวิธีการยืนยันตัวตน</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="closeModal()" class="modal_btn" style="background: #9D9D99;">ย้อนกลับ</button>
+                        <button type="button" onclick="ok_btn('2')" class="modal_btn">ตกลง</button>
+                    </div>`;
+    let case3 = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('3')" class="modal_btn">ตกลง</button>
+                    </div>`;
+    let case4 = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('4')" class="modal_btn">ตกลง</button>
+                    </div>`;
+    let case5 = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('5')" class="modal_btn">ตกลง</button>
+                    </div>`;
+    let case6 = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('6')" class="modal_btn">ตกลง</button>
+                    </div>`;
+    let case7 = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('7')" class="modal_btn">ตกลง</button>
+                    </div>`;
+    let case_rejected = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('')" class="modal_btn">ตกลง</button>
+                    </div>`;
+    let case_default = `<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('')" class="modal_btn">ตกลง</button>
+                    </div>`;
+
+    $('#modal_ndid_status').addClass('show')
+
+    if (status == 'unknow') {
+        $("#modal_ndid_status_content").html(case7);
+    } else if (!timed_out && !closed) {
+        if (status == "pending") {
+            $("#modal_ndid_status_content").html(case2);
+        } else if (status == "confirmed") {
+            $("#modal_ndid_status_content").html(case5);
+        } else if (status == "rejected") {
+            $("#modal_ndid_status_content").html(case_rejected);
+        } else if (status == "complicated") {
+            $("#modal_ndid_status_content").html(case6);
+        } else if (status == "completed") {
+            $("#modal_ndid_status_content").html(case1);
+        } else {
+            $("#modal_ndid_status_content").html(case_default);
+        }
+    } else if (!timed_out && closed) {
+        if (status == "completed") {
+            $("#modal_ndid_status_content").html(case1);
+        } else if (status == "confirmed") {
+            $("#modal_ndid_status_content").html(case5);
+        } else if (status == "pending") {
+            $("#modal_ndid_status_content").html(case_default);
+        } else if (status == "rejected") {
+            $("#modal_ndid_status_content").html(case3);
+        } else if (status == "errored") {
+            if (error_code == 30000) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30000')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30200) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30200')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30300) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30300')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30400) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30400')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30500) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30500')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30510) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30510')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30520) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30520')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30530) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30530')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30600) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30600')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30610) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30610')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30700) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30700')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30800) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30800')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 30900) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('30900')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 40000) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('40000')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 40200) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('40200')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 40300) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('40300')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 40400) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('40400')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            } else if (error_code == 40500) {
+                $("#modal_ndid_status_content").html(`<div class="modal-body mdb-msg">
+                        <p>${message}</p>
+                    </div>
+                    <div class="modal_footer">
+                        <button type="button" onclick="ok_btn('40500')" class="modal_btn">ตกลง</button>
+                    </div>`);
+            }
+        } else {
+            $("#modal_ndid_status_content").html(case_default);
+        }
+    } else if (timed_out && !closed) {
+        if (status != 'completed') {
+            $("#modal_ndid_status_content").html(case4);
+        }
+    }
+}
+
+function closeNDID() {
+    let objReq = {
+        id: uid
+    }
+    const wsurl = `${MAIN_URL}/api/ndid-close`;
+    fetch(wsurl, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(objReq)
+    }).then(function(response) {
+        return response.json();
+    }).then(function(data) {
+        back_btn()
+    }).catch(function(error) {});
+}
+
+function ok_btn(n) {
+    const wsurl = `${MAIN_URL}/api/clear-view-count`;
+    var data = {
+        url: ""
+    };
+    fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(function(result) {
+            if (
+                n == "1") {
+                // go to page login web trade
+                window.open("/register", "_self");
+            } else if (
+                n == "2") {
+                closeNDID();
+            } else if (
+                n == "3") {
+					back_btn();
+            } else if (
+                n == "4") {
+					back_btn();
+            } else if (
+                n == "5") {
+					closeModal();
+            } else if (
+                n == "6") {
+					closeModal();
+            } else if (
+                n == "7") {
+					closeModal();
+            } else if (
+                n == "") {
+					closeModal();
+            } else if (
+                n == "30000") {
+					closeModal();
+            } else if (
+                n == "30200") {
+					closeModal();
+            } else if (
+                n == "30300") {
+					closeModal();
+            } else if (
+                n == "30400") {
+					closeModal();
+            } else if (
+                n == "30500") {
+					closeModal();
+            } else if (
+                n == "30510") {
+					closeModal();
+            } else if (
+                n == "30520") {
+					closeModal();
+            } else if (
+                n == "30530") {
+					closeModal();
+            } else if (
+                n == "30600") {
+					closeModal();
+            } else if (
+                n == "30610") {
+					closeModal();
+            } else if (
+                n == "30700") {
+					closeModal();
+            } else if (
+                n == "30800") {
+					closeModal();
+            } else if (
+                n == "30900") {
+					closeModal();
+            } else if (
+                n == "40000") {
+					closeModal();
+            } else if (
+                n == "40200") {
+					closeModal();
+            } else if (
+                n == "40300") {
+					closeModal();
+            } else if (
+                n == "40400") {
+					closeModal();
+            } else if (
+                n == "40500") {
+					closeModal();
+            }
+        })
+        .catch(error => console.log('error', error));
+}
+
+function back_btn() {
+    const wsurl = `${MAIN_URL}/api/clear-view-count`;
+    var data = {
+        url: "/identity/selection/type"
+    };
+    fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(function(result) {
+            window.open(result, "_self");
+        })
+        .catch(error => console.log('error', error));
+}
+
+function btnBack() {
+    setTimeout(() => {
+        window.open(`${MAIN_URL}/go-edit-op-acc`, "_self");
+    }, 50);
+}
+
+function closeModal(){
+	$("#modal_ndid_status").removeClass("show");
+}
+
+$("#includedFooter").load("/assets/layout/footer.php");
+</script>
+
+</body>
+
+</html>

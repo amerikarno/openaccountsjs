@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Finansia</title>
+
+    <!-- CSS -->
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/css/jquery-ui.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <!-- JAVASCRIPT -->
+    <script src="/assets/js/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/jquery.form-validator-2.1.67.js"></script>
+    <script src="/assets/js/jquery-ui.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <link rel="stylesheet" href="/assets/css/jquery.Thailand.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/davidshimjs-qrcodejs@0.0.2/qrcode.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+</head>
+
+<body><div id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="logo">
+                    <a href="#"><img src="/assets/imgs/header/logo.png" class="img-responsive" alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!-- CONTENT -->
+<div id="otp">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 no-padding-mobile">
+                <!-- process -->
+                <div class="border">
+                    <div class="process">
+                        <div class="col-xs-12 col-md-5">
+                            <div class="process__title">โปรดยืนยันตัวตนผ่านระบบ NDID</div>
+                        </div>
+                        <div class="col-xs-12 col-md-7">
+                            <div class="process__list">
+                                <li>
+                                    <div class="circle">
+                                        <svg x="0px" y="0px" viewBox="-89.3 2 29 24"
+                                            style="enable-background:new -89.3 2 29 24;">
+                                            <path class="tik" d="M-89.3,14l4-4l7,8l14-16l4,4l-18,20L-89.3,14z" />
+                                        </svg>
+                                    </div>
+                                    <div class="title">กรอกข้อมูล</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart orange">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="60, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">2</text>
+                                    </svg>
+                                    <div class="title orange">ยืนยันตัวตน</div>
+                                </li>
+                                <li>
+                                    <div class="arrow">
+                                        <svg version="1.1" viewBox="0 0 132.4 100.4">
+                                            <polyline class="svg" points="78.7,96.9 125.3,50.2 78.7,3.5 " />
+                                            <line class="svg" x1="125.3" y1="50.2" x2="0" y2="50.2" />
+                                        </svg>
+                                    </div>
+                                </li>
+                                <li>
+                                    <svg viewBox="0 0 36 36" class="circular-chart ">
+                                        <path class="circle-bg"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <path class="circle" stroke-dasharray="80, 100"
+                                            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                        <text x="18" y="23" class="percentage">3</text>
+                                    </svg>
+                                    <div class="title">รับรหัสผ่าน</div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="clear"></div>
+                <form id="frm_register" action="" method="GET" class="form" role="form">
+                    <div class="border z-index-1">
+                        <div class="col-xs-12 col-md-12 no-padding-mobile">
+                            <div class="content__title">
+                                <span>ข้อตกลงการยืนยันตัวตนผ่านระบบ NDID</span>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-md-12 no-padding-mobile">
+                            <div class="title">ข้อตกลงตามที่ระบุในที่นี้เป็นข้อกำหนดขั้นต่ำ
+                                สมาชิกตกลงที่จะนำข้อตกลงนี้มาใช้บังคับกับประเภทสมาชิกภาพของตนต่อไปนี้ไว้ในสัญญาฉบับต่างๆ
+                                ที่ทำกับลูกค้าของตน ("<u>ลูกค้า</u>") คู่สัญญาทั้งสองฝ่ายตกลงว่า
+                                สมาชิกอาจมีการปรับภาษาของข้อตกลงบังคับขั้นต่ำได้ตามลักษณะและประเภทของธุรกิจหรือธุรกรรม
+                                แต่จะต้องคงไว้ซึ่งข้อตกลงในสาระสำคัญทั้งหมด
+                                ตลอดจนเจตนาของคู่สัญญาทั้งสองฝ่ายไว้ครบถ้วนทุกประการ
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="border z-index-1">
+                        <div class="col-xs-12 col-md-12 no-padding-mobile">
+                            <div class="content__title content__title--big">
+                                <span>เงื่อนไขบังคับขั้นต่ำที่เกี่ยวข้องกับสมาชิกที่เป็น Relying Party
+                                    (RP)</span>
+                            </div>
+                            <br>
+                            <div class="title">
+                                1. ข้อตกลงและเงื่อนไขนี้ ("<u>ข้อตกลง</u>”)
+                                ถือเป็นสัญญาให้บริการที่ใช้บังคับกับการใช้บริการและการเข้าร่วมของลูกค้าในบริการพิสูจน์และยืนยันตัวตนทางดิจิทัล
+                                และการทำธุรกรรมอื่น ๆ ที่เกี่ยวเนื่องกับ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด
+                                ในฐานะที่เป็นผู้ให้บริการ ("<u>ผู้ให้บริการ</u>")
+                                (ซึ่งต่อไปนี้จะเรียกว่า "<u>บริการพิสูจน์และยืนยันตัวตนทางดิจิทัล</u>" หรือ "<u>NDID
+                                    Services</u>")
+                                โดยที่การให้บริการพิสูจน์และยืนยันตัวตนทางดิจิทัลของผู้ให้บริการนี้จะดำเนินการผ่านระบบการพิสูจน์และยืนยันตัวตนทางดิจิทัล
+                                ("<u>Digital ID Platform</u>") ที่บริษัท เนชั่นแนลดิจิทัล ไอดี จำกัด ("<u>NDID</u>")
+                                เป็นผู้จัดให้มีขึ้น โดยมีนโยบายและเงื่อนไขการใช้
+                                บริการระบบการพิสูจน์และยืนยันตัวตนทางดิจิทัล เป็นไปตามที่ NDID กำหนด ทั้งนี้
+                                ลูกค้าสามารถศึกษารายละเอียดเพิ่มเติมที่ได้ website: [<a href="#"
+                                    onclick="window.open('https://www.ndid.co.th/termandcon.html')"
+                                    style="display: contents;color: #337ab7;" tabindex="-1">
+                                    https://www.ndid.co.th/termandcon.html </a>]<br><br>ลูกค้ารับทราบและตกลงว่า
+                                การยอมรับข้อตกลงนี้ให้ถือว่าลูกค้าได้อ่าน เข้าใจ และตกลงที่จะผูกพันตามหลักเกณฑ์
+                                และเงื่อนไขที่กำหนดในข้อตกลงนี้
+                                รวมถึงนโยบายและเงื่อนไขการใช้บริการระบบการพิสูจน์และยืนยันตัวตนทางดิจิทัลของ NDID
+                                ทั้งนี้ หากลูกค้าไม่ยอมรับข้อตกลงดังกล่าวนี้ โปรดอย่าเข้าถึง
+                                หรือใช้บริการพิสูจน์และยืนยันตัวตนทางดิจิทัล
+                            </div>
+                            <br>
+                            <div class="title">
+                                2. ลูกค้ารับทราบว่าก่อนที่ลูกค้าจะสามารถใช้บริการพิสูจน์และยืนยันตัวตนทางดิจิทัลได้
+                                ลูกค้าจะต้องลงทะเบียนเพื่อพิสูจน์ตัวตนกับผู้ให้บริการพิสูจน์และยืนยันตัวตนทางดิจิทัลรายอื่น
+                                ("<u>Identity Provider</u>" หรือ "<u>IdP</u>")
+                                ซึ่งเป็นบุคคลที่ลูกค้าได้ทำความตกลงที่มีผลทางกฎหมายโดยมีข้อกำหนดในลักษณะเดียวกันกับข้อตกลงนี้
+                            </div>
+                            <br>
+                            <div class="title">
+                                3. เมื่อลูกค้าขอรับบริการพิสูจน์และยืนยันตัวตนทางดิจิทัลจากผู้ให้บริการแล้ว
+                                ลูกค้าตกลงต่อผู้ให้บริการดังต่อไปนี้<p></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
+                                    ผู้ให้บริการมีสิทธิใช้ผลการพิสูจน์และยืนยันตัวตนทางดิจิทัลของลูกค้าที่ Identity
+                                    Provider อื่น ได้ดำเนินการผ่าน Digital ID Platform</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)
+                                    ผู้ให้บริการมีสิทธิที่จะรวบรวม ได้รับ ใช้ ประมวลผล
+                                    และจัดเก็บข้อมูลส่วนบุคคลของลูกค้าจากผู้ให้ข้อมูลที่น่าเชื่อถือที่เกี่ยวข้อง
+                                    (authoritative source)</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3) เมื่อ Identity Provider
+                                    ดำเนินการพิสูจน์และยืนยันตัวตนทางดิจิทัลเสร็จสิ้น และผู้ให้ข้อมูลที่น่าเชื่อถือ
+                                    (authoritative source) ได้รับอนุญาตในการเข้าถึงข้อมูลของลูกค้าเรียบร้อยแล้ว
+                                    ลูกค้าตกลงว่าจะดำเนินการผ่านผู้ให้บริการเพื่ออนุญาตให้ผู้ให้ข้อมูลที่น่าเชื่อถือ
+                                    (authoritative source) ส่งข้อมูลส่วนบุคคลของลูกค้าให้กับผู้ให้บริการ
+                                    ตามรายละเอียดที่ระบุในนโยบายความเป็นส่วนตัวของผู้ให้บริการ (Privacy
+                                    Policy/Notice) ทั้งนี้ ลูกค้ารับทราบและตกลงว่า
+                                    หากลูกค้าปฏิเสธที่จะดำเนินการดังกล่าวและทำให้ผู้ให้ข้อมูลที่น่าเชื่อถือ
+                                    (authoritative source) ไม่สามารถส่งข้อมูลส่วนบุคคลของลูกค้าให้กับผู้ให้บริการได้
+                                    ลูกค้าจะไม่สามารถทำธุรกรรมต่อไปได้
+                                    และผู้ให้บริการอาจไม่สามารถที่จะมอบผลิตภัณฑ์หรือบริการตามที่ลูกค้าต้องการได้</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)
+                                    ผู้ให้บริการอาจอนุมัติหรือปฏิเสธคำขอของลูกค้าในการสมัครเข้าใช้บริการพิสูจน์และยืนยันตัวตนทางดิจิทัลของผู้ให้บริการก็ได้
+                                    หาก Identity Provider ไม่สามารถพิสูจน์และยืนยันตัวตน
+                                    หรือผู้ให้ข้อมูลที่น่าเชื่อถือ (authoritative source)
+                                    ไม่ได้รับอนุญาตให้เข้าถึงข้อมูลหรือไม่สามารถส่งข้อมูลส่วนบุคคลของลูกค้าตามเงื่อนไข
+                                    (requirement) ที่กำหนด ทั้งนี้ ไม่ว่าจะด้วยเหตุใดก็ตาม</p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)
+                                    คำขอสมัครใช้บริการพิสูจน์และยืนยันตัวตนทางดิจิทัลของผู้ให้บริการจะมีผลสมบูรณ์เมื่อ
+                                    Identity Provider ได้พิสูจน์และยืนยันตัวตน และผู้ให้ข้อมูลที่น่าเชื่อถือ
+                                    (authoritative source)
+                                    ได้รับอนุญาตให้เข้าถึงข้อมูลและได้ส่งข้อมูลส่วนบุคคลของลูกค้าแก่ผู้ให้บริการแล้ว
+                                </p>
+                            </div>
+                            <br>
+                            <div class="title">
+                                4. ลูกค้ารับทราบและตกลงว่า NDID เป็นเพียงผู้ให้บริการระบบ Digital ID Platform
+                                ซึ่งเป็นระบบงานสำหรับการส่งต่อข้อมูลและ/หรือจัดเก็บบันทึก Logs
+                                ข้อมูลระหว่างสมาชิกของ NDID ตามข้อตกลงและเงื่อนไขของ NDID เท่านั้น โดย NDID
+                                จะไม่สามารถเข้าถึงและ/หรือแทรกแซงเนื้อหาของข้อมูลที่มีการแลกเปลี่ยนในระหว่างสมาชิกด้วยกันได้<br><br>อนึ่ง
+                                ลูกค้ารับทราบและตกลงว่าสมาชิกของ NDID ที่เป็นส่วนหนึ่งของระบบ Digital ID Platform
+                                อาจมีการส่งต่อและ/หรือจัดเก็บบันทึก Logs ตามวรรคหนึ่งได้ ทั้งนี้ ข้อมูล Logs
+                                ดังกล่าวอาจประกอบไปด้วยข้อมูลที่เกี่ยวข้องกับการทำรายการต่าง ๆ บนระบบ Digital ID
+                                Platform แต่จะเป็นข้อมูลที่ไม่สามารถระบุถึงบุคคลที่เป็นเจ้าของข้อมูลได้
+                            </div>
+                            <br>
+                            <div class="title">
+                                5. ลูกค้ารับทราบและตกลงว่า ความสัมพันธ์ในทางสัญญา
+                                (ซึ่งรวมถึงข้อเรียกร้องและความรับผิด)
+                                ระหว่างผู้ให้บริการกับลูกค้าที่เกี่ยวข้องกับผลิตภัณฑ์และบริการของผู้ให้บริการนั้นถือว่าเป็นความผูกพันระหว่างผู้ให้บริการกับลูกค้าเท่านั้น
+                                โดยผู้ให้บริการจะเป็นผู้รับผิดชอบโดยตรงต่อลูกค้าสำหรับผลิตภัณฑ์และบริการใดก็ตามที่มีการนำเสนอ
+                                ให้บริการ หรือขายบริการแก่ลูกค้า โดยที่ NDID
+                                จะไม่รับผิดชอบต่อผลิตภัณฑ์และบริการของผู้ให้บริการ นอกจากนี้ ลูกค้ารับทราบและตกลงว่า
+                                NDID ตลอดจนบรรดากรรมการ ผู้ถือหุ้น พนักงาน หรือตัวแทนของ NDID
+                                จะไม่รับผิดต่อความสูญเสียหรือความเสียหายใด ๆ ไม่ว่าจะเป็นค่าเสียหายโดยตรง
+                                ค่าเสียหายโดยอ้อม ค่าเสียหายอันเป็นผลสืบเนื่อง ค่าเสียหายเชิงห้ามปราม
+                                ค่าเสียหายเชิงลงโทษ หรือค่าเสียหายอื่นใด
+                                ซึ่งรวมถึงการสูญเสียผลกำไรและการสูญเสียค่าความนิยม (goodwill)
+                                ซึ่งเกิดขึ้นกับลูกค้าและ/หรือบุคคลอื่นใด อันเป็นผลมาจากหรือเกิดจากการให้บริการของ
+                                NDID
+                            </div>
+                            <br>
+                            <div class="title">
+                                6. ลูกค้าตกลงที่จะผูกพันตามบริการพิสูจน์และยืนยันตัวตนทางดิจิทัล และ/หรือธุรกรรมใด ๆ
+                                ที่ได้ดำเนินการหรือเข้าทำผ่าน Digital ID Platform
+                            </div>
+                            <br>
+                            <div class="title">
+                                7. ลูกค้ารับรองว่า ข้อมูลและเอกสารทั้งหมด (รวมทั้งสำเนาของข้อมูลและเอกสารดังกล่าว)
+                                ที่มอบให้แก่ผู้ให้บริการ (ถ้ามี) เพื่อเป็นการพิสูจน์และยืนยันตัวตน และ/หรือการอนุญาต
+                                (authorization) นั้น เป็นจริง ถูกต้อง ครบถ้วนและเป็นข้อมูลที่เป็นปัจจุบัน
+                                และรับรองว่าลูกค้ามีความสามารถในการใช้บริการพิสูจน์และยืนยันตัวตนทางดิจิทัลได้
+                                ซึ่งรวมถึงมีความสามารถในการทำธุรกรรมต่าง ๆ ไม่ว่าบางส่วนหรือทั้งหมด
+                                ที่เกี่ยวข้องกับบริการพิสูจน์และยืนยันตัวตนทางดิจิทัลด้วย
+                            </div>
+                            <br>
+                            <div class="title">
+                                8. ลูกค้าตกลงว่าจะมอบข้อมูลเพิ่มเติมใด ๆ ก็ตามให้แก่ผู้ให้บริการเมื่อได้รับการร้องขอ
+                                และ/หรือจะปรับปรุงข้อมูลดังกล่าวให้เป็นปัจจุบัน
+                                พร้อมแจ้งให้ผู้ให้บริการทราบทันทีหากมีการเปลี่ยนแปลงข้อมูลนั้น
+                            </div>
+                            <br>
+                            <div class="title">
+                                9. ลูกค้ารับทราบและตกลงว่า
+                                ผู้ให้บริการอาจเก็บรวบรวมและใช้ข้อมูลที่ลูกค้ามอบให้แก่ผู้ให้บริการซึ่งรวมถึงข้อมูลส่วนบุคคลของลูกค้า
+                                เช่น ข้อมูลชีวภาพ (ยกตัวอย่างเช่น ลายพิมพ์นิ้วมือ, การจดจำใบหน้า)
+                                เพื่อดำเนินการตามสัญญาระหว่างผู้ให้บริการกับลูกค้า และ/หรือ ดำเนินการใด ๆ
+                                ภายใต้วัตถุประสงค์ที่มีอยู่ในสัญญาดังกล่าว<br><br>นอกจากนี้ ลูกค้ารับทราบและตกลงว่า
+                                เพื่อการปฏิบัติตามสัญญาซึ่งลูกค้าได้เข้าไปเป็นคู่สัญญา
+                                ผู้ให้บริการอาจเปิดเผยข้อมูลของลูกค้าตามวรรคหนึ่งแก่ผู้ให้บริการรายอื่น NDID
+                                สมาชิกรายอื่นใดของ NDID และ/หรือบุคคลภายนอกเท่าที่จำเป็น
+                                เพื่อประโยชน์ในการรับรองความถูกต้องของข้อมูล
+                                การบริการพิสูจน์และยืนยันตัวตนทางดิจิทัล การอนุญาต (authorization)
+                                และการทำธุรกรรมอื่น ๆ ที่เกี่ยวเนื่อง
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+
+                    <div class="border z-index-1">
+                        <div class="col-xs-12 no-padding-mobile">
+                            <div class="content__title content__title--small">
+                                <span>กรุณาอ่านและทำเครื่องหมายในช่องสี่เหลี่ยม <span class="orange">*</span></span>
+                            </div>
+                        </div>
+                        <div class="mobile-height"></div>
+                        <div class="col-xs-12 no-padding-mobile">
+                            <div class="checkboxchoice">
+                                <li style="margin:0;">
+                                    <label for="TermNDID" class="checkbox" style="margin:0;">
+                                        ข้าพเจ้าขอยอมรับเงื่อนไขในการยืนยันตัวตนผ่าน NDID
+                                        <input type="checkbox" name="TermNDID" id="TermNDID">
+                                        <span class="checksquare"></span>
+                                    </label>
+                                </li>
+                            </div>
+                            <div id="errorTermNDID" class="hide">
+                                <div class="help-block form-error"
+                                    style="position: relative;text-align: center !important;top: 15px;">
+                                    กรุณายอมรับข้อตกลง ก่อนดำเนินการในขั้นตอนถัดไป</div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                    <div class="bottom" style="display: flex;">
+                        <div class="col-xs-6 col-md-4 padding ">
+                            <div class="button-term-ndid">
+                                <button class="btnConfirm" onclick="btnBack()" type="button">ปฏิเสธ</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 padding hidden-xs hidden-sm">
+                            <div class="condition" style="text-align: center;"><span>*</span> ข้อมูลสำคัญ กรุณากรอกให้ครบถ้วน</div>
+                        </div>
+                        <div class="col-xs-6 col-md-4 padding ">
+                            <div class="button-term-ndid">
+                                <button class="btnConfirm" onclick="btnNext()" type="button">ยอมรับ</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+
+<div id="confirm_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body mdb-msg">
+                <p id="confirm_content">คุณต้องการยกเลิกการทำรายการและกลับไปที่หน้าจอเลือกวิธียืนยันตัวตน?</p>
+            </div>
+            <div class="modal-footer">
+                <div class="button-cancel-term-ndid col-xs-12 col-md-offset-7 col-md-5">
+                    <a class="confirm" href="javascript:void(0)" id="btn_ok_confirm_dialog" tabindex="-1">ตกลง</a>
+                    <a class="confirm" href="javascript:void(0)" id="btn_cancel_confirm_dialog" tabindex="-1">ยกเลิก</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="waiting_modal_dialog" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+
+            <div class="modal-body mdb-msg" style="text-align:center;">
+                <p>
+                    ระบบกำลังอยู่ระหว่างดำเนินการกรุณารอสักครู่
+                </p>
+                <img src="/assets/imgs/wait.gif">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <div class="info">
+                    <div class="info__text">สอบถามข้อมูลเพิ่มเติม 
+                        <!-- ทุกวันทำการ 8:30 - 18:00 น. -->
+                    </div>
+                    <div class="info__call">
+                        <div class="call"><a href="tel:020884666"><img src="/assets/imgs/footer/tel.svg" alt="">
+                                <span>02 088 4666</span></a></div>
+                        <div class="email"><a href="mailto:cxcenter@fnsyrus.com"><img
+                                    src="/assets/imgs/footer/email.svg" alt=""><span> callcenter@finansiada.com</span></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-6">
+                <div class="copy">สงวนลิขสิทธิ์ บริษัท ฟินันเซีย ดิจิทัล แอสเซท จำกัด</div>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<script>
+const MAIN_URL = window.location.origin;
+
+$(document).ready(function() {
+    let v = parseInt('1');
+    if (v == 1) {
+        setTimeout(() => {
+            $('#waiting_modal_dialog').removeClass('show');
+        }, 300);
+    } else {
+        setTimeout(() => {
+            window.location.href = '/send-reload-page';
+        }, 1000);
+    }
+
+    function disableBack() {
+        window.history.forward()
+    }
+    window.onload = disableBack();
+    window.onpageshow = function(e) {
+        if (e.persisted)
+            disableBack();
+    }
+})
+
+function btnNext() {
+    let next_page = true;
+    if (!$("#TermNDID").is(":checked")) {
+        next_page = false;
+        $("#errorTermNDID").removeClass("hide");
+    } else {
+        $("#errorTermNDID").addClass("hide");
+    }
+
+    if (next_page) {
+        saveTermNDID(true)
+    }
+}
+
+function saveTermNDID(type){
+    let acceptFlag = type;
+
+    const wsurl = `${MAIN_URL}/api/save-term-ndid`;
+        var data = {
+            "acceptFlag": acceptFlag
+        };
+        fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+            .then(response => response.text())
+            .then(function(result) {
+                if(acceptFlag){
+                    clearCount();
+                }
+            })
+            .catch(error => console.log('error', error));
+}
+
+function clearCount() {
+    const wsurl = `${MAIN_URL}/api/clear-view-count`;
+    var data = {
+        url: ""
+    };
+    fetch(wsurl, {
+            method: "POST",
+            body: JSON.stringify(data)
+        })
+        .then(response => response.text())
+        .then(function(result) {
+            window.open(`${MAIN_URL}/NDID`, "_self");
+        })
+        .catch(error => console.log('error', error));
+}
+
+function btnBack() {
+    $("#confirm_modal_dialog").addClass("show")
+}
+
+$("#btn_ok_confirm_dialog").on("click", function() {
+    $("#status_module").val("back_module");
+    $('#waiting_modal_dialog').addClass('show');
+
+    saveTermNDID(false);
+    setTimeout(() => {
+        const wsurl = `${MAIN_URL}/api/clear-view-count`;
+        var data = {
+            url: "/identity/selection/type"
+        };
+        fetch(wsurl, {
+                method: "POST",
+                body: JSON.stringify(data)
+            })
+            .then(response => response.text())
+            .then(function(result) {
+                window.open(result, "_self");
+            })
+            .catch(error => console.log('error', error));
+    }, 1000);
+})
+
+$("#btn_cancel_confirm_dialog").on("click", function() {
+    $("#confirm_modal_dialog").removeClass("show")
+})
+</script>
+
+</body>
+
+</html>
