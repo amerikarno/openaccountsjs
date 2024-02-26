@@ -373,3 +373,7 @@
 192.168.65.1 - - [26/Feb/2024:10:50:08 +0000] "GET /register/form/preinfo HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 192.168.65.1 - - [26/Feb/2024:10:53:13 +0000] "GET /register/form/preinfo HTTP/1.1" 200 187041 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
 192.168.65.1 - - [26/Feb/2024:10:53:39 +0000] "GET /home HTTP/1.1" 200 4888 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+192.168.65.1 - - [26/Feb/2024:10:56:36 +0000] "GET /edit-op-acc.html HTTP/1.1" 500 579 "http://localhost:8080/home" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+192.168.65.1 - - [26/Feb/2024:10:56:44 +0000] "GET /edit-op-acc.html HTTP/1.1" 500 579 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+192.168.65.1 - - [26/Feb/2024:10:57:48 +0000] "GET / HTTP/1.1" 200 4896 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
+192.168.65.1 - - [26/Feb/2024:10:57:51 +0000] "GET /verify-registered-status HTTP/1.1" 200 24120 "http://localhost:8080/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36"
