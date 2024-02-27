@@ -18,6 +18,8 @@ function customInput(mod, obj, next = null) {
       }
     },
     save: function (fnerror, callback) {
+      console.log("1")
+      console.log("2")
       let dataElem = {};
       this.each(function (elem, name, val) {
         let dataChild = {};
