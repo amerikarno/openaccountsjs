@@ -3362,6 +3362,12 @@
             $('#waiting_modal_dialog').addClass('show');
 
             setTimeout(() => {
+                forNModule = localStorage.getItem("nModule");
+
+
+            // mock data below
+            forNModule = "basic/form/suitfatca"
+            // end mock data below
                 const wsurl = `${MAIN_URL}/api/clearViewCount`;
                 var data = {
                     url: ""
@@ -3379,6 +3385,7 @@
                         // }, 2000);
                         validateAddress();
                         validateBank();
+                        window.location = `${window.location.origin}/${forNModule}`;
                     })
                     .catch(error => console.log('error', error));
             }, 1000);
