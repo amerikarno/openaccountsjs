@@ -2889,7 +2889,7 @@ $(document).ready(function() {
 
 
 function getSuitDropdown() {
-    const wsurl = `${MAIN_URL}/api/get-suit-dropdown`;
+    const wsurl = `${MAIN_URL}/api/get-suite-select`;
 
     fetch(wsurl, {
             method: "POST"
@@ -2940,7 +2940,8 @@ function numbercount() {
 };
 
 function initCurrenPage(module) {
-    const wsurl = `${MAIN_URL}/api/current-page`;
+    console.log("init")
+    const wsurl = `${MAIN_URL}/api/currentPage`;
     var data = {
         module: module
     };
@@ -2954,9 +2955,10 @@ function initCurrenPage(module) {
 }
 
 function checkSession(module) {
+    console.log("session")
     let session = 'Y';
     if (session == "Y") {
-        const wsurl = `${MAIN_URL}/api/current-page`;
+        const wsurl = `${MAIN_URL}/api/currentPage`;
         var data = {
             module: module
         };
@@ -2988,7 +2990,7 @@ $("select").selectmenu({
 var questionSuit = {};
 
 function loadQuizSuit() {
-    const wsurl = `${MAIN_URL}/api/get-quiz-suit`;
+    const wsurl = `${MAIN_URL}/api/get-suite-questions`;
 
     fetch(wsurl, {
             method: "POST"
@@ -5437,7 +5439,7 @@ function showKnowledgeTestForm(str) {
 }
 
 function loadQuizKTL() {
-    const wsurl = `${MAIN_URL}/api/get-quiz-knowledge`;
+    const wsurl = `${MAIN_URL}/api/get-knowledge-questions`;
 
     fetch(wsurl, {
             method: "POST"
@@ -6075,8 +6077,9 @@ function btnNext() {
 
         getJsonSendSuit();
 
+        // module = 'module_otp'
         setTimeout(() => {
-            const wsurl = `${MAIN_URL}/api/clear-view-count`;
+            const wsurl = `${MAIN_URL}/api/clearViewCount`;
             var data = {
                 url: ""
             };
@@ -6086,7 +6089,8 @@ function btnNext() {
                 })
                 .then(response => response.text())
                 .then(function(result) {
-                    customInput(module).save();
+                    // customInput(module).save();
+                    window.location = `${window.location.origin}/verify/form/otp`;
                 })
                 .catch(error => console.log('error', error));
         }, 1000);

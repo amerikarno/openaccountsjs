@@ -67,12 +67,12 @@
                                 <form action="#" method="GET" id="module_preinfo" class="form" role="form">
                                     <div class="col-xs-7 header">
                                         <!-- Header -->
-                                        <div class="row">
-                                            <div class="column">
+                                        <!-- <div class="row">
+                                            <div class="column"> -->
 
                                                 <li class="white hidden-xs hidden-sm">กรุณากรอกข้อมูลเพื่อเปิดบัญชีใหม่
                                                 </li>
-                                            </div>
+                                            <!-- </div>
                                             <div class="column">
                                                 <select id="languageSelect" name="languageSelect">
                                                     <option value="th">ภาษาไทย</option>
@@ -81,7 +81,7 @@
                                                     <option value="mm">ဗမာဘာသာစကား</option>
                                                 </select>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="clear"></div>
                                     <div class="col-xs-6 z-index">
@@ -1348,7 +1348,7 @@
     <!-- JS -->
     <script src="../../assets/js/framework.js"></script>
     <script src="../../assets/js/script.js"></script>
-    <script src="../../assets/js/multilingual.js"></script>
+    <!-- <script src="../../assets/js/multilingual.js"></script> -->
 
     <!-- OTHER -->
     <script>
@@ -1368,7 +1368,7 @@
                 }
             }
 
-            // getTitleName();
+            getTitleName();
             function getTitleName() {
                 const wsurl = `${MAIN_URL}/api/getTitleName`;
                 fetch(wsurl, {
@@ -1966,30 +1966,30 @@
         }
 
         // multi langual
-        async function fetchLanguage(lang) {
-            const response = await fetch(`../languages/${lang}.json`);
-            const data = await response.json();
-            console.log(data)
-            updatePageText(data);
-        }
+        // async function fetchLanguage(lang) {
+        //     const response = await fetch(`../languages/${lang}.json`);
+        //     const data = await response.json();
+        //     console.log(data)
+        //     updatePageText(data);
+        // }
 
-        function updatePageText(data) {
-            document.querySelectorAll("[data-key]").forEach(elem => {
-                const key = elem.getAttribute("data-key");
-                elem.textContent = data[key];
-            });
-        }
+        // function updatePageText(data) {
+        //     document.querySelectorAll("[data-key]").forEach(elem => {
+        //         const key = elem.getAttribute("data-key");
+        //         elem.textContent = data[key];
+        //     });
+        // }
 
-        document.getElementById("languageSelect").addEventListener("change", function () {
-            console.log("change on languageSelect")
-            fetchLanguage(this.value);
-        });
+        // document.getElementById("languageSelect").addEventListener("change", function () {
+        //     console.log("change on languageSelect")
+        //     fetchLanguage(this.value);
+        // });
 
-        // Initialize page with default language
-        window.onload = () => {
-            console.log("on loading multilingual")
-            fetchLanguage('th');
-        };
+        // // Initialize page with default language
+        // window.onload = () => {
+        //     console.log("on loading multilingual")
+        //     fetchLanguage('th');
+        // };
 
     </script>
 

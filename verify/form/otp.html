@@ -448,7 +448,7 @@
     })
 
     function initCurrenPage(module) {
-        const wsurl = `${MAIN_URL}/api/current-page`;
+        const wsurl = `${MAIN_URL}/api/currentPage`;
         var data = {
             module: module
         };
@@ -468,7 +468,7 @@
     function checkSession(module) {
         let session = 'Y';
         if (session == "Y") {
-            const wsurl = `${MAIN_URL}/api/current-page`;
+            const wsurl = `${MAIN_URL}/api/currentPage`;
             var data = {
                 module: module
             };
@@ -767,7 +767,7 @@
     }
 
     function sendCheckExistEmail() {
-        const wsurl = `${MAIN_URL}/api/check-exist-email`;
+        const wsurl = `${MAIN_URL}/api/checkExistEmail`;
         let email = "";
         email = $("#Email").val() !== "" ? $("#Email").val() : ""
         var data = {
@@ -807,7 +807,7 @@
     }
 
     function sendCeckExistMobile() {
-        const wsurl = `${MAIN_URL}/api/check-exist-mobile`;
+        const wsurl = `${MAIN_URL}/api/checkExistMobile`;
         let mobile = "";
         mobile = $("#Mobile").val() !== "" ? $("#Mobile").val() : ""
         var data = {

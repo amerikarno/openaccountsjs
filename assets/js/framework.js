@@ -178,7 +178,9 @@ function customInput(mod, obj, next = null) {
         if (querystring != "") querystring += "&";
         querystring += key + "=" + objRequest[key];
       }
-      const wsurl = `${MAIN_URL}/api/${this.module}`;
+      // const wsurl = `${MAIN_URL}/api/${this.module}`;
+      const wsurl = `http://localhost/verify/form/otp`
+
       // const wsurl = `${MAIN_URL}/api/loadTempdata/${this.module}`;
       console.log('wsurl',wsurl);
       fetch(wsurl, {
