@@ -242,6 +242,10 @@ button:focus {
   z-index: 7;
 }
 
+.row {
+  display: flex;
+}
+
 .right {
   display: none;
   position: absolute;
@@ -1780,6 +1784,9 @@ button:focus {
 #otp {
   position: relative;
   z-index: 3;
+}
+#languageSelect {
+  width: 30;
 }
 
 #general .container,
